@@ -1,0 +1,74 @@
+[
+    {
+        "moduleName": "https",
+        "properties": [
+            {
+                "name": "Agent",
+                "type": [
+                    "oc",
+                    "ro"
+                ],
+                "postponeRegistration": false,
+                "returnedObject": "http.Agent"
+            },
+            {
+                "name": "Server",
+                "type": [
+                    "oc",
+                    "ro",
+                    "co",
+                    "cb"
+                ],
+                "postponeRegistration": false,
+                "returnedObject": "http.Server",
+                "callbackObjects": [
+                    "http.IncomingMessage",
+                    "http.ServerResponse"
+                ]
+            },
+            {
+                "name": "get",
+                "type": [
+                    "cb",
+                    "ro",
+                    "co"
+                ],
+                "postponeRegistration": false,
+                "connectedCallbacks": true,
+                "returnedObject": "http.ClientRequest",
+                "callbackObjects": [
+                    "http.IncomingMessage"
+                ]
+            },
+            {
+                "name": "request",
+                "type": [
+                    "cb",
+                    "ro",
+                    "co"
+                ],
+                "postponeRegistration": false,
+                "connectedCallbacks": true,
+                "returnedObject": "http.ClientRequest",
+                "callbackObjects": [
+                    "http.IncomingMessage"
+                ]
+            },
+            {
+                "name": "createServer",
+                "type": [
+                    "cb",
+                    "ro",
+                    "co"
+                ],
+                "postponeRegistration": false,
+                "returnedObject": "http.Server",
+                "connectedCallbacks": true,
+                "callbackObjects": [
+                    "http.IncomingMessage",
+                    "http.ServerResponse"
+                ]
+            }
+        ]
+    }
+]

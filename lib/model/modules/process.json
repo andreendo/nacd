@@ -1,0 +1,39 @@
+[
+    {
+        "moduleName": "process",
+        "is": [
+            "EventEmitter"
+        ],
+        "properties": [
+            {
+                "name": "send",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": false,
+                "optionalProperty": true
+            },
+            {
+                "name": "stderr",
+                "type": [
+                    "op"
+                ],
+                "AsyncObjectProperty": "EventEmitter"
+            },
+            {
+                "name": "stdout",
+                "type": [
+                    "op"
+                ],
+                "AsyncObjectProperty": "EventEmitter"
+            },
+            {
+                "name": "stdin",
+                "type": [
+                    "op"
+                ],
+                "AsyncObjectProperty": "EventEmitter"
+            }
+        ]
+    }
+]

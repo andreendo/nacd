@@ -1,0 +1,57 @@
+[
+    {
+        "moduleName": "dgram",
+        "properties": [
+            {
+                "name": "createSocket",
+                "type": [
+                    "cb",
+                    "ro"
+                ],
+                "postponeRegistration": false,
+                "returnedObject": "dgram.Socket",
+                "connectedCallbacks": true
+            }
+        ]
+    },
+    {
+        "moduleName": "dgram.Socket",
+        "is": [
+            "EventEmitter"
+        ],
+        "properties": [
+            {
+                "name": "bind",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": false,
+                "connectedCallbacks": true
+            },
+            {
+                "name": "close",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": false,
+                "connectedCallbacks": true
+            },
+            {
+                "name": "connect",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": false,
+                "connectedCallbacks": true
+            },
+            {
+                "name": "send",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": false,
+                "connectedCallbacks": true
+            }
+        ]
+    }
+]

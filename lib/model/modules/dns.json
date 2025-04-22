@@ -1,0 +1,261 @@
+[
+    {
+        "moduleName": "dns",
+        "is": [
+            "dns.Resolver"
+        ],
+        "properties": [
+            {
+                "name": "lookup",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": false
+            },
+            {
+                "name": "lookupService",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": false
+            },
+            {
+                "name": "Resolver",
+                "type": [
+                    "oc"
+                ],
+                "postponeRegistration": false,
+                "returnedObject": "dns.Resolver"
+            },
+            {
+                "name": "promises",
+                "type": [
+                    "op"
+                ],
+                "AsyncObjectProperty": "dns.Promises"
+            }
+        ]
+    },
+    {
+        "moduleName": "dns.Resolver",
+        "properties": [
+            {
+                "name": "resolve",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": false
+            },
+            {
+                "name": "resolveAny",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": false
+            },
+            {
+                "name": "resolve4",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": false
+            },
+            {
+                "name": "resolve6",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": false
+            },
+            {
+                "name": "resolveCname",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": false
+            },
+            {
+                "name": "resolveMx",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": false
+            },
+            {
+                "name": "resolveNs",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": false
+            },
+            {
+                "name": "resolveTxt",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": false
+            },
+            {
+                "name": "resolveSrv",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": false
+            },
+            {
+                "name": "resolvePtr",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": false
+            },
+            {
+                "name": "resolveNaptr",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": false
+            },
+            {
+                "name": "resolveSoa",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": false
+            },
+            {
+                "name": "reverse",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": false
+            }
+        ]
+    },
+    {
+        "moduleName": "dns.Promises",
+        "is": [
+            "dns.PromiseResolver"
+        ],
+        "properties": [
+            {
+                "name": "lookup",
+                "type": [
+                    "rp"
+                ],
+                "postponeRegistration": false
+            },
+            {
+                "name": "lookupService",
+                "type": [
+                    "rp"
+                ],
+                "postponeRegistration": false
+            },
+            {
+                "name": "Resolver",
+                "type": [
+                    "oc"
+                ],
+                "postponeRegistration": false,
+                "returnedObject": "dns.PromiseResolver"
+            }
+        ]
+    },
+    {
+        "moduleName": "dns.PromiseResolver",
+        "properties": [
+            {
+                "name": "resolve",
+                "type": [
+                    "rp"
+                ],
+                "postponeRegistration": false
+            },
+            {
+                "name": "resolveAny",
+                "type": [
+                    "rp"
+                ],
+                "postponeRegistration": false
+            },
+            {
+                "name": "resolve4",
+                "type": [
+                    "rp"
+                ],
+                "postponeRegistration": false
+            },
+            {
+                "name": "resolve6",
+                "type": [
+                    "rp"
+                ],
+                "postponeRegistration": false
+            },
+            {
+                "name": "resolveCname",
+                "type": [
+                    "rp"
+                ],
+                "postponeRegistration": false
+            },
+            {
+                "name": "resolveMx",
+                "type": [
+                    "rp"
+                ],
+                "postponeRegistration": false
+            },
+            {
+                "name": "resolveNs",
+                "type": [
+                    "rp"
+                ],
+                "postponeRegistration": false
+            },
+            {
+                "name": "resolveTxt",
+                "type": [
+                    "rp"
+                ],
+                "postponeRegistration": false
+            },
+            {
+                "name": "resolveSrv",
+                "type": [
+                    "rp"
+                ],
+                "postponeRegistration": false
+            },
+            {
+                "name": "resolvePtr",
+                "type": [
+                    "rp"
+                ],
+                "postponeRegistration": false
+            },
+            {
+                "name": "resolveNaptr",
+                "type": [
+                    "rp"
+                ],
+                "postponeRegistration": false
+            },
+            {
+                "name": "resolveSoa",
+                "type": [
+                    "rp"
+                ],
+                "postponeRegistration": false
+            },
+            {
+                "name": "reverse",
+                "type": [
+                    "rp"
+                ],
+                "postponeRegistration": false
+            }
+        ]
+    }
+]

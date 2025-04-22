@@ -1,0 +1,54 @@
+Mapping of built-in modules that trigger async operations
+
+-------------------------------------------------------------------------------
+Built-in modules WITH asynchronous operations
+
+child_process
+cluster
+crypto
+    - Some functions (e.g., randomBytes) are only async if a callback is provided.
+dgram
+    - UDP/Datagram sockets
+dns
+fs
+http
+http2
+https
+inspector
+net
+perf_hooks
+    - Callback sent as an argument for a constructor (e.g. PerformanceObserver)
+**process
+    - Not touching process.nextTick(), process.on('exit')
+readline
+repl
+stream
+**timers
+    - Not touching it for now
+tls
+tty
+vm
+zlib
+
+-------------------------------------------------------------------------------
+Built-in modules WITHOUT asynchronous operations
+
+assert
+    - Only functions that can wait for an async function to be finished.
+async_hooks    
+buffer
+console
+constants
+domain
+events
+    - It facilitates data structures for async behavior, but it does not start async operations per se.
+module    
+os
+path
+punycode    
+querystring    
+string_decoder
+trace_events
+url    
+util
+v8    

@@ -1,0 +1,59 @@
+[
+    {
+        "moduleName": "readline",
+        "properties": [
+            {
+                "name": "clearLine",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": false
+            },
+            {
+                "name": "clearScreenDown",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": false
+            },
+            {
+                "name": "createInterface",
+                "type": [
+                    "ro"
+                ],
+                "postponeRegistration": false,
+                "returnedObject": "readline.Interface"
+            },
+            {
+                "name": "cursorTo",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": false
+            },
+            {
+                "name": "moveCursor",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": false
+            }            
+        ]
+    },
+    {
+        "moduleName": "readline.Interface",
+        "is": [
+            "EventEmitter"
+        ],
+        "properties": [
+            {
+                "name": "question",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": false,
+                "connectedCallbacks": true
+            }
+        ]
+    }
+]

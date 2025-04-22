@@ -1,0 +1,81 @@
+[
+    {
+        "moduleName": "child_process",
+        "properties": [
+            {
+                "name": "fork",
+                "type": [
+                    "ro"
+                ],
+                "postponeRegistration": false,
+                "returnedObject": "ChildProcess"
+            },
+            {
+                "name": "spawn",
+                "type": [
+                    "ro"
+                ],
+                "postponeRegistration": false,
+                "returnedObject": "ChildProcess"
+            },
+            {
+                "name": "exec",
+                "type": [
+                    "cb",
+                    "ro"
+                ],
+                "postponeRegistration": false,
+                "returnedObject": "ChildProcess"
+            },
+            {
+                "name": "execFile",
+                "type": [
+                    "cb",
+                    "ro"
+                ],
+                "postponeRegistration": false,
+                "returnedObject": "ChildProcess"
+            }
+        ]
+    },
+    {
+        "moduleName": "ChildProcess",
+        "is": [
+            "EventEmitter"
+        ],
+        "properties": [
+            {
+                "name": "send",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": false,
+                "optionalProperty": true
+            },
+            {
+                "name": "stderr",
+                "type": [
+                    "op"
+                ],
+                "optionalProperty": true,
+                "AsyncObjectProperty": "stream.Readable"
+            },
+            {
+                "name": "stdin",
+                "type": [
+                    "op"
+                ],
+                "optionalProperty": true,
+                "AsyncObjectProperty": "stream.Writable"
+            },
+            {
+                "name": "stdout",
+                "type": [
+                    "op"
+                ],
+                "optionalProperty": true,
+                "AsyncObjectProperty": "stream.Readable"
+            }
+        ]
+    }    
+]

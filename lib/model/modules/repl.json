@@ -1,0 +1,40 @@
+[
+    {
+        "moduleName": "repl",
+        "properties": [
+            {
+                "name": "start",
+                "type": [
+                    "ro"
+                ],
+                "postponeRegistration": false,
+                "returnedObject": "repl.REPLServer"
+            },
+            {
+                "name": "REPLServer",
+                "type": [
+                    "oc",
+                    "ro"
+                ],
+                "postponeRegistration": false,
+                "returnedObject": "repl.REPLServer"
+            }            
+        ]
+    },
+    {
+        "moduleName": "repl.REPLServer",
+        "is": [
+            "readline.Interface"
+        ],
+        "properties": [
+            {
+                "name": "setupHistory",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": false,
+                "optionalProperty": true
+            }
+        ]
+    }
+]

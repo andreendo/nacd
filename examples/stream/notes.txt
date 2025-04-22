@@ -1,0 +1,39 @@
+- pipes and events are not usually used together (https://www.freecodecamp.org/news/node-js-streams-everything-you-need-to-know-c9141306be93/). 
+
+We cannot track async callbacks related to streams. For instance, we know when a built-in stream is created (e.g., fs.createReadStream), but we miss the source of asynchrony when e.g. a custom-made stream is piped. If the custom-made stream provokes async callbacks, we are not aware of it. 
+
+**Ideas
+
+* Delay _read() and/or _write() methods of Readable and Writable streams
+    - This may delay callbacks associated to the stream (provoke interleavings)
+    - Problem: if there are no callbacks involved, we are just delaying the runtime.
+        - these methods may be called several times
+
+* Instrument the object passed to the pipe (only event emitter properties - most cases)
+    - All streams are event emitters; we can instrument callbacks related to it
+        - instrument the object passed to the pipe method.
+        - instrument the chain of pipes. 
+    - Problem 1: cannot detect cbs previously added
+        - Possible: hack the internal array of event listeners
+    - Problem 2: a stream can create other duplex streams and passes the async behavior forward.
+        - it does not used pipe and new stream objects are passed.
+            - Example unzip2
+--------------------------------
+fs.createReadStream('path/to/archive.zip')
+  .pipe(unzip.Parse())
+  .on('entry', function (entry) {   //we can delay this callback
+    var fileName = entry.path;
+    var type = entry.type; // 'Directory' or 'File'
+    var size = entry.size;
+    if (fileName === "this IS the file I'm looking for") {
+      entry.pipe(fs.createWriteStream('output/path'));      //entry is a stream itself !!!
+    } else {
+      entry.autodrain();
+    }
+  });
+--------------------------------
+
+
+https://nodejs.org/es/docs/guides/backpressuring-in-streams/
+https://nodejs.org/api/stream.html
+https://www.freecodecamp.org/news/node-js-streams-everything-you-need-to-know-c9141306be93/

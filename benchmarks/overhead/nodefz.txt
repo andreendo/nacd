@@ -1,0 +1,32 @@
+AKA
+real    2m14,242s
+user    1m13,789s
+sys     0m10,216s
+FPS
+real    1m31,352s
+user    0m37,374s
+sys     0m5,592s
+GHO
+real    1m26,159s
+user    0m33,168s
+sys     0m3,179s
+MKD
+real    1m14,220s
+user    0m20,181s
+sys     0m3,984s
+NLF
+real    2m10,853s
+user    1m8,757s
+sys     0m10,991s
+SIO
+real    1m17,803s
+user    0m24,008s
+sys     0m4,045s
+NSC
+real    2m26,908s
+user    1m24,763s
+sys     0m12,264s
+bluebird
+real    2m46,947s
+user    1m42,852s
+sys     0m14,299s

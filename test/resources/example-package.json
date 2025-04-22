@@ -1,0 +1,47 @@
+{
+  "name": "nacd",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "eslint . && mocha",
+    "lint": "eslint .",
+    "cloc": "cloc lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/user/nacd.git"
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "author": "",
+  "license": "ISC",
+  "bin": {
+    "nacd": "./lib/cli/cli.js"
+  },
+  "bugs": {
+    "url": "https://github.com/user/nacd/issues"
+  },
+  "homepage": "https://github.com/user/nacd#readme",
+  "dependencies": {
+    "compare-versions": "^3.5.1",
+    "foreground-child": "^2.0.0",
+    "fs-extra": "^8.1.0",
+    "glob": "^7.1.6",
+    "graphviz": "0.0.9",
+    "lodash": "^4.17.15",
+    "lowdb": "^1.0.0",
+    "random": "^2.1.1",
+    "spawn-wrap": "^1.4.3",
+    "stacktracey": "^1.2.122",
+    "yargs": "^15.0.2"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^6.7.1",
+    "mocha": "^6.2.2",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.5",
+    "shelljs": "^0.8.3"
+  }
+}

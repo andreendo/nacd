@@ -1,0 +1,128 @@
+[
+  {
+    "operation": [
+      "async function call"
+    ],
+    "object": "fs",
+    "function": "readdir",
+    "argument": "",
+    "stackTrace": "Error\n    at collectCurrentStackTrace (/home/user/git/nacd/lib/util/stacktrace.js:6:17)\n    at Object.apply (/home/user/git/nacd/lib/mode/plain2/instrumenter.js:166:29)\n    at go$readdir (/home/user/benchmarks/example/jprichardson_node-fs-extra/node_modules/graceful-fs/graceful-fs.js:194:23)\n    at Object.readdir (/home/user/benchmarks/example/jprichardson_node-fs-extra/node_modules/graceful-fs/graceful-fs.js:176:12)\n    at Object.emptyDir (/home/user/benchmarks/example/jprichardson_node-fs-extra/lib/empty/index.js:11:6)\n    at Object.emptyDir (/home/user/benchmarks/example/jprichardson_node-fs-extra/node_modules/universalify/index.js:5:67)\n    at Context.done (/home/user/benchmarks/example/jprichardson_node-fs-extra/lib/remove/__tests__/remove.test.js:31:9)\n    at callFnAsync (/home/user/benchmarks/example/jprichardson_node-fs-extra/node_modules/mocha/lib/runnable.js:400:21)\n    at Hook.Runnable.run (/home/user/benchmarks/example/jprichardson_node-fs-extra/node_modules/mocha/lib/runnable.js:342:7)\n    at next (/home/user/benchmarks/example/jprichardson_node-fs-extra/node_modules/mocha/lib/runner.js:317:10)\n    at Immediate._onImmediate (/home/user/benchmarks/example/jprichardson_node-fs-extra/node_modules/mocha/lib/runner.js:347:5)\n    at runCallback (timers.js:705:18)\n    at tryOnImmediate (timers.js:676:5)\n    at processImmediate (timers.js:658:5)",
+    "ID": 1,
+    "callback": true,
+    "delayed": false
+  },
+  {
+    "operation": "callback run",
+    "registeredBy": 1,
+    "delayed": false,
+    "stackTrace": "Error\n    at collectCurrentStackTrace (/home/user/git/nacd/lib/util/stacktrace.js:6:17)\n    at DelayInjector.dealWithSimpleCallback (/home/user/git/nacd/lib/mode/plain2/delayinjector.js:144:25)\n    at Object.apply (/home/user/git/nacd/lib/mode/plain2/delayinjector.js:41:33)\n    at FSReqWrap.args [as oncomplete] (fs.js:140:20)"
+  },
+  {
+    "operation": [
+      "async function call"
+    ],
+    "object": "fs",
+    "function": "mkdir",
+    "argument": "",
+    "stackTrace": "Error\n    at collectCurrentStackTrace (/home/user/git/nacd/lib/util/stacktrace.js:6:17)\n    at Object.apply (/home/user/git/nacd/lib/mode/plain2/instrumenter.js:166:29)\n    at Object.mkdirs (/home/user/benchmarks/example/jprichardson_node-fs-extra/lib/mkdirs/mkdirs.js:34:7)\n    at Object.mkdirs (/home/user/benchmarks/example/jprichardson_node-fs-extra/node_modules/universalify/index.js:5:67)\n    at fs.readdir (/home/user/benchmarks/example/jprichardson_node-fs-extra/lib/empty/index.js:12:27)\n    at go$readdir$cb (/home/user/benchmarks/example/jprichardson_node-fs-extra/node_modules/graceful-fs/graceful-fs.js:187:14)\n    at DelayInjector.dealWithSimpleCallback (/home/user/git/nacd/lib/mode/plain2/delayinjector.js:156:28)\n    at Object.apply (/home/user/git/nacd/lib/mode/plain2/delayinjector.js:41:33)\n    at FSReqWrap.args [as oncomplete] (fs.js:140:20)",
+    "ID": 2,
+    "callback": true,
+    "delayed": false
+  },
+  {
+    "operation": "callback run",
+    "registeredBy": 2,
+    "delayed": false,
+    "stackTrace": "Error\n    at collectCurrentStackTrace (/home/user/git/nacd/lib/util/stacktrace.js:6:17)\n    at DelayInjector.dealWithSimpleCallback (/home/user/git/nacd/lib/mode/plain2/delayinjector.js:144:25)\n    at Object.apply (/home/user/git/nacd/lib/mode/plain2/delayinjector.js:41:33)\n    at FSReqWrap.args [as oncomplete] (fs.js:140:20)"
+  },
+  {
+    "operation": [
+      "async function call"
+    ],
+    "object": "fs",
+    "function": "lstat",
+    "argument": "",
+    "stackTrace": "Error\n    at collectCurrentStackTrace (/home/user/git/nacd/lib/util/stacktrace.js:6:17)\n    at Object.apply (/home/user/git/nacd/lib/mode/plain2/instrumenter.js:166:29)\n    at Object.lstat (/home/user/benchmarks/example/jprichardson_node-fs-extra/node_modules/graceful-fs/polyfills.js:298:16)\n    at rimraf_ (/home/user/benchmarks/example/jprichardson_node-fs-extra/lib/remove/rimraf.js:79:11)\n    at Object.rimraf (/home/user/benchmarks/example/jprichardson_node-fs-extra/lib/remove/rimraf.js:43:3)\n    at Promise (/home/user/benchmarks/example/jprichardson_node-fs-extra/node_modules/universalify/index.js:13:12)\n    at new Promise (<anonymous>)\n    at Object.rimraf [as remove] (/home/user/benchmarks/example/jprichardson_node-fs-extra/node_modules/universalify/index.js:7:14)\n    at Context.done (/home/user/benchmarks/example/jprichardson_node-fs-extra/lib/remove/__tests__/remove.test.js:82:11)\n    at callFnAsync (/home/user/benchmarks/example/jprichardson_node-fs-extra/node_modules/mocha/lib/runnable.js:400:21)\n    at Test.Runnable.run (/home/user/benchmarks/example/jprichardson_node-fs-extra/node_modules/mocha/lib/runnable.js:342:7)\n    at Runner.runTest (/home/user/benchmarks/example/jprichardson_node-fs-extra/node_modules/mocha/lib/runner.js:455:10)\n    at /home/user/benchmarks/example/jprichardson_node-fs-extra/node_modules/mocha/lib/runner.js:573:12\n    at next (/home/user/benchmarks/example/jprichardson_node-fs-extra/node_modules/mocha/lib/runner.js:369:14)\n    at /home/user/benchmarks/example/jprichardson_node-fs-extra/node_modules/mocha/lib/runner.js:379:7\n    at next (/home/user/benchmarks/example/jprichardson_node-fs-extra/node_modules/mocha/lib/runner.js:303:14)\n    at Immediate._onImmediate (/home/user/benchmarks/example/jprichardson_node-fs-extra/node_modules/mocha/lib/runner.js:347:5)\n    at runCallback (timers.js:705:18)\n    at tryOnImmediate (timers.js:676:5)\n    at processImmediate (timers.js:658:5)",
+    "ID": 3,
+    "callback": true,
+    "delayed": false
+  },
+  {
+    "operation": "callback run",
+    "registeredBy": 3,
+    "delayed": false,
+    "stackTrace": "Error\n    at collectCurrentStackTrace (/home/user/git/nacd/lib/util/stacktrace.js:6:17)\n    at DelayInjector.dealWithSimpleCallback (/home/user/git/nacd/lib/mode/plain2/delayinjector.js:144:25)\n    at Object.apply (/home/user/git/nacd/lib/mode/plain2/delayinjector.js:41:33)\n    at FSReqWrap.oncomplete (fs.js:154:5)"
+  },
+  {
+    "operation": [
+      "async function call"
+    ],
+    "object": "fs",
+    "function": "unlink",
+    "argument": "",
+    "stackTrace": "Error\n    at collectCurrentStackTrace (/home/user/git/nacd/lib/util/stacktrace.js:6:17)\n    at Object.apply (/home/user/git/nacd/lib/mode/plain2/instrumenter.js:166:29)\n    at options.lstat (/home/user/benchmarks/example/jprichardson_node-fs-extra/lib/remove/rimraf.js:93:13)\n    at callback (/home/user/benchmarks/example/jprichardson_node-fs-extra/node_modules/graceful-fs/polyfills.js:295:20)\n    at DelayInjector.dealWithSimpleCallback (/home/user/git/nacd/lib/mode/plain2/delayinjector.js:156:28)\n    at Object.apply (/home/user/git/nacd/lib/mode/plain2/delayinjector.js:41:33)\n    at FSReqWrap.oncomplete (fs.js:154:5)",
+    "ID": 4,
+    "callback": true,
+    "delayed": false
+  },
+  {
+    "operation": "callback run",
+    "registeredBy": 4,
+    "delayed": false,
+    "stackTrace": "Error\n    at collectCurrentStackTrace (/home/user/git/nacd/lib/util/stacktrace.js:6:17)\n    at DelayInjector.dealWithSimpleCallback (/home/user/git/nacd/lib/mode/plain2/delayinjector.js:144:25)\n    at Object.apply (/home/user/git/nacd/lib/mode/plain2/delayinjector.js:41:33)\n    at FSReqWrap.args [as oncomplete] (fs.js:140:20)"
+  },
+  {
+    "operation": [
+      "async function call"
+    ],
+    "object": "fs",
+    "function": "access",
+    "argument": "",
+    "stackTrace": "Error\n    at collectCurrentStackTrace (/home/user/git/nacd/lib/util/stacktrace.js:6:17)\n    at Object.apply (/home/user/git/nacd/lib/mode/plain2/instrumenter.js:166:29)\n    at Promise (/home/user/benchmarks/example/jprichardson_node-fs-extra/node_modules/universalify/index.js:13:12)\n    at new Promise (<anonymous>)\n    at Object.access (/home/user/benchmarks/example/jprichardson_node-fs-extra/node_modules/universalify/index.js:7:14)\n    at Object.pathExists (/home/user/benchmarks/example/jprichardson_node-fs-extra/lib/path-exists/index.js:6:13)\n    at Object.pathExists (/home/user/benchmarks/example/jprichardson_node-fs-extra/node_modules/universalify/index.js:23:13)\n    at Timeout.setInterval [as _onTimeout] (/home/user/benchmarks/example/jprichardson_node-fs-extra/lib/remove/__tests__/remove.test.js:74:13)\n    at ontimeout (timers.js:436:11)\n    at tryOnTimeout (timers.js:300:5)\n    at listOnTimeout (timers.js:263:5)\n    at Timer.processTimers (timers.js:223:10)",
+    "ID": 5,
+    "callback": true,
+    "delayed": false
+  },
+  {
+    "operation": "callback run",
+    "registeredBy": 5,
+    "delayed": false,
+    "stackTrace": "Error\n    at collectCurrentStackTrace (/home/user/git/nacd/lib/util/stacktrace.js:6:17)\n    at DelayInjector.dealWithSimpleCallback (/home/user/git/nacd/lib/mode/plain2/delayinjector.js:144:25)\n    at Object.apply (/home/user/git/nacd/lib/mode/plain2/delayinjector.js:41:33)\n    at FSReqWrap.args [as oncomplete] (fs.js:140:20)"
+  },
+  {
+    "operation": [
+      "async function call"
+    ],
+    "object": "fs",
+    "function": "lstat",
+    "argument": "",
+    "stackTrace": "Error\n    at collectCurrentStackTrace (/home/user/git/nacd/lib/util/stacktrace.js:6:17)\n    at Object.apply (/home/user/git/nacd/lib/mode/plain2/instrumenter.js:166:29)\n    at Object.lstat (/home/user/benchmarks/example/jprichardson_node-fs-extra/node_modules/graceful-fs/polyfills.js:298:16)\n    at rimraf_ (/home/user/benchmarks/example/jprichardson_node-fs-extra/lib/remove/rimraf.js:79:11)\n    at Object.rimraf (/home/user/benchmarks/example/jprichardson_node-fs-extra/lib/remove/rimraf.js:43:3)\n    at Object.rimraf [as remove] (/home/user/benchmarks/example/jprichardson_node-fs-extra/node_modules/universalify/index.js:5:67)\n    at Context.done (/home/user/benchmarks/example/jprichardson_node-fs-extra/lib/remove/__tests__/remove.test.js:34:25)\n    at callFnAsync (/home/user/benchmarks/example/jprichardson_node-fs-extra/node_modules/mocha/lib/runnable.js:400:21)\n    at Hook.Runnable.run (/home/user/benchmarks/example/jprichardson_node-fs-extra/node_modules/mocha/lib/runnable.js:342:7)\n    at next (/home/user/benchmarks/example/jprichardson_node-fs-extra/node_modules/mocha/lib/runner.js:317:10)\n    at Immediate._onImmediate (/home/user/benchmarks/example/jprichardson_node-fs-extra/node_modules/mocha/lib/runner.js:347:5)\n    at runCallback (timers.js:705:18)\n    at tryOnImmediate (timers.js:676:5)\n    at processImmediate (timers.js:658:5)",
+    "ID": 6,
+    "callback": true,
+    "delayed": false
+  },
+  {
+    "operation": "callback run",
+    "registeredBy": 6,
+    "delayed": false,
+    "stackTrace": "Error\n    at collectCurrentStackTrace (/home/user/git/nacd/lib/util/stacktrace.js:6:17)\n    at DelayInjector.dealWithSimpleCallback (/home/user/git/nacd/lib/mode/plain2/delayinjector.js:144:25)\n    at Object.apply (/home/user/git/nacd/lib/mode/plain2/delayinjector.js:41:33)\n    at FSReqWrap.oncomplete (fs.js:154:5)"
+  },
+  {
+    "operation": [
+      "async function call"
+    ],
+    "object": "fs",
+    "function": "rmdir",
+    "argument": "",
+    "stackTrace": "Error\n    at collectCurrentStackTrace (/home/user/git/nacd/lib/util/stacktrace.js:6:17)\n    at Object.apply (/home/user/git/nacd/lib/mode/plain2/instrumenter.js:166:29)\n    at rmdir (/home/user/benchmarks/example/jprichardson_node-fs-extra/lib/remove/rimraf.js:184:11)\n    at options.lstat (/home/user/benchmarks/example/jprichardson_node-fs-extra/lib/remove/rimraf.js:90:14)\n    at callback (/home/user/benchmarks/example/jprichardson_node-fs-extra/node_modules/graceful-fs/polyfills.js:295:20)\n    at DelayInjector.dealWithSimpleCallback (/home/user/git/nacd/lib/mode/plain2/delayinjector.js:156:28)\n    at Object.apply (/home/user/git/nacd/lib/mode/plain2/delayinjector.js:41:33)\n    at FSReqWrap.oncomplete (fs.js:154:5)",
+    "ID": 7,
+    "callback": true,
+    "delayed": false
+  },
+  {
+    "operation": "callback run",
+    "registeredBy": 7,
+    "delayed": false,
+    "stackTrace": "Error\n    at collectCurrentStackTrace (/home/user/git/nacd/lib/util/stacktrace.js:6:17)\n    at DelayInjector.dealWithSimpleCallback (/home/user/git/nacd/lib/mode/plain2/delayinjector.js:144:25)\n    at Object.apply (/home/user/git/nacd/lib/mode/plain2/delayinjector.js:41:33)\n    at FSReqWrap.args [as oncomplete] (fs.js:140:20)"
+  }
+]

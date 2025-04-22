@@ -1,0 +1,178 @@
+{
+    "asyncObjects": {
+        "objects": [
+            {
+                "id": 1,
+                "entry": {
+                    "e": "AsyncHook-init",
+                    "id": 1,
+                    "trigger": 0,
+                    "type": "main",
+                    "current": 0
+                },
+                "callback": {
+                    "name": "module.exports",
+                    "file": "/home/user/git/nacd/examples/fs/4.js",
+                    "line": 3,
+                    "args": "EMPTY",
+                    "logindex": 0,
+                    "instance": 1
+                }
+            },
+            {
+                "id": 4,
+                "entry": {
+                    "e": "AsyncHook-init",
+                    "id": 7,
+                    "trigger": 5,
+                    "type": "FSREQWRAP",
+                    "current": 5,
+                    "logindex": 6
+                },
+                "beforeindex": 7,
+                "callback": {
+                    "name": "[Anonymous]",
+                    "file": "/home/user/git/nacd/examples/fs/4.js",
+                    "line": 8,
+                    "args": "6a1423126160963ae4dee5b518e2a105ea76c203e2afdb8188a0fca341427741c22b970274485d51fd8bc31a3f3c125b5ef7a24534ec5b1badac830f205ebb45",
+                    "logindex": 8,
+                    "instance": 1
+                }
+            },
+            {
+                "id": 7,
+                "entry": {
+                    "e": "AsyncHook-init",
+                    "id": 10,
+                    "trigger": 9,
+                    "type": "FSREQWRAP",
+                    "current": 9,
+                    "logindex": 14
+                },
+                "beforeindex": 15,
+                "callback": {
+                    "name": "[Anonymous]",
+                    "file": "/home/user/git/nacd/examples/fs/4.js",
+                    "line": 8,
+                    "args": "53637b5f90c8f794b1f08f21b7453eebdc1c06641cc9e8d3ff3fd1c2cbc9ba602616a8b7040eccbcbe87e5ae544e5dd5c839579134c955dc5b9fc9bf9c96554c",
+                    "logindex": 16,
+                    "instance": 2
+                }
+            },
+            {
+                "id": 10,
+                "entry": {
+                    "e": "AsyncHook-init",
+                    "id": 13,
+                    "trigger": 12,
+                    "type": "FSREQWRAP",
+                    "current": 12,
+                    "logindex": 22
+                },
+                "beforeindex": 23,
+                "callback": {
+                    "name": "[Anonymous]",
+                    "file": "/home/user/git/nacd/examples/fs/4.js",
+                    "line": 8,
+                    "args": "4f86012ad2d54b00ee846253793e488286d5dc58b84cdfb5fe5d7323b347239de7095907017bde034cc9d05a6896e16cd4d8a41dcc487fa7bf0d60f2aa12b147",
+                    "logindex": 24,
+                    "instance": 3
+                }
+            },
+            {
+                "id": 13,
+                "entry": {
+                    "e": "AsyncHook-init",
+                    "id": 16,
+                    "trigger": 15,
+                    "type": "FSREQWRAP",
+                    "current": 15,
+                    "logindex": 30
+                },
+                "beforeindex": 31,
+                "callback": {
+                    "name": "[Anonymous]",
+                    "file": "/home/user/git/nacd/examples/fs/4.js",
+                    "line": 8,
+                    "args": "3d5aab064f1362b843b7460fff6ff83050c4607f804f4451ac2951e2e938f465fa9c486acceef878bff3e0715c2c06e28211ee515701aee207a7ab6489aad159",
+                    "logindex": 32,
+                    "instance": 4
+                }
+            },
+            {
+                "id": 17,
+                "entry": {
+                    "e": "AsyncHook-init",
+                    "id": 20,
+                    "trigger": 19,
+                    "type": "TickObject",
+                    "current": 19,
+                    "logindex": 40
+                },
+                "beforeindex": 41,
+                "callback": {
+                    "name": "[Anonymous]",
+                    "file": "/home/user/git/nacd/examples/fs/4.js",
+                    "line": 13,
+                    "args": "EMPTY",
+                    "logindex": 43,
+                    "instance": 1
+                }
+            },
+            {
+                "id": 18,
+                "entry": {
+                    "e": "AsyncHook-init",
+                    "id": 21,
+                    "trigger": 20,
+                    "type": "FSREQWRAP",
+                    "current": 20,
+                    "logindex": 42
+                },
+                "beforeindex": 47,
+                "callback": {
+                    "name": "[Anonymous]",
+                    "file": "/home/user/git/nacd/examples/fs/4.js",
+                    "line": 18,
+                    "args": "EMPTY",
+                    "logindex": 49,
+                    "instance": 1
+                }
+            }
+        ]
+    },
+    "relations": {
+        "hb": [
+            {
+                "a": 1,
+                "b": 4,
+                "type": ""
+            },
+            {
+                "a": 4,
+                "b": 7,
+                "type": ""
+            },
+            {
+                "a": 7,
+                "b": 10,
+                "type": ""
+            },
+            {
+                "a": 10,
+                "b": 13,
+                "type": ""
+            },
+            {
+                "a": 13,
+                "b": 17,
+                "type": ""
+            },
+            {
+                "a": 17,
+                "b": 18,
+                "type": ""
+            }
+        ]
+    }
+}

@@ -1,0 +1,56 @@
+{
+  "name": "nacd",
+  "version": "0.0.1",
+  "description": "",
+  "scripts": {
+    "test": "mocha test/*.test.js test/**/*.test.js",
+    "test:e2e": "mocha e2e-test",
+    "cov": "nyc mocha",
+    "lint": "eslint .",
+    "cloc": "cloc lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nacd/nacd.git"
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "author": "",
+  "license": "ISC",
+  "bin": {
+    "nacd": "./lib/cli/cli.js"
+  },
+  "bugs": {
+    "url": "https://github.com/nacd/nacd/issues"
+  },
+  "homepage": "https://github.com/nacd/nacd#readme",
+  "dependencies": {
+    "compare-versions": "^3.5.1",
+    "foreground-child": "^2.0.0",
+    "fs-extra": "8.1.0",
+    "glob": "^7.1.6",
+    "graphviz": "0.0.9",
+    "lodash": "^4.17.15",
+    "lowdb": "^1.0.0",
+    "random": "^2.1.1",
+    "spawn-wrap": "^1.4.3",
+    "stack-utils": "^2.0.2",
+    "stacktracey": "^1.2.122",
+    "yargs": "^15.1.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^6.8.0",
+    "get-urls": "^9.2.0",
+    "github-api": "^3.3.0",
+    "mocha": "^6.2.2",
+    "node-expat": "^2.3.18",
+    "nyc": "^14.1.1",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.5",
+    "request-promise-native": "^1.0.8",
+    "shelljs": "^0.8.3",
+    "unzip2": "^0.2.5"
+  }
+}

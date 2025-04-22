@@ -1,0 +1,91 @@
+[
+    {
+        "moduleName": "crypto",
+        "properties": [
+            {
+                "name": "pbkdf2",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": false
+            },
+            {
+                "name": "generateKeyPair",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": false
+            },
+            {
+                "name": "randomBytes",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": false
+            },
+            {
+                "name": "randomFill",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": false,
+                "optionalProperty": true
+            },
+            {
+                "name": "scrypt",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": false
+            },
+            {
+                "name": "createCipher",
+                "type": [
+                    "ro"
+                ],
+                "postponeRegistration": false,
+                "returnedObject": "stream.Transform"
+            },
+            {
+                "name": "createCipheriv",
+                "type": [
+                    "ro"
+                ],
+                "postponeRegistration": false,
+                "returnedObject": "stream.Transform"
+            },
+            {
+                "name": "createDecipher",
+                "type": [
+                    "ro"
+                ],
+                "postponeRegistration": false,
+                "returnedObject": "stream.Transform"
+            },
+            {
+                "name": "createDecipheriv",
+                "type": [
+                    "ro"
+                ],
+                "postponeRegistration": false,
+                "returnedObject": "stream.Transform"
+            },
+            {
+                "name": "createHash",
+                "type": [
+                    "ro"
+                ],
+                "postponeRegistration": false,
+                "returnedObject": "stream.Transform"
+            },
+            {
+                "name": "createHmac",
+                "type": [
+                    "ro"
+                ],
+                "postponeRegistration": false,
+                "returnedObject": "stream.Transform"
+            }
+        ]
+    }
+]

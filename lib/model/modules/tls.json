@@ -1,0 +1,67 @@
+[
+    {
+        "moduleName": "tls",
+        "properties": [
+            {
+                "name": "connect",
+                "type": [
+                    "cb",
+                    "ro"
+                ],
+                "postponeRegistration": false,
+                "returnedObject": "tls.TLSSocket",
+                "connectedCallbacks": true
+            },
+            {
+                "name": "createServer",
+                "type": [
+                    "cb",
+                    "ro",
+                    "co"
+                ],
+                "postponeRegistration": false,
+                "returnedObject": "tls.Server",
+                "callbackObjects": [
+                    "tls.TLSSocket"
+                ],
+                "connectedCallbacks": true
+            },
+            {
+                "name": "Server",
+                "type": [
+                    "oc",
+                    "ro",
+                    "co",
+                    "cb"
+                ],
+                "postponeRegistration": false,
+                "returnedObject": "tls.Server",
+                "callbackObjects": [
+                    "tls.TLSSocket"
+                ],
+                "connectedCallbacks": true
+            },
+            {
+                "name": "TLSSocket",
+                "type": [
+                    "oc",
+                    "ro"
+                ],
+                "postponeRegistration": false,
+                "returnedObject": "tls.TLSSocket"
+            }            
+        ]
+    },
+    {
+        "moduleName": "tls.TLSSocket",
+        "is": [
+            "net.Socket"
+        ]
+    },
+    {
+        "moduleName": "tls.Server",
+        "is": [
+            "net.Server"
+        ]
+    }
+]

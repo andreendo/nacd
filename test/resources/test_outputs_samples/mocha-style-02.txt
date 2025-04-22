@@ -1,0 +1,1197 @@
+
+> license-checker@25.0.1 pretest /benchmarks/nacd/davglass_license-checker
+> eslint --fix .
+
+
+> license-checker@25.0.1 test /benchmarks/nacd/davglass_license-checker
+> jenkins-mocha ./tests/*.js
+
+
+[0m[0m
+[0m  bin/license-checker[0m
+  [32m  ✓[0m[90m should exit 0[0m[31m (920ms)[0m
+
+[0m  bin/license-checker[0m
+  [32m  ✓[0m[90m should exit 1 if it finds a single license type (MIT) license due to --failOn MIT[0m[31m (870ms)[0m
+  [32m  ✓[0m[90m should exit 1 if it finds forbidden licenses license due to --failOn MIT;ISC[0m[31m (896ms)[0m
+  [32m  ✓[0m[90m should give warning about commas if --failOn MIT,ISC is provided[0m[31m (866ms)[0m
+
+[0m  license files detector[0m
+  [32m  ✓[0m[90m should export a function[0m
+  [32m  ✓[0m[90m no files[0m
+  [32m  ✓[0m[90m no license files[0m
+  [32m  ✓[0m[90m one license candidate[0m
+  [32m  ✓[0m[90m multiple license candidates detected in the right order[0m
+  [32m  ✓[0m[90m extensions have no effect[0m
+  [32m  ✓[0m[90m lower/upper case has no effect[0m
+  [32m  ✓[0m[90m LICENSE-MIT gets matched[0m
+  [32m  ✓[0m[90m only the first LICENSE-* file gets matched[0m
+
+[0m  license parser[0m
+  [32m  ✓[0m[90m should export a function[0m
+  [32m  ✓[0m[90m undefined check[0m
+  [32m  ✓[0m[90m MIT check[0m
+  [32m  ✓[0m[90m MIT word check[0m
+  [32m  ✓[0m[90m Non-MIT word check[0m
+  [32m  ✓[0m[90m GPL word check[0m
+  [32m  ✓[0m[90m Non-GPL word check[0m
+  [32m  ✓[0m[90m LGPL word check[0m
+  [32m  ✓[0m[90m BSD check[0m
+  [32m  ✓[0m[90m BSD-Source-Code check[0m
+  [32m  ✓[0m[90m BSD word check[0m
+  [32m  ✓[0m[90m Non-BSD word check[0m
+  [32m  ✓[0m[90m Apache word check[0m
+  [32m  ✓[0m[90m Non-Apache word check[0m
+  [32m  ✓[0m[90m WTF check[0m
+  [32m  ✓[0m[90m WTF word check[0m
+  [32m  ✓[0m[90m Non-WTF word check[0m
+  [32m  ✓[0m[90m ISC check[0m
+  [32m  ✓[0m[90m Non-ISC word check[0m
+  [32m  ✓[0m[90m ISC word check[0m
+  [32m  ✓[0m[90m CC0-1.0 word check[0m
+  [32m  ✓[0m[90m Public Domain check[0m
+  [32m  ✓[0m[90m License at URL check[0m
+  [32m  ✓[0m[90m License at file check[0m
+  [32m  ✓[0m[90m Check for null[0m
+[0m    SPDX licenses[0m
+    [32m  ✓[0m[90m should parse a basic SPDX license[0m
+    [32m  ✓[0m[90m should parse more complicated license expressions[0m
+
+[0m  bin/license-checker[0m
+  [32m  ✓[0m[90m should restrict the output to the provided packages[0m[31m (832ms)[0m
+  [32m  ✓[0m[90m should exclude provided excludedPackages from the output[0m[31m (860ms)[0m
+  [32m  ✓[0m[90m should exclude private packages from the output[0m[31m (221ms)[0m
+
+[0m  main tests[0m
+  [32m  ✓[0m[90m should load init[0m
+  [32m  ✓[0m[90m should load print[0m
+[0m    should parse local with unknown[0m
+    [32m  ✓[0m[90m and give us results[0m
+    [32m  ✓[0m[90m and convert to CSV[0m
+    [32m  ✓[0m[90m and convert to MarkDown[0m
+[0m    should parse local with unknown and custom format[0m
+    [32m  ✓[0m[90m and give us results[0m
+    [32m  ✓[0m[90m and convert to CSV[0m
+    [32m  ✓[0m[90m and convert to CSV with component prefix[0m
+    [32m  ✓[0m[90m and convert to MarkDown[0m
+[0m    should parse local without unknown[0m
+    [32m  ✓[0m[90m should give us results[0m
+[0m    should parse local with unknown and excludes[0m
+    [32m  ✓[0m[90m should exclude MIT and ISC licensed modules from results[0m
+[0m    should parse local with excludes containing commas[0m
+    [32m  ✓[0m[90m should exclude a license with a comma from the list[0m
+[0m    should parse local with BSD excludes[0m
+    [32m  ✓[0m[90m should exclude BSD-3-Clause[0m
+[0m    should parse local with Public Domain excludes[0m
+    [32m  ✓[0m[90m should exclude Public Domain[0m
+[0m    should not exclude Custom if not specified in excludes[0m
+    [32m  ✓[0m[90m should exclude Public Domain[0m
+[0m    should exit on given list of onlyAllow licenses[0m
+Package "aws-sign2@0.7.0" is licensed under "Apache-2.0" which is not permitted by the --onlyAllow flag. Exiting.
+Package "aws-sign@0.3.0" is licensed under "Apache*" which is not permitted by the --onlyAllow flag. Exiting.
+Package "bcrypt-pbkdf@1.0.2" is licensed under "BSD-3-Clause" which is not permitted by the --onlyAllow flag. Exiting.
+Package "boom@0.4.2" is licensed under "BSD" which is not permitted by the --onlyAllow flag. Exiting.
+Package "caseless@0.12.0" is licensed under "Apache-2.0" which is not permitted by the --onlyAllow flag. Exiting.
+Package "colors@0.5.1" is licensed under "Custom: http://i.imgur.com/goJdO.png" which is not permitted by the --onlyAllow flag. Exiting.
+Package "cookie-jar@0.3.0" is licensed under "Apache*" which is not permitted by the --onlyAllow flag. Exiting.
+Package "cryptiles@0.2.2" is licensed under "BSD" which is not permitted by the --onlyAllow flag. Exiting.
+Package "detectionizr@0.1.5" is licensed under "WTFPL" which is not permitted by the --onlyAllow flag. Exiting.
+Package "diff@3.3.1" is licensed under "BSD-3-Clause" which is not permitted by the --onlyAllow flag. Exiting.
+Package "doctrine@2.1.0" is licensed under "Apache-2.0" which is not permitted by the --onlyAllow flag. Exiting.
+Package "duplexer2@0.0.2" is licensed under "BSD*" which is not permitted by the --onlyAllow flag. Exiting.
+Package "escodegen@1.8.1" is licensed under "BSD-2-Clause" which is not permitted by the --onlyAllow flag. Exiting.
+Package "eslint-scope@3.7.3" is licensed under "BSD-2-Clause" which is not permitted by the --onlyAllow flag. Exiting.
+Package "eslint-visitor-keys@1.1.0" is licensed under "Apache-2.0" which is not permitted by the --onlyAllow flag. Exiting.
+Package "espree@3.5.4" is licensed under "BSD-2-Clause" which is not permitted by the --onlyAllow flag. Exiting.
+Package "esprima@2.7.3" is licensed under "BSD-2-Clause" which is not permitted by the --onlyAllow flag. Exiting.
+Package "esprima@4.0.1" is licensed under "BSD-2-Clause" which is not permitted by the --onlyAllow flag. Exiting.
+Package "esquery@1.0.1" is licensed under "BSD-3-Clause" which is not permitted by the --onlyAllow flag. Exiting.
+Package "esrecurse@4.2.1" is licensed under "BSD-2-Clause" which is not permitted by the --onlyAllow flag. Exiting.
+Package "estraverse@1.9.3" is licensed under "BSD" which is not permitted by the --onlyAllow flag. Exiting.
+Package "estraverse@4.3.0" is licensed under "BSD-2-Clause" which is not permitted by the --onlyAllow flag. Exiting.
+Package "esutils@2.0.2" is licensed under "BSD" which is not permitted by the --onlyAllow flag. Exiting.
+Package "esutils@2.0.3" is licensed under "BSD-2-Clause" which is not permitted by the --onlyAllow flag. Exiting.
+Package "forever-agent@0.5.2" is licensed under "Apache*" which is not permitted by the --onlyAllow flag. Exiting.
+Package "forever-agent@0.6.1" is licensed under "Apache-2.0" which is not permitted by the --onlyAllow flag. Exiting.
+Package "format-package-json@0.2.0" is licensed under "BSD*" which is not permitted by the --onlyAllow flag. Exiting.
+Package "hawk@0.13.1" is licensed under "BSD" which is not permitted by the --onlyAllow flag. Exiting.
+Package "hoek@0.8.5" is licensed under "BSD" which is not permitted by the --onlyAllow flag. Exiting.
+Package "hoek@0.9.1" is licensed under "BSD" which is not permitted by the --onlyAllow flag. Exiting.
+Package "istanbul-lib-coverage@1.2.0" is licensed under "BSD-3-Clause" which is not permitted by the --onlyAllow flag. Exiting.
+Package "istanbul-lib-hook@1.1.0" is licensed under "BSD-3-Clause" which is not permitted by the --onlyAllow flag. Exiting.
+Package "istanbul-lib-instrument@1.10.1" is licensed under "BSD-3-Clause" which is not permitted by the --onlyAllow flag. Exiting.
+Package "istanbul-lib-report@1.1.3" is licensed under "BSD-3-Clause" which is not permitted by the --onlyAllow flag. Exiting.
+Package "istanbul-lib-source-maps@1.2.3" is licensed under "BSD-3-Clause" which is not permitted by the --onlyAllow flag. Exiting.
+Package "istanbul-reports@1.4.0" is licensed under "BSD-3-Clause" which is not permitted by the --onlyAllow flag. Exiting.
+Package "istanbul@0.4.5" is licensed under "BSD-3-Clause" which is not permitted by the --onlyAllow flag. Exiting.
+Package "json-schema@0.2.3" is licensed under "AFLv2.1,BSD" which is not permitted by the --onlyAllow flag. Exiting.
+Package "json-stringify-safe@4.0.0" is licensed under "BSD*" which is not permitted by the --onlyAllow flag. Exiting.
+Package "license-checker@25.0.1" is licensed under "BSD-3-Clause" which is not permitted by the --onlyAllow flag. Exiting.
+Package "normalize-package-data@2.4.0" is licensed under "BSD-2-Clause" which is not permitted by the --onlyAllow flag. Exiting.
+Package "normalize-package-data@2.5.0" is licensed under "BSD-2-Clause" which is not permitted by the --onlyAllow flag. Exiting.
+Package "oauth-sign@0.3.0" is licensed under "Apache*" which is not permitted by the --onlyAllow flag. Exiting.
+Package "oauth-sign@0.9.0" is licensed under "Apache-2.0" which is not permitted by the --onlyAllow flag. Exiting.
+Package "qs@6.5.2" is licensed under "BSD-3-Clause" which is not permitted by the --onlyAllow flag. Exiting.
+Package "request@2.22.0" is licensed under "Apache*" which is not permitted by the --onlyAllow flag. Exiting.
+Package "request@2.88.0" is licensed under "Apache-2.0" which is not permitted by the --onlyAllow flag. Exiting.
+Package "rx-lite-aggregates@4.0.8" is licensed under "Apache License, Version 2.0" which is not permitted by the --onlyAllow flag. Exiting.
+Package "rx-lite@4.0.8" is licensed under "Apache License, Version 2.0" which is not permitted by the --onlyAllow flag. Exiting.
+Package "shelljs@0.7.8" is licensed under "BSD-3-Clause" which is not permitted by the --onlyAllow flag. Exiting.
+Package "sntp@0.2.4" is licensed under "BSD" which is not permitted by the --onlyAllow flag. Exiting.
+Package "source-map@0.2.0" is licensed under "BSD" which is not permitted by the --onlyAllow flag. Exiting.
+Package "source-map@0.4.4" is licensed under "BSD-3-Clause" which is not permitted by the --onlyAllow flag. Exiting.
+Package "source-map@0.5.7" is licensed under "BSD-3-Clause" which is not permitted by the --onlyAllow flag. Exiting.
+Package "source-map@0.6.1" is licensed under "BSD-3-Clause" which is not permitted by the --onlyAllow flag. Exiting.
+Package "spdx-correct@3.0.0" is licensed under "Apache-2.0" which is not permitted by the --onlyAllow flag. Exiting.
+Package "spdx-correct@3.1.0" is licensed under "Apache-2.0" which is not permitted by the --onlyAllow flag. Exiting.
+Package "spdx-exceptions@2.1.0" is licensed under "CC-BY-3.0" which is not permitted by the --onlyAllow flag. Exiting.
+Package "spdx-exceptions@2.2.0" is licensed under "CC-BY-3.0" which is not permitted by the --onlyAllow flag. Exiting.
+Package "spdx-license-ids@3.0.0" is licensed under "CC0-1.0" which is not permitted by the --onlyAllow flag. Exiting.
+Package "spdx-license-ids@3.0.5" is licensed under "CC0-1.0" which is not permitted by the --onlyAllow flag. Exiting.
+Package "sprintf-js@1.0.3" is licensed under "BSD-3-Clause" which is not permitted by the --onlyAllow flag. Exiting.
+Package "table@4.0.2" is licensed under "BSD-3-Clause" which is not permitted by the --onlyAllow flag. Exiting.
+Package "tough-cookie@2.4.3" is licensed under "BSD-3-Clause" which is not permitted by the --onlyAllow flag. Exiting.
+Package "tunnel-agent@0.3.0" is licensed under "Apache*" which is not permitted by the --onlyAllow flag. Exiting.
+Package "tunnel-agent@0.6.0" is licensed under "Apache-2.0" which is not permitted by the --onlyAllow flag. Exiting.
+Package "tweetnacl@0.14.5" is licensed under "Unlicense" which is not permitted by the --onlyAllow flag. Exiting.
+Package "uglify-js@2.8.29" is licensed under "BSD-2-Clause" which is not permitted by the --onlyAllow flag. Exiting.
+Package "uglify-js@3.7.5" is licensed under "BSD-2-Clause" which is not permitted by the --onlyAllow flag. Exiting.
+Package "uri-js@4.2.2" is licensed under "BSD-2-Clause" which is not permitted by the --onlyAllow flag. Exiting.
+Package "validate-npm-package-license@3.0.3" is licensed under "Apache-2.0" which is not permitted by the --onlyAllow flag. Exiting.
+Package "validate-npm-package-license@3.0.4" is licensed under "Apache-2.0" which is not permitted by the --onlyAllow flag. Exiting.
+Package "weak-map@1.0.5" is licensed under "Custom: https://github.com/substack/node-browserify" which is not permitted by the --onlyAllow flag. Exiting.
+    [32m  ✓[0m[90m should exit on non MIT and ISC licensed modules from results[0m
+[0m    should exit on single onlyAllow license[0m
+Package "acorn-jsx@3.0.1" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "acorn@3.3.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "acorn@5.7.3" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "ajv-keywords@2.1.1" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "ajv@5.5.2" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "ajv@6.10.2" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "align-text@0.1.4" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "amdefine@1.0.1" is licensed under "BSD-3-Clause OR MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "ansi-escapes@3.2.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "ansi-regex@2.1.1" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "ansi-regex@3.0.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "ansi-styles@2.2.1" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "ansi-styles@3.2.1" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "append-transform@0.4.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "application-config-path@0.1.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "application-config@0.1.2" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "archy@1.0.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "argparse@1.0.10" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "arr-diff@4.0.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "arr-flatten@1.1.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "arr-union@3.1.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "array-find-index@1.0.2" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "array-unique@0.3.2" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "arrify@1.0.1" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "asap@2.0.6" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "asn1@0.1.11" is licensed under "MIT*" which is not permitted by the --onlyAllow flag. Exiting.
+Package "asn1@0.2.4" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "assert-plus@0.1.5" is licensed under "MIT*" which is not permitted by the --onlyAllow flag. Exiting.
+Package "assert-plus@1.0.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "assign-symbols@1.0.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "async@0.2.10" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "async@1.5.2" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "asynckit@0.4.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "atob@2.1.1" is licensed under "(MIT OR Apache-2.0)" which is not permitted by the --onlyAllow flag. Exiting.
+Package "aws-sign2@0.7.0" is licensed under "Apache-2.0" which is not permitted by the --onlyAllow flag. Exiting.
+Package "aws-sign@0.3.0" is licensed under "Apache*" which is not permitted by the --onlyAllow flag. Exiting.
+Package "aws4@1.9.1" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "babel-code-frame@6.26.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "babel-generator@6.26.1" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "babel-messages@6.23.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "babel-runtime@6.26.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "babel-template@6.26.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "babel-traverse@6.26.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "babel-types@6.26.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "babylon@6.18.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "balanced-match@1.0.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "base@0.11.2" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "bcrypt-pbkdf@1.0.2" is licensed under "BSD-3-Clause" which is not permitted by the --onlyAllow flag. Exiting.
+Package "bl@0.9.5" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "bluebird@1.0.3" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "boom@0.4.2" is licensed under "BSD" which is not permitted by the --onlyAllow flag. Exiting.
+Package "brace-expansion@1.1.11" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "braces@2.3.2" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "buffer-from@1.1.1" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "builtin-modules@1.1.1" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "cache-base@1.0.1" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "caching-transform@1.0.1" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "caller-path@0.1.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "callsites@0.2.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "camden.jshint@2.2.20" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "camelcase@1.2.1" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "camelcase@4.1.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "caseless@0.12.0" is licensed under "Apache-2.0" which is not permitted by the --onlyAllow flag. Exiting.
+Package "center-align@0.1.3" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "chalk@1.1.3" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "chalk@2.4.2" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "chardet@0.4.2" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "circular-json@0.3.3" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "class-utils@0.3.6" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "cli-cursor@2.1.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "co@4.6.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "code-point-at@1.1.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "collection-visit@1.0.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "color-convert@1.9.3" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "color-name@1.1.3" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "colors@0.5.1" is licensed under "Custom: http://i.imgur.com/goJdO.png" which is not permitted by the --onlyAllow flag. Exiting.
+Package "combined-stream@0.0.7" is licensed under "MIT*" which is not permitted by the --onlyAllow flag. Exiting.
+Package "combined-stream@1.0.8" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "commander@2.11.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "commander@2.20.3" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "commander@2.8.1" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "commondir@1.0.1" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "component-emitter@1.2.1" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "concat-map@0.0.1" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "concat-stream@1.6.2" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "convert-source-map@1.5.1" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "cookie-jar@0.3.0" is licensed under "Apache*" which is not permitted by the --onlyAllow flag. Exiting.
+Package "copy-descriptor@0.1.1" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "core-js@2.5.6" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "core-util-is@1.0.2" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "cross-spawn@4.0.2" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "cross-spawn@5.1.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "cryptiles@0.2.2" is licensed under "BSD" which is not permitted by the --onlyAllow flag. Exiting.
+Package "ctype@0.5.3" is licensed under "MIT*" which is not permitted by the --onlyAllow flag. Exiting.
+Package "dashdash@1.14.1" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "debug-log@1.0.1" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "debug@2.6.9" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "debug@3.1.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "debug@3.2.6" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "debuglog@1.0.1" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "decamelize@1.2.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "decode-uri-component@0.2.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "deep-is@0.1.3" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "default-require-extensions@1.0.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "define-property@0.2.5" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "define-property@1.0.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "define-property@2.0.2" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "delayed-stream@0.0.5" is licensed under "MIT*" which is not permitted by the --onlyAllow flag. Exiting.
+Package "delayed-stream@1.0.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "detect-indent@0.1.4" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "detect-indent@4.0.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "detectionizr@0.1.5" is licensed under "WTFPL" which is not permitted by the --onlyAllow flag. Exiting.
+Package "diff@3.3.1" is licensed under "BSD-3-Clause" which is not permitted by the --onlyAllow flag. Exiting.
+Package "doctrine@2.1.0" is licensed under "Apache-2.0" which is not permitted by the --onlyAllow flag. Exiting.
+Package "duplexer2@0.0.2" is licensed under "BSD*" which is not permitted by the --onlyAllow flag. Exiting.
+Package "ecc-jsbn@0.1.2" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "error-ex@1.3.1" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "escape-string-regexp@1.0.5" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "escodegen@1.8.1" is licensed under "BSD-2-Clause" which is not permitted by the --onlyAllow flag. Exiting.
+Package "eslint-scope@3.7.3" is licensed under "BSD-2-Clause" which is not permitted by the --onlyAllow flag. Exiting.
+Package "eslint-visitor-keys@1.1.0" is licensed under "Apache-2.0" which is not permitted by the --onlyAllow flag. Exiting.
+Package "eslint@4.19.1" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "espree@3.5.4" is licensed under "BSD-2-Clause" which is not permitted by the --onlyAllow flag. Exiting.
+Package "esprima@2.7.3" is licensed under "BSD-2-Clause" which is not permitted by the --onlyAllow flag. Exiting.
+Package "esprima@4.0.1" is licensed under "BSD-2-Clause" which is not permitted by the --onlyAllow flag. Exiting.
+Package "esquery@1.0.1" is licensed under "BSD-3-Clause" which is not permitted by the --onlyAllow flag. Exiting.
+Package "esrecurse@4.2.1" is licensed under "BSD-2-Clause" which is not permitted by the --onlyAllow flag. Exiting.
+Package "estraverse@1.9.3" is licensed under "BSD" which is not permitted by the --onlyAllow flag. Exiting.
+Package "estraverse@4.3.0" is licensed under "BSD-2-Clause" which is not permitted by the --onlyAllow flag. Exiting.
+Package "esutils@2.0.2" is licensed under "BSD" which is not permitted by the --onlyAllow flag. Exiting.
+Package "esutils@2.0.3" is licensed under "BSD-2-Clause" which is not permitted by the --onlyAllow flag. Exiting.
+Package "execa@0.7.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "expand-brackets@2.1.4" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "extend-shallow@2.0.1" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "extend-shallow@3.0.2" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "extend@3.0.2" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "external-editor@2.2.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "extglob@2.0.4" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "extsprintf@1.3.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "fast-deep-equal@1.1.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "fast-deep-equal@2.0.1" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "fast-json-stable-stringify@2.1.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "fast-levenshtein@2.0.6" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "figures@2.0.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "file-entry-cache@2.0.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "fill-range@4.0.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "find-cache-dir@0.1.1" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "find-up@1.1.2" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "find-up@2.1.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "flat-cache@1.3.4" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "for-in@1.0.2" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "foreach@2.0.5" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "forever-agent@0.5.2" is licensed under "Apache*" which is not permitted by the --onlyAllow flag. Exiting.
+Package "forever-agent@0.6.1" is licensed under "Apache-2.0" which is not permitted by the --onlyAllow flag. Exiting.
+Package "form-data@0.0.8" is licensed under "MIT*" which is not permitted by the --onlyAllow flag. Exiting.
+Package "form-data@2.3.3" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "format-package-json@0.2.0" is licensed under "BSD*" which is not permitted by the --onlyAllow flag. Exiting.
+Package "fragment-cache@0.2.1" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "functional-red-black-tree@1.0.1" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "get-stream@3.0.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "get-value@2.0.6" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "getpass@0.1.7" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "ghauth@3.0.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "git-contributors@0.2.3" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "github-changes@1.1.2" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "github-commit-stream@0.1.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "github@0.1.16" is licensed under "The MIT License" which is not permitted by the --onlyAllow flag. Exiting.
+Package "globals@11.12.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "globals@9.18.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "graceful-readlink@1.0.1" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "growl@1.10.3" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "handlebars@4.0.11" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "handlebars@4.7.2" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "har-validator@5.1.3" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "has-ansi@2.0.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "has-flag@1.0.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "has-flag@2.0.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "has-flag@3.0.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "has-value@0.3.1" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "has-value@1.0.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "has-values@0.1.4" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "has-values@1.0.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "hawk@0.13.1" is licensed under "BSD" which is not permitted by the --onlyAllow flag. Exiting.
+Package "he@1.1.1" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "hoek@0.8.5" is licensed under "BSD" which is not permitted by the --onlyAllow flag. Exiting.
+Package "hoek@0.9.1" is licensed under "BSD" which is not permitted by the --onlyAllow flag. Exiting.
+Package "http-signature@0.10.1" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "http-signature@1.2.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "hyperquest@1.2.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "iconv-lite@0.4.24" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "ignore@3.3.10" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "imurmurhash@0.1.4" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "indexof@0.0.1" is licensed under "MIT*" which is not permitted by the --onlyAllow flag. Exiting.
+Package "inquirer@3.3.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "interpret@1.2.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "invariant@2.2.4" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "invert-kv@1.0.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "is-accessor-descriptor@0.1.6" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "is-accessor-descriptor@1.0.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "is-arrayish@0.2.1" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "is-buffer@1.1.6" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "is-builtin-module@1.0.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "is-data-descriptor@0.1.4" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "is-data-descriptor@1.0.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "is-descriptor@0.1.6" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "is-descriptor@1.0.2" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "is-extendable@0.1.1" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "is-extendable@1.0.1" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "is-finite@1.0.2" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "is-fullwidth-code-point@1.0.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "is-fullwidth-code-point@2.0.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "is-number@3.0.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "is-number@4.0.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "is-object@0.1.2" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "is-odd@2.0.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "is-plain-object@2.0.4" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "is-promise@2.1.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "is-stream@1.1.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "is-typedarray@1.0.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "is-utf8@0.2.1" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "is-windows@1.0.2" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "is@0.2.7" is licensed under "MIT*" which is not permitted by the --onlyAllow flag. Exiting.
+Package "isarray@0.0.1" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "isarray@1.0.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "isobject@2.1.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "isobject@3.0.1" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "isstream@0.1.2" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "istanbul-lib-coverage@1.2.0" is licensed under "BSD-3-Clause" which is not permitted by the --onlyAllow flag. Exiting.
+Package "istanbul-lib-hook@1.1.0" is licensed under "BSD-3-Clause" which is not permitted by the --onlyAllow flag. Exiting.
+Package "istanbul-lib-instrument@1.10.1" is licensed under "BSD-3-Clause" which is not permitted by the --onlyAllow flag. Exiting.
+Package "istanbul-lib-report@1.1.3" is licensed under "BSD-3-Clause" which is not permitted by the --onlyAllow flag. Exiting.
+Package "istanbul-lib-source-maps@1.2.3" is licensed under "BSD-3-Clause" which is not permitted by the --onlyAllow flag. Exiting.
+Package "istanbul-reports@1.4.0" is licensed under "BSD-3-Clause" which is not permitted by the --onlyAllow flag. Exiting.
+Package "istanbul@0.4.5" is licensed under "BSD-3-Clause" which is not permitted by the --onlyAllow flag. Exiting.
+Package "jenkins-mocha@6.0.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "js-tokens@3.0.2" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "js-yaml@3.13.1" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "jsbn@0.1.1" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "jsesc@1.3.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "json-parse-better-errors@1.0.2" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "json-schema-traverse@0.3.1" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "json-schema-traverse@0.4.1" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "json-schema@0.2.3" is licensed under "AFLv2.1,BSD" which is not permitted by the --onlyAllow flag. Exiting.
+Package "json-stable-stringify-without-jsonify@1.0.1" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "json-stringify-safe@4.0.0" is licensed under "BSD*" which is not permitted by the --onlyAllow flag. Exiting.
+Package "jsprim@1.4.1" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "kind-of@3.2.2" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "kind-of@4.0.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "kind-of@5.1.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "kind-of@6.0.2" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "lazy-cache@1.0.4" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "lcid@1.0.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "levn@0.3.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "license-checker@25.0.1" is licensed under "BSD-3-Clause" which is not permitted by the --onlyAllow flag. Exiting.
+Package "load-json-file@1.1.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "locale@0.1.0" is licensed under "MIT*" which is not permitted by the --onlyAllow flag. Exiting.
+Package "locate-path@2.0.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "lodash@2.4.1" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "lodash@3.9.3" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "lodash@4.17.10" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "lodash@4.17.15" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "longest@1.0.1" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "loose-envify@1.3.1" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "map-cache@0.2.2" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "map-visit@1.0.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "md5-hex@1.3.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "md5-o-matic@0.1.1" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "mem@1.1.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "merge-source-map@1.1.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "micromatch@3.1.10" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "mime-db@1.43.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "mime-types@2.1.26" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "mime@1.2.11" is licensed under "MIT*" which is not permitted by the --onlyAllow flag. Exiting.
+Package "mimic-fn@1.2.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "minimist@0.0.8" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "mixin-deep@1.3.1" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "mkdirp@0.5.1" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "mocha@4.1.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "moment-timezone@0.5.5" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "moment@2.24.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "ms@2.0.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "ms@2.1.2" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "nanomatch@1.2.9" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "natural-compare@1.4.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "neo-async@2.6.1" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "node-uuid@1.4.8" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "nomnom@1.6.2" is licensed under "MIT*" which is not permitted by the --onlyAllow flag. Exiting.
+Package "normalize-package-data@2.4.0" is licensed under "BSD-2-Clause" which is not permitted by the --onlyAllow flag. Exiting.
+Package "normalize-package-data@2.5.0" is licensed under "BSD-2-Clause" which is not permitted by the --onlyAllow flag. Exiting.
+Package "npm-path@2.0.4" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "npm-run-path@2.0.2" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "npm-which@3.0.1" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "number-is-nan@1.0.1" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "oauth-sign@0.3.0" is licensed under "Apache*" which is not permitted by the --onlyAllow flag. Exiting.
+Package "oauth-sign@0.9.0" is licensed under "Apache-2.0" which is not permitted by the --onlyAllow flag. Exiting.
+Package "object-assign@4.1.1" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "object-copy@0.1.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "object-keys@0.2.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "object-visit@1.0.1" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "object.pick@1.3.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "onetime@2.0.1" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "optimist@0.6.1" is licensed under "MIT*" which is not permitted by the --onlyAllow flag. Exiting.
+Package "optionator@0.8.3" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "os-homedir@1.0.2" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "os-locale@2.1.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "os-tmpdir@1.0.2" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "p-finally@1.0.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "p-limit@1.2.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "p-locate@2.0.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "p-try@1.0.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "parse-json@2.2.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "parse-link-header@0.1.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "pascalcase@0.1.1" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "path-exists@2.1.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "path-exists@3.0.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "path-is-absolute@1.0.1" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "path-is-inside@1.0.2" is licensed under "(WTFPL OR MIT)" which is not permitted by the --onlyAllow flag. Exiting.
+Package "path-key@2.0.1" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "path-parse@1.0.5" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "path-parse@1.0.6" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "path-type@1.1.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "performance-now@2.1.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "pify@2.3.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "pinkie-promise@2.0.1" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "pinkie@2.0.4" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "pkg-dir@1.0.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "pluralize@7.0.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "pop-iterate@1.0.1" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "posix-character-classes@0.1.1" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "prelude-ls@1.1.2" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "process-nextick-args@2.0.1" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "progress@2.0.3" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "psl@1.7.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "punycode@1.4.1" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "punycode@2.1.1" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "q@2.0.3" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "qs@0.6.6" is licensed under "MIT*" which is not permitted by the --onlyAllow flag. Exiting.
+Package "qs@6.5.2" is licensed under "BSD-3-Clause" which is not permitted by the --onlyAllow flag. Exiting.
+Package "queue@4.5.1" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "read-pkg-up@1.0.1" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "read-pkg@1.1.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "readable-stream@1.0.34" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "readable-stream@1.1.14" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "readable-stream@2.3.7" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "rechoir@0.6.2" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "regenerator-runtime@0.11.1" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "regex-not@1.0.2" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "regexpp@1.1.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "repeat-element@1.1.2" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "repeat-string@1.6.1" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "repeating@2.0.1" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "request@2.22.0" is licensed under "Apache*" which is not permitted by the --onlyAllow flag. Exiting.
+Package "request@2.88.0" is licensed under "Apache-2.0" which is not permitted by the --onlyAllow flag. Exiting.
+Package "require-directory@2.1.1" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "require-uncached@1.0.3" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "resolve-from@1.0.1" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "resolve-from@2.0.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "resolve-url@0.2.1" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "resolve@1.1.7" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "resolve@1.14.2" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "restore-cursor@2.0.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "ret@0.1.15" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "right-align@0.1.3" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "run-async@2.3.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "rx-lite-aggregates@4.0.8" is licensed under "Apache License, Version 2.0" which is not permitted by the --onlyAllow flag. Exiting.
+Package "rx-lite@4.0.8" is licensed under "Apache License, Version 2.0" which is not permitted by the --onlyAllow flag. Exiting.
+Package "safe-buffer@5.1.2" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "safe-regex@1.1.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "safer-buffer@2.1.2" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "set-value@0.4.3" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "set-value@2.0.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "shebang-command@1.2.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "shebang-regex@1.0.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "shell-escape@0.2.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "shelljs@0.7.8" is licensed under "BSD-3-Clause" which is not permitted by the --onlyAllow flag. Exiting.
+Package "slice-ansi@1.0.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "snapdragon-node@2.1.1" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "snapdragon-util@3.0.1" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "snapdragon@0.8.2" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "sntp@0.2.4" is licensed under "BSD" which is not permitted by the --onlyAllow flag. Exiting.
+Package "source-map-resolve@0.5.1" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "source-map-url@0.4.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "source-map@0.2.0" is licensed under "BSD" which is not permitted by the --onlyAllow flag. Exiting.
+Package "source-map@0.4.4" is licensed under "BSD-3-Clause" which is not permitted by the --onlyAllow flag. Exiting.
+Package "source-map@0.5.7" is licensed under "BSD-3-Clause" which is not permitted by the --onlyAllow flag. Exiting.
+Package "source-map@0.6.1" is licensed under "BSD-3-Clause" which is not permitted by the --onlyAllow flag. Exiting.
+Package "spdx-compare@1.0.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "spdx-correct@3.0.0" is licensed under "Apache-2.0" which is not permitted by the --onlyAllow flag. Exiting.
+Package "spdx-correct@3.1.0" is licensed under "Apache-2.0" which is not permitted by the --onlyAllow flag. Exiting.
+Package "spdx-exceptions@2.1.0" is licensed under "CC-BY-3.0" which is not permitted by the --onlyAllow flag. Exiting.
+Package "spdx-exceptions@2.2.0" is licensed under "CC-BY-3.0" which is not permitted by the --onlyAllow flag. Exiting.
+Package "spdx-expression-parse@3.0.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "spdx-license-ids@3.0.0" is licensed under "CC0-1.0" which is not permitted by the --onlyAllow flag. Exiting.
+Package "spdx-license-ids@3.0.5" is licensed under "CC0-1.0" which is not permitted by the --onlyAllow flag. Exiting.
+Package "spdx-ranges@2.1.1" is licensed under "(MIT AND CC-BY-3.0)" which is not permitted by the --onlyAllow flag. Exiting.
+Package "spdx-satisfies@4.0.1" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "spec-xunit-file@0.0.1-3" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "split-string@3.1.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "sprintf-js@1.0.3" is licensed under "BSD-3-Clause" which is not permitted by the --onlyAllow flag. Exiting.
+Package "sshpk@1.16.1" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "static-extend@0.1.2" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "string-width@1.0.2" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "string-width@2.1.1" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "string_decoder@0.10.31" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "string_decoder@1.1.1" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "strip-ansi@3.0.1" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "strip-ansi@4.0.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "strip-bom@2.0.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "strip-eof@1.0.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "strip-json-comments@2.0.1" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "supports-color@2.0.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "supports-color@3.2.3" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "supports-color@4.4.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "supports-color@5.5.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "table@4.0.2" is licensed under "BSD-3-Clause" which is not permitted by the --onlyAllow flag. Exiting.
+Package "text-table@0.2.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "through2@0.6.5" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "through@2.3.8" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "tmp@0.0.33" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "to-fast-properties@1.0.3" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "to-object-path@0.3.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "to-regex-range@2.1.1" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "to-regex@3.0.2" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "tough-cookie@2.4.3" is licensed under "BSD-3-Clause" which is not permitted by the --onlyAllow flag. Exiting.
+Package "treeify@1.1.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "trim-right@1.0.1" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "tunnel-agent@0.3.0" is licensed under "Apache*" which is not permitted by the --onlyAllow flag. Exiting.
+Package "tunnel-agent@0.6.0" is licensed under "Apache-2.0" which is not permitted by the --onlyAllow flag. Exiting.
+Package "tweetnacl@0.14.5" is licensed under "Unlicense" which is not permitted by the --onlyAllow flag. Exiting.
+Package "type-check@0.3.2" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "typedarray@0.0.6" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "uglify-js@2.8.29" is licensed under "BSD-2-Clause" which is not permitted by the --onlyAllow flag. Exiting.
+Package "uglify-js@3.7.5" is licensed under "BSD-2-Clause" which is not permitted by the --onlyAllow flag. Exiting.
+Package "uglify-to-browserify@1.0.2" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "underscore@1.4.4" is licensed under "MIT*" which is not permitted by the --onlyAllow flag. Exiting.
+Package "union-value@1.0.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "unset-value@1.0.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "uri-js@4.2.2" is licensed under "BSD-2-Clause" which is not permitted by the --onlyAllow flag. Exiting.
+Package "urix@0.1.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "use@3.1.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "util-deprecate@1.0.2" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "util-extend@1.0.3" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "uuid@3.3.3" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "validate-npm-package-license@3.0.3" is licensed under "Apache-2.0" which is not permitted by the --onlyAllow flag. Exiting.
+Package "validate-npm-package-license@3.0.4" is licensed under "Apache-2.0" which is not permitted by the --onlyAllow flag. Exiting.
+Package "verror@1.10.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "weak-map@1.0.5" is licensed under "Custom: https://github.com/substack/node-browserify" which is not permitted by the --onlyAllow flag. Exiting.
+Package "window-size@0.1.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "word-wrap@1.2.3" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "wordwrap@0.0.2" is licensed under "MIT*" which is not permitted by the --onlyAllow flag. Exiting.
+Package "wordwrap@0.0.3" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "wordwrap@1.0.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "wrap-ansi@2.1.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "write@0.2.1" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "xtend@2.0.6" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "xtend@4.0.2" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "yargs@11.1.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+Package "yargs@3.10.0" is licensed under "MIT" which is not permitted by the --onlyAllow flag. Exiting.
+    [32m  ✓[0m[90m should exit on non ISC licensed modules from results[0m
+[0m    should not exit on complete list[0m
+    [32m  ✓[0m[90m should not exist if list is complete[0m
+[0m    should exit on given list of failOn licenses[0m
+Found license defined by the --failOn flag: "Apache License, Version 2.0". Exiting.
+Found license defined by the --failOn flag: "Apache License, Version 2.0". Exiting.
+    [32m  ✓[0m[90m should exit on Apache License, Version 2.0 licensed modules from results[0m
+[0m    should exit on given list of failOn licenses[0m
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+Found license defined by the --failOn flag: "MIT". Exiting.
+    [32m  ✓[0m[90m should exit on MIT and ISC licensed modules from results[0m
+[0m    should exit on single failOn license[0m
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+Found license defined by the --failOn flag: "ISC". Exiting.
+    [32m  ✓[0m[90m should exit on ISC licensed modules from results[0m
+[0m    should parse local and handle private modules[0m
+    [32m  ✓[0m[90m should reconise private modules[0m
+[0m    should treat license file over custom urls[0m
+    [32m  ✓[0m[90m should recognise a custom license at a url[0m
+[0m    should treat URLs as custom licenses[0m
+    [32m  ✓[0m[90m should recognise a custom license at a url[0m
+[0m    should treat file references as custom licenses[0m
+    [32m  ✓[0m[90m should recognise a custom license in a file[0m
+[0m    error handler[0m
+    [32m  ✓[0m[90m should init without errors[0m[31m (366ms)[0m
+    [32m  ✓[0m[90m should init with errors (npm packages not found)[0m
+[0m    should parse with args[0m
+    [32m  ✓[0m[90m should handle undefined[0m
+    [32m  ✓[0m[90m should handle color undefined[0m
+    [32m  ✓[0m[90m should handle direct undefined[0m
+    [32m  ✓[0m[90m should handle direct true[0m
+    [32m  ✓[0m[90m should disable color on json[0m
+    [32m  ✓[0m[90m should disable color on markdown[0m
+    [32m  ✓[0m[90m should disable color on csv[0m
+    [32m  ✓[0m[90m should disable color on summary[0m
+[0m    custom formats[0m
+    [32m  ✓[0m[90m should create a custom format using customFormat successfully[0m[31m (354ms)[0m
+    [32m  ✓[0m[90m should create a custom format using customPath[0m[31m (391ms)[0m
+[0m    should output the module location[0m
+    [32m  ✓[0m[90m as absolute path[0m[31m (308ms)[0m
+[0m    should output the location of the license files[0m
+    [32m  ✓[0m[90m as absolute paths[0m[31m (328ms)[0m
+    [32m  ✓[0m[90m as relative paths when using relativeLicensePath[0m[31m (378ms)[0m
+[0m    handle copytight statement[0m
+    [32m  ✓[0m[90m should output copyright statements when configured in custom format[0m[31m (380ms)[0m
+[0m    should only list UNKNOWN or guessed licenses successful[0m
+    [32m  ✓[0m[90m so we check if there is no license with a star or UNKNOWN found[0m
+[0m    should only list UNKNOWN or guessed licenses with errors (argument missing)[0m
+    [32m  ✓[0m[90m so we check if there is no license with a star or UNKNOWN found[0m
+[0m    should export[0m
+    [32m  ✓[0m[90m print a tree[0m
+    [32m  ✓[0m[90m a tree[0m
+    [32m  ✓[0m[90m as csv[0m
+    [32m  ✓[0m[90m as csv with partial data[0m
+    [32m  ✓[0m[90m as markdown[0m
+    [32m  ✓[0m[90m as summary[0m
+no license file found for: bar
+    [32m  ✓[0m[90m as files[0m
+[0m    json parsing[0m
+    [32m  ✓[0m[90m should parse json successfully (File exists + was json)[0m
+    [32m  ✓[0m[90m should parse json with errors (File exists + no json)[0m
+    [32m  ✓[0m[90m should parse json with errors (File not found)[0m
+    [32m  ✓[0m[90m should parse json with errors (null passed)[0m
+
+
+[92m [0m[32m 97 passing[0m[90m (14s)[0m
+
+
+=============================== Coverage summary ===============================
+Statements   : 100% ( 404/404 )
+Branches     : 100% ( 277/277 )
+Functions    : 100% ( 52/52 )
+Lines        : 100% ( 397/397 )
+================================================================================
+
+> license-checker@25.0.1 posttest /benchmarks/nacd/davglass_license-checker
+> nyc check-coverage && nyc report -r lcov -r text -r text-summary
+
+------------------|----------|----------|----------|----------|-------------------|
+File              |  % Stmts | % Branch |  % Funcs |  % Lines | Uncovered Line #s |
+------------------|----------|----------|----------|----------|-------------------|
+All files         |      100 |      100 |      100 |      100 |                   |
+ args.js          |      100 |      100 |      100 |      100 |                   |
+ index.js         |      100 |      100 |      100 |      100 |                   |
+ license-files.js |      100 |      100 |      100 |      100 |                   |
+ license.js       |      100 |      100 |      100 |      100 |                   |
+------------------|----------|----------|----------|----------|-------------------|
+
+=============================== Coverage summary ===============================
+Statements   : 100% ( 404/404 )
+Branches     : 100% ( 277/277 )
+Functions    : 100% ( 52/52 )
+Lines        : 100% ( 397/397 )
+================================================================================

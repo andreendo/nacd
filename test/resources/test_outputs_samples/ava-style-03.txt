@@ -1,0 +1,123 @@
+
+> xo@0.25.3 test /benchmarks/nacd/xojs_xo
+> eslint --quiet . && nyc ava
+
+
+  ✔ options-manager › normalizeOptions: makes all the options plural and arrays
+  ✔ options-manager › normalizeOptions: falsie values stay falsie
+  ✔ options-manager › buildConfig: defaults
+  ✔ options-manager › buildConfig: esnext
+  ✔ options-manager › buildConfig: space: true
+  ✔ options-manager › buildConfig: space: 4
+  ✔ options-manager › buildConfig: semicolon
+  ✔ options-manager › buildConfig: prettier: true
+  ✔ options-manager › buildConfig: prettier: true, semicolon: false
+  ✔ options-manager › buildConfig: prettier: true, space: 4
+  ✔ options-manager › buildConfig: prettier: true, esnext: false
+  ✔ options-manager › buildConfig: prettier: true, space: true
+  ✔ options-manager › buildConfig: merge with prettier config
+  ✔ options-manager › buildConfig: engines: undefined
+  ✔ options-manager › buildConfig: nodeVersion: false
+  ✔ options-manager › buildConfig: nodeVersion: invalid range
+  ✔ options-manager › buildConfig: nodeVersion: >=8
+  ✔ options-manager › mergeWithPrettierConfig: use `singleQuote`, `trailingComma`, `bracketSpacing` and `jsxBracketSameLine` from `prettier` config if defined
+  ✔ options-manager › mergeWithPrettierConfig: determine `tabWidth`, `useTabs`, `semi` from xo config
+  ✔ options-manager › mergeWithPrettierConfig: determine `tabWidth`, `useTabs`, `semi` from prettier config
+  ✔ options-manager › mergeWithPrettierConfig: throw error is `semi`/`semicolon` conflicts
+  ✔ options-manager › mergeWithPrettierConfig: throw error is `space`/`useTabs` conflicts
+  ✔ options-manager › mergeWithPrettierConfig: throw error is `space`/`tabWidth` conflicts
+  ✔ options-manager › buildConfig: rules
+  ✔ options-manager › buildConfig: parser
+  ✔ options-manager › buildConfig: settings
+  ✔ options-manager › buildConfig: extends
+  ✔ options-manager › findApplicableOverrides
+  ✔ options-manager › groupConfigs
+  ✔ options-manager › mergeWithPackageConfig: use child if closest
+  ✔ options-manager › mergeWithPackageConfig: use parent if closest
+  ✔ options-manager › mergeWithPackageConfig: use parent if child is ignored
+  ✔ options-manager › mergeWithPackageConfig: use child if child is empty
+  ✔ options-manager › mergeWithPackageConfig: read engines from package.json
+  ✔ options-manager › mergeWithPackageConfig: XO engine options supersede package.json's
+  ✔ options-manager › mergeWithPackageConfig: XO engine options false supersede package.json's
+  ✔ cli › runs no-local install of XO (4.9s)
+  ✔ cli-main › invalid node-engine option (6s)
+  ✔ open-report › opens nothing when there are no errors nor warnings (5.9s)
+  ✔ open-report › only opens warnings if there are no errors (5.9s)
+  ✔ lint-files › cwd option (6.2s)
+  ✔ open-report › only opens errors if there are errors and warnings (6.2s)
+  ✔ open-report › if a file has errors and warnings, it opens the first error (6.3s)
+  ✔ lint-files › enable rules based on nodeVersion (382ms)
+  ✔ lint-files › do not lint eslintignored files (528ms)
+  ✔ lint-files › do not lint gitignored files in file with negative gitignores (640ms)
+  ✔ lint-files › lint negatively gitignored files (694ms)
+  ✔ lint-files › multiple negative patterns should act as positive patterns (995ms)
+Warning: React version was set to "detect" in eslint-plugin-react settings, but the "react" package is not installed. Assuming latest React version for linting.
+  ✔ cli-main › ignore explicit files when in .gitgnore (8.6s)
+  ✔ lint-files › do not lint gitignored files (1.6s)
+  ✔ lint-files › do not lint inapplicable negatively gitignored files (1.6s)
+  ✔ cli-main › fix option with stdin (9.2s)
+  ✔ lint-files › only accepts whitelisted extensions (1.9s)
+  ✔ lint-files › ignores dirs for empty extensions (1.9s)
+  ✔ cli-main › stdin-filename option with stdin (10.1s)
+  ✔ cli-main › supports being extended with a shareable config (9.8s)
+  ✔ cli-main › overrides work with relative path (10.1s)
+  ✔ lint-text › .lintText() (6s)
+  ✔ lint-text › default `ignores`
+  ✔ lint-text › `ignores` option
+  ✔ lint-text › `ignores` option without cwd
+  ✔ lint-text › respect overrides (104ms)
+  ✔ lint-text › overriden ignore
+  ✔ lint-text › `ignores` option without filename
+  ✔ lint-text › JSX support (106ms)
+  ✔ lint-text › plugin support (720ms)
+  ✔ lint-text › prevent use of extended native objects
+  ✔ lint-text › extends support (680ms)
+  ✔ lint-text › extends support with `esnext` option (179ms)
+  ✔ lint-text › disable style rules when `prettier` option is enabled (619ms)
+  ✔ lint-text › extends `react` support with `prettier` option (199ms)
+  ✔ lint-text › always use the latest ECMAScript parser so esnext syntax won't throw in normal mode
+  ✔ lint-text › regression test for #71 (136ms)
+  ✔ cli-main › negative gitignores (10.2s)
+  ✔ cli-main › ignores fixture
+  ✔ lint-text › do not lint gitignored files if filename is given (263ms)
+  ✔ cli-main › overrides work with absolute path (10.4s)
+  ✔ cli-main › fix option (10.6s)
+  ✔ cli-main › overrides work with relative path starting with `./` (10.5s)
+  ✔ lint-text › lint gitignored files if filename is not given (373ms)
+  ✔ cli-main › ignore files in .gitignore (10.4s)
+  ✔ lint-text › do not lint gitignored files in file with negative gitignores (398ms)
+  ✔ cli-main › space option with number value (10.3s)
+  ✔ cli-main › overrides fixture (10.7s)
+  ✔ cli-main › space option as boolean (10.3s)
+  ✔ lint-text › enable rules based on nodeVersion (450ms)
+  ✔ lint-text › enable rules based on nodeVersion in override (507ms)
+  ✔ lint-text › multiple negative patterns should act as positive patterns (521ms)
+  ✔ cli-main › quiet option (10.5s)
+  ✔ lint-text › lint eslintignored files if filename is not given (530ms)
+  ✔ lint-text › do not lint eslintignored files if filename is given (540ms)
+  ✔ cli-main › space option as boolean with filename (10.4s)
+  ✔ lint-text › lint negatively gitignored files (586ms)
+  ✔ cli-main › reporter option (10.8s)
+  ✔ lint-text › lintText() - overrides support (633ms)
+  ✔ cli-main › space option with boolean strings (11.9s)
+  ✔ cli-main › cli option takes precedence over config (13.2s)
+
+  96 tests passed
+  1 known failure
+
+  cli-main › ignores fixture
+
+---------------------|----------|----------|----------|----------|-------------------|
+File                 |  % Stmts | % Branch |  % Funcs |  % Lines | Uncovered Line #s |
+---------------------|----------|----------|----------|----------|-------------------|
+All files            |    96.22 |    91.76 |      100 |    96.11 |                   |
+ xojs_xo             |    92.68 |    86.15 |      100 |    92.56 |                   |
+  cli-main.js        |       88 |    82.35 |      100 |       88 |... 46,165,166,178 |
+  cli.js             |     62.5 |       40 |      100 |     62.5 |          10,11,12 |
+  index.js           |      100 |      100 |      100 |      100 |                   |
+ xojs_xo/config      |      100 |      100 |      100 |      100 |                   |
+  plugins.js         |      100 |      100 |      100 |      100 |                   |
+ xojs_xo/lib         |     98.8 |    95.24 |      100 |    98.76 |                   |
+  open-report.js     |    95.83 |    91.67 |      100 |    95.24 |                22 |
+  options-manager.js |     99.3 |     95.7 |      100 |    99.29 |               297 |
+---------------------|----------|----------|----------|----------|-------------------|

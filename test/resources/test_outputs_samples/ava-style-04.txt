@@ -1,0 +1,363 @@
+
+> @ test /home/user/benchmarks/nacd/zeit_micro
+> NODE_ENV=test ava
+
+ 
+ ⠋ [2K[1A[2K[G 
+ ⠙ [2K[1A[2K[G 
+ ⠹ [2K[1A[2K[G 
+ ⠸ [2K[1A[2K[G 
+ ⠼ [2K[1A[2K[G 
+ ⠼ …
+
+  1 passed[2K[1A[2K[1A[2K[1A[2K[G 
+ ⠼ …
+
+  2 passed[2K[1A[2K[1A[2K[1A[2K[G 
+ ⠼ …
+
+  3 passed[2K[1A[2K[1A[2K[1A[2K[G 
+ ⠼ …
+
+  4 passed[2K[1A[2K[1A[2K[1A[2K[G 
+ ⠼ …
+
+  5 passed[2K[1A[2K[1A[2K[1A[2K[G 
+ ⠼ …
+
+  6 passed[2K[1A[2K[1A[2K[1A[2K[G 
+ ⠼ …
+
+  7 passed[2K[1A[2K[1A[2K[1A[2K[G 
+ ⠴ …
+
+  7 passed[2K[1A[2K[1A[2K[1A[2K[G 
+ ⠴ …
+
+  8 passed[2K[1A[2K[1A[2K[1A[2K[G 
+ ⠦ …
+
+  8 passed[2K[1A[2K[1A[2K[1A[2K[G 
+ ⠦ …
+
+  9 passed[2K[1A[2K[1A[2K[1A[2K[GError: Custom
+    at fn (/home/user/benchmarks/nacd/zeit_micro/test/development.js:27:9)
+    at resolve (/home/user/benchmarks/nacd/zeit_micro/packages/micro/lib/index.js:108:33)
+    at new Promise (<anonymous>)
+    at Function.exports.run (/home/user/benchmarks/nacd/zeit_micro/packages/micro/lib/index.js:108:2)
+    at Server.<anonymous> (/home/user/benchmarks/nacd/zeit_micro/packages/micro/lib/index.js:25:43)
+    at Server.emit (events.js:198:13)
+    at parserOnIncoming (_http_server.js:691:12)
+    at HTTPParser.parserOnHeadersComplete (_http_common.js:111:17)
+ 
+ ⠦ …
+
+  9 passed[2K[1A[2K[1A[2K[1A[2K[GError: Custom
+    at fn (/home/user/benchmarks/nacd/zeit_micro/test/development.js:40:15)
+    at resolve (/home/user/benchmarks/nacd/zeit_micro/packages/micro/lib/index.js:108:33)
+    at new Promise (<anonymous>)
+    at Function.exports.run (/home/user/benchmarks/nacd/zeit_micro/packages/micro/lib/index.js:108:2)
+    at Server.<anonymous> (/home/user/benchmarks/nacd/zeit_micro/packages/micro/lib/index.js:25:43)
+    at Server.emit (events.js:198:13)
+    at parserOnIncoming (_http_server.js:691:12)
+    at HTTPParser.parserOnHeadersComplete (_http_common.js:111:17)
+ 
+ ⠦ …
+
+  9 passed[2K[1A[2K[1A[2K[1A[2K[G 
+ ⠦ …
+
+  10 passed[2K[1A[2K[1A[2K[1A[2K[G 
+ ⠦ …
+
+  11 passed[2K[1A[2K[1A[2K[1A[2K[G 
+ ⠦ …
+
+  12 passed[2K[1A[2K[1A[2K[1A[2K[GError: 500 from test (expected)
+    at fn (/home/user/benchmarks/nacd/zeit_micro/test/index.js:224:9)
+    at resolve (/home/user/benchmarks/nacd/zeit_micro/packages/micro/lib/index.js:108:33)
+    at new Promise (<anonymous>)
+    at Function.exports.run (/home/user/benchmarks/nacd/zeit_micro/packages/micro/lib/index.js:108:2)
+    at Server.<anonymous> (/home/user/benchmarks/nacd/zeit_micro/packages/micro/lib/index.js:25:43)
+    at Server.emit (events.js:198:13)
+    at parserOnIncoming (_http_server.js:691:12)
+    at HTTPParser.parserOnHeadersComplete (_http_common.js:111:17)
+ 
+ ⠦ …
+
+  12 passed[2K[1A[2K[1A[2K[1A[2K[GError: 500 from test (expected)
+    at fn (/home/user/benchmarks/nacd/zeit_micro/test/index.js:238:9)
+    at resolve (/home/user/benchmarks/nacd/zeit_micro/packages/micro/lib/index.js:108:33)
+    at new Promise (<anonymous>)
+    at Function.exports.run (/home/user/benchmarks/nacd/zeit_micro/packages/micro/lib/index.js:108:2)
+    at Server.<anonymous> (/home/user/benchmarks/nacd/zeit_micro/packages/micro/lib/index.js:25:43)
+    at Server.emit (events.js:198:13)
+    at parserOnIncoming (_http_server.js:691:12)
+    at HTTPParser.parserOnHeadersComplete (_http_common.js:111:17)
+ 
+ ⠦ …
+
+  12 passed[2K[1A[2K[1A[2K[1A[2K[GError: 500 from test (expected)
+    at fn (/home/user/benchmarks/nacd/zeit_micro/test/index.js:255:24)
+    at resolve (/home/user/benchmarks/nacd/zeit_micro/packages/micro/lib/index.js:108:33)
+    at new Promise (<anonymous>)
+    at Function.exports.run (/home/user/benchmarks/nacd/zeit_micro/packages/micro/lib/index.js:108:2)
+    at Server.<anonymous> (/home/user/benchmarks/nacd/zeit_micro/packages/micro/lib/index.js:25:43)
+    at Server.emit (events.js:198:13)
+    at parserOnIncoming (_http_server.js:691:12)
+    at HTTPParser.parserOnHeadersComplete (_http_common.js:111:17)
+ 
+ ⠦ …
+
+  12 passed[2K[1A[2K[1A[2K[1A[2K[GTypeError: handlers[key] is not a function
+    at Object.emit (/home/user/benchmarks/nacd/zeit_micro/test/index.js:280:5)
+    at fn (/home/user/benchmarks/nacd/zeit_micro/test/index.js:288:10)
+    at resolve (/home/user/benchmarks/nacd/zeit_micro/packages/micro/lib/index.js:108:33)
+    at new Promise (<anonymous>)
+    at Function.exports.run (/home/user/benchmarks/nacd/zeit_micro/packages/micro/lib/index.js:108:2)
+    at Server.<anonymous> (/home/user/benchmarks/nacd/zeit_micro/packages/micro/lib/index.js:25:43)
+    at Server.emit (events.js:198:13)
+    at parserOnIncoming (_http_server.js:691:12)
+    at HTTPParser.parserOnHeadersComplete (_http_common.js:111:17)
+ 
+ ⠦ …
+
+  12 passed[2K[1A[2K[1A[2K[1A[2K[GError: Invalid JSON
+    at createError (/home/user/benchmarks/nacd/zeit_micro/packages/micro/lib/index.js:32:14)
+    at parseJSON (/home/user/benchmarks/nacd/zeit_micro/packages/micro/lib/index.js:132:9)
+    at exports.text.then.body (/home/user/benchmarks/nacd/zeit_micro/packages/micro/lib/index.js:170:39)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+ 
+ ⠦ …
+
+  12 passed[2K[1A[2K[1A[2K[1A[2K[GTypeError: Converting circular structure to JSON
+    at JSON.stringify (<anonymous>)
+    at send (/home/user/benchmarks/nacd/zeit_micro/packages/micro/lib/index.js:80:15)
+    at fn (/home/user/benchmarks/nacd/zeit_micro/test/index.js:444:3)
+    at resolve (/home/user/benchmarks/nacd/zeit_micro/packages/micro/lib/index.js:108:33)
+    at new Promise (<anonymous>)
+    at Function.exports.run (/home/user/benchmarks/nacd/zeit_micro/packages/micro/lib/index.js:108:2)
+    at Server.<anonymous> (/home/user/benchmarks/nacd/zeit_micro/packages/micro/lib/index.js:25:43)
+    at Server.emit (events.js:198:13)
+    at parserOnIncoming (_http_server.js:691:12)
+    at HTTPParser.parserOnHeadersComplete (_http_common.js:111:17)
+ 
+ ⠦ …
+
+  12 passed[2K[1A[2K[1A[2K[1A[2K[GTypeError: Cannot read property 'some' of undefined
+    at fn (/home/user/benchmarks/nacd/zeit_micro/test/index.js:486:19)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+ 
+ ⠦ …
+
+  12 passed[2K[1A[2K[1A[2K[1A[2K[GError: Custom
+    at fn (/home/user/benchmarks/nacd/zeit_micro/test/index.js:506:15)
+    at resolve (/home/user/benchmarks/nacd/zeit_micro/packages/micro/lib/index.js:108:33)
+    at new Promise (<anonymous>)
+    at Function.exports.run (/home/user/benchmarks/nacd/zeit_micro/packages/micro/lib/index.js:108:2)
+    at Server.<anonymous> (/home/user/benchmarks/nacd/zeit_micro/packages/micro/lib/index.js:25:43)
+    at Server.emit (events.js:198:13)
+    at parserOnIncoming (_http_server.js:691:12)
+    at HTTPParser.parserOnHeadersComplete (_http_common.js:111:17)
+thrown error must be an instance Error
+ 
+ ⠦ …
+
+  12 passed[2K[1A[2K[1A[2K[1A[2K[GError: Invalid JSON
+    at createError (/home/user/benchmarks/nacd/zeit_micro/packages/micro/lib/index.js:32:14)
+    at parseJSON (/home/user/benchmarks/nacd/zeit_micro/packages/micro/lib/index.js:132:9)
+    at exports.text.then.body (/home/user/benchmarks/nacd/zeit_micro/packages/micro/lib/index.js:170:39)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+ 
+ ⠦ …
+
+  12 passed[2K[1A[2K[1A[2K[1A[2K[GError: Invalid body
+    at createError (/home/user/benchmarks/nacd/zeit_micro/packages/micro/lib/index.js:32:14)
+    at getRawBody.then.catch.err (/home/user/benchmarks/nacd/zeit_micro/packages/micro/lib/index.js:161:12)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+ 
+ ⠦ …
+
+  12 passed[2K[1A[2K[1A[2K[1A[2K[G 
+ ⠧ …
+
+  12 passed[2K[1A[2K[1A[2K[1A[2K[G 
+ ⠧ …
+
+  13 passed[2K[1A[2K[1A[2K[1A[2K[G 
+ ⠧ …
+
+  14 passed[2K[1A[2K[1A[2K[1A[2K[G 
+ ⠧ …
+
+  15 passed[2K[1A[2K[1A[2K[1A[2K[G 
+ ⠧ …
+
+  16 passed[2K[1A[2K[1A[2K[1A[2K[G 
+ ⠧ …
+
+  17 passed[2K[1A[2K[1A[2K[1A[2K[G 
+ ⠧ …
+
+  18 passed[2K[1A[2K[1A[2K[1A[2K[G 
+ ⠧ …
+
+  19 passed[2K[1A[2K[1A[2K[1A[2K[G 
+ ⠧ …
+
+  20 passed[2K[1A[2K[1A[2K[1A[2K[G 
+ ⠧ …
+
+  21 passed[2K[1A[2K[1A[2K[1A[2K[G 
+ ⠧ …
+
+  22 passed[2K[1A[2K[1A[2K[1A[2K[G 
+ ⠧ …
+
+  23 passed[2K[1A[2K[1A[2K[1A[2K[G 
+ ⠧ …
+
+  24 passed[2K[1A[2K[1A[2K[1A[2K[G 
+ ⠧ …
+
+  25 passed[2K[1A[2K[1A[2K[1A[2K[G 
+ ⠧ …
+
+  26 passed[2K[1A[2K[1A[2K[1A[2K[G 
+ ⠧ …
+
+  27 passed[2K[1A[2K[1A[2K[1A[2K[G 
+ ⠧ …
+
+  28 passed[2K[1A[2K[1A[2K[1A[2K[G 
+ ⠧ …
+
+  29 passed[2K[1A[2K[1A[2K[1A[2K[G 
+ ⠧ …
+
+  30 passed[2K[1A[2K[1A[2K[1A[2K[G 
+ ⠧ …
+
+  31 passed[2K[1A[2K[1A[2K[1A[2K[G 
+ ⠧ …
+
+  32 passed[2K[1A[2K[1A[2K[1A[2K[G 
+ ⠧ …
+
+  33 passed[2K[1A[2K[1A[2K[1A[2K[G 
+ ⠧ …
+
+  34 passed[2K[1A[2K[1A[2K[1A[2K[G 
+ ⠧ …
+
+  35 passed[2K[1A[2K[1A[2K[1A[2K[G 
+ ⠧ …
+
+  36 passed[2K[1A[2K[1A[2K[1A[2K[G 
+ ⠧ …
+
+  37 passed[2K[1A[2K[1A[2K[1A[2K[G 
+ ⠧ …
+
+  38 passed[2K[1A[2K[1A[2K[1A[2K[G 
+ ⠧ …
+
+  39 passed[2K[1A[2K[1A[2K[1A[2K[G 
+ ⠧ …
+
+  40 passed[2K[1A[2K[1A[2K[1A[2K[G 
+ ⠧ …
+
+  41 passed[2K[1A[2K[1A[2K[1A[2K[G 
+ ⠧ …
+
+  42 passed[2K[1A[2K[1A[2K[1A[2K[G 
+ ⠧ …
+
+  43 passed[2K[1A[2K[1A[2K[1A[2K[G 
+ ⠧ …
+
+  44 passed[2K[1A[2K[1A[2K[1A[2K[G 
+ ⠧ …
+
+  45 passed[2K[1A[2K[1A[2K[1A[2K[G 
+ ⠧ …
+
+  46 passed[2K[1A[2K[1A[2K[1A[2K[G 
+ ⠧ …
+
+  47 passed[2K[1A[2K[1A[2K[1A[2K[G 
+ ⠧ …
+
+  48 passed[2K[1A[2K[1A[2K[1A[2K[G 
+ ⠧ …
+
+  49 passed[2K[1A[2K[1A[2K[1A[2K[G 
+ ⠧ …
+
+  50 passed[2K[1A[2K[1A[2K[1A[2K[G 
+ ⠧ …
+
+  51 passed[2K[1A[2K[1A[2K[1A[2K[G 
+ ⠧ …
+
+  52 passed[2K[1A[2K[1A[2K[1A[2K[G 
+ ⠧ …
+
+  53 passed[2K[1A[2K[1A[2K[1A[2K[GError: Error from test (expected)
+    at fn (/home/user/benchmarks/nacd/zeit_micro/test/index.js:208:15)
+ 
+ ⠧ …
+
+  53 passed[2K[1A[2K[1A[2K[1A[2K[G 
+ ⠧ …
+
+  54 passed[2K[1A[2K[1A[2K[1A[2K[G 
+ ⠧ …
+
+  55 passed[2K[1A[2K[1A[2K[1A[2K[G 
+ ⠧ …
+
+  56 passed[2K[1A[2K[1A[2K[1A[2K[G 
+ ⠇ …
+
+  56 passed[2K[1A[2K[1A[2K[1A[2K[Gmicro: The file "/home/user/benchmarks/nacd/zeit_micro/test/fixtures/regular-object" does not export a function.
+ 
+ ⠇ …
+
+  56 passed[2K[1A[2K[1A[2K[1A[2K[Gmicro: https://err.sh/micro/no-export
+ 
+ ⠇ …
+
+  56 passed[2K[1A[2K[1A[2K[1A[2K[G 
+ ⠇ …
+
+  57 passed[2K[1A[2K[1A[2K[1A[2K[G 
+ ⠇ …
+
+  58 passed[2K[1A[2K[1A[2K[1A[2K[Gmicro: Error when importing /home/user/benchmarks/nacd/zeit_micro/foo/bar: Error: Cannot find module '/home/user/benchmarks/nacd/zeit_micro/foo/bar'
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:636:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:562:25)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at module.exports (/home/user/benchmarks/nacd/zeit_micro/packages/micro/lib/handler.js:8:15)
+    at Test.test [as fn] (/home/user/benchmarks/nacd/zeit_micro/test/handler.js:49:18)
+    at Test.callFn (/home/user/benchmarks/nacd/zeit_micro/node_modules/ava/lib/test.js:305:18)
+    at Test.run (/home/user/benchmarks/nacd/zeit_micro/node_modules/ava/lib/test.js:318:23)
+    at runNext (/home/user/benchmarks/nacd/zeit_micro/node_modules/ava/lib/sequence.js:58:44)
+    at Sequence.run (/home/user/benchmarks/nacd/zeit_micro/node_modules/ava/lib/sequence.js:90:10)
+    at runNext (/home/user/benchmarks/nacd/zeit_micro/node_modules/ava/lib/sequence.js:58:44)
+    at promise.then.passed (/home/user/benchmarks/nacd/zeit_micro/node_modules/ava/lib/sequence.js:86:12)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+ 
+ ⠇ …
+
+  58 passed[2K[1A[2K[1A[2K[1A[2K[Gmicro: https://err.sh/micro/invalid-entry
+ 
+ ⠇ …
+
+  58 passed[2K[1A[2K[1A[2K[1A[2K[G 
+ ⠇ …
+
+  59 passed[2K[1A[2K[1A[2K[1A[2K[G
+  59 passed

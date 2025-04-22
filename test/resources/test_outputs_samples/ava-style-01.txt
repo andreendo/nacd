@@ -1,0 +1,40 @@
+
+> is-online@8.2.1 test /home/user/benchmarks/nacd/sindresorhus_is-online
+> ava test.js
+
+
+  ✔ v4 with impossible timeout (103ms)
+  ✔ v4 (150ms)
+  ✔ v4 with timeout (141ms)
+  ✖ v6 with timeout 
+  ✖ v6 
+
+  2 tests failed
+
+  v6 with timeout
+
+  /home/user/benchmarks/nacd/sindresorhus_is-online/test.js:22
+
+   21:   test('v6 with timeout', async t => {                    
+   22:     t.true(await isOnline({version: 'v6', timeout: 500}));
+   23:   });                                                     
+
+  Value is not `true`:
+
+  false
+
+
+
+  v6
+
+  /home/user/benchmarks/nacd/sindresorhus_is-online/test.js:18
+
+   17:   test('v6', async t => {                   
+   18:     t.true(await isOnline({version: 'v6'}));
+   19:   });                                       
+
+  Value is not `true`:
+
+  false
+
+npm ERR! Test failed.  See above for more details.

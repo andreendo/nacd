@@ -1,0 +1,14 @@
+[
+    {
+        "moduleName": "util",
+        "properties": [
+            {
+                "name": "promisify",
+                "type": [
+                    "promisify"
+                ],
+                "postponeRegistration": false
+            }
+        ]
+    }
+]

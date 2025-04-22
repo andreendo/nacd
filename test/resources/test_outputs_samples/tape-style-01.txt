@@ -1,0 +1,596 @@
+
+> david@12.0.0 test /benchmarks/nacd/alanshaw_david
+> standard && nyc --reporter=lcov --reporter=text tape test/*.js
+
+TAP version 13
+# Test update and save dependencies, devDependencies & optionalDependencies
+npm notice created a lockfile as package-lock.json. You should commit this file.
+npm WARN test@0.0.0 No description
+npm WARN test@0.0.0 No repository field.
+
++ async@3.1.0
++ rimraf@3.0.0
+added 13 packages from 5 contributors in 1.018s
+
+1 package is looking for funding
+  run `npm fund` for details
+
+npm WARN test@0.0.0 No description
+npm WARN test@0.0.0 No repository field.
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@2.1.2 (node_modules/fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@2.1.2: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+
++ request@2.88.0
++ mocha@7.0.0
+added 144 packages from 595 contributors in 7.491s
+
+15 packages are looking for funding
+  run `npm fund` for details
+
+npm WARN test@0.0.0 No description
+npm WARN test@0.0.0 No repository field.
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@2.1.2 (node_modules/fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@2.1.2: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+
++ through@2.3.8
+added 1 package from 1 contributor in 0.442s
+
+15 packages are looking for funding
+  run `npm fund` for details
+
+ok 1 null
+ok 2 async expected to be installed
+ok 3 rimraf expected to be installed
+ok 4 request expected to be installed
+ok 5 mocha expected to be installed
+ok 6 through expected to be installed
+ok 7 async version expected to have changed
+ok 8 rimraf version expected to have changed
+ok 9 request version expected to have changed
+ok 10 mocha version expected to have changed
+ok 11 through version expected to have changed
+# Test update & save only async and request dependencies
+npm notice created a lockfile as package-lock.json. You should commit this file.
+npm WARN test@0.0.0 No description
+npm WARN test@0.0.0 No repository field.
+
++ async@3.1.0
+added 1 package from 1 contributor in 0.18s
+npm WARN test@0.0.0 No description
+npm WARN test@0.0.0 No repository field.
+
++ request@2.88.0
+added 48 packages from 59 contributors in 1.829s
+ok 12 null
+ok 13 async expected to be installed
+ok 14 rimraf not expected to be installed
+ok 15 request expected to be installed
+ok 16 mocha not expected to be installed
+ok 17 through not expected to be installed
+ok 18 should be truthy
+ok 19 should be truthy
+ok 20 async version expected to have changed
+ok 21 rimraf version not expected to have changed
+ok 22 request version expected to have changed
+ok 23 mocha version not expected to have changed
+ok 24 through version not expected to have changed
+# Test print-only output with unregistered dependency in each type
+dependencies
+
+┌───────┬─────────┬────────┐
+│ Name  │ Package │ Latest │
+├───────┼─────────┼────────┤
+│ async │ 0.1.x   │ 3.1.0  │
+└───────┴─────────┴────────┘
+
+npm install --save async@3.1.0
+
+Unregistered dependencies
+
+┌────────────────┬─────────────────────────────────────────────────────┐
+│ Name           │ Message                                             │
+├────────────────┼─────────────────────────────────────────────────────┤
+│ unregistered-- │ Error: 'unregistered--' is not in the npm registry. │
+│                │ You should bug the author to publish it             │
+│                │ (or use the name yourself!)                         │
+│                │                                                     │
+│                │ Note that you can also install from a               │
+│                │ tarball, folder, http url, or git url.              │
+└────────────────┴─────────────────────────────────────────────────────┘
+
+devDependencies
+
+┌─────────┬─────────┬────────┐
+│ Name    │ Package │ Latest │
+├─────────┼─────────┼────────┤
+│ request │ ~0.1.9  │ 2.88.0 │
+└─────────┴─────────┴────────┘
+
+npm install --save-dev request@2.88.0
+
+Unregistered devDependencies
+
+┌───────────────────┬────────────────────────────────────────────────────────┐
+│ Name              │ Message                                                │
+├───────────────────┼────────────────────────────────────────────────────────┤
+│ unregistereddev-- │ Error: 'unregistereddev--' is not in the npm registry. │
+│                   │ You should bug the author to publish it                │
+│                   │ (or use the name yourself!)                            │
+│                   │                                                        │
+│                   │ Note that you can also install from a                  │
+│                   │ tarball, folder, http url, or git url.                 │
+└───────────────────┴────────────────────────────────────────────────────────┘
+
+optionalDependencies
+
+┌─────────┬─────────┬────────┐
+│ Name    │ Package │ Latest │
+├─────────┼─────────┼────────┤
+│ through │ ~2.2.6  │ 2.3.8  │
+└─────────┴─────────┴────────┘
+
+npm install --save-optional through@2.3.8
+
+Unregistered optionalDependencies
+
+┌───────────────────┬────────────────────────────────────────────────────────┐
+│ Name              │ Message                                                │
+├───────────────────┼────────────────────────────────────────────────────────┤
+│ unregisteredopt-- │ Error: 'unregisteredopt--' is not in the npm registry. │
+│                   │ You should bug the author to publish it                │
+│                   │ (or use the name yourself!)                            │
+│                   │                                                        │
+│                   │ Note that you can also install from a                  │
+│                   │ tarball, folder, http url, or git url.                 │
+└───────────────────┴────────────────────────────────────────────────────────┘
+
+ok 25 Exited with non zero exit code
+ok 26 should be truthy
+ok 27 async expected to be outdated
+ok 28 should be truthy
+ok 29 request expected to be outdated
+ok 30 should be truthy
+ok 31 through expected to be outdated
+ok 32 should be falsy
+ok 33 should be falsy
+ok 34 should be falsy
+# Test default exit response to unregistered dependency
+dependencies
+
+┌───────┬─────────┬────────┐
+│ Name  │ Package │ Latest │
+├───────┼─────────┼────────┤
+│ async │ 0.1.x   │ 3.1.0  │
+└───────┴─────────┴────────┘
+
+npm install --save async@3.1.0
+
+Unregistered dependencies
+
+┌────────────────┬─────────────────────────────────────────────────────┐
+│ Name           │ Message                                             │
+├────────────────┼─────────────────────────────────────────────────────┤
+│ unregistered-- │ Error: 'unregistered--' is not in the npm registry. │
+│                │ You should bug the author to publish it             │
+│                │ (or use the name yourself!)                         │
+│                │                                                     │
+│                │ Note that you can also install from a               │
+│                │ tarball, folder, http url, or git url.              │
+└────────────────┴─────────────────────────────────────────────────────┘
+
+devDependencies
+
+┌─────────┬─────────┬────────┐
+│ Name    │ Package │ Latest │
+├─────────┼─────────┼────────┤
+│ request │ ~0.1.9  │ 2.88.0 │
+└─────────┴─────────┴────────┘
+
+npm install --save-dev request@2.88.0
+
+Unregistered devDependencies
+
+┌───────────────────┬────────────────────────────────────────────────────────┐
+│ Name              │ Message                                                │
+├───────────────────┼────────────────────────────────────────────────────────┤
+│ unregistereddev-- │ Error: 'unregistereddev--' is not in the npm registry. │
+│                   │ You should bug the author to publish it                │
+│                   │ (or use the name yourself!)                            │
+│                   │                                                        │
+│                   │ Note that you can also install from a                  │
+│                   │ tarball, folder, http url, or git url.                 │
+└───────────────────┴────────────────────────────────────────────────────────┘
+
+optionalDependencies
+
+┌─────────┬─────────┬────────┐
+│ Name    │ Package │ Latest │
+├─────────┼─────────┼────────┤
+│ through │ ~2.2.6  │ 2.3.8  │
+└─────────┴─────────┴────────┘
+
+npm install --save-optional through@2.3.8
+
+Unregistered optionalDependencies
+
+┌───────────────────┬────────────────────────────────────────────────────────┐
+│ Name              │ Message                                                │
+├───────────────────┼────────────────────────────────────────────────────────┤
+│ unregisteredopt-- │ Error: 'unregisteredopt--' is not in the npm registry. │
+│                   │ You should bug the author to publish it                │
+│                   │ (or use the name yourself!)                            │
+│                   │                                                        │
+│                   │ Note that you can also install from a                  │
+│                   │ tarball, folder, http url, or git url.                 │
+└───────────────────┴────────────────────────────────────────────────────────┘
+
+ok 35 Exited with non zero exit code
+ok 36 should be falsy
+ok 37 should be falsy
+ok 38 should be falsy
+# Test update with unregistered dependency in each type
+npm notice created a lockfile as package-lock.json. You should commit this file.
+npm WARN test@0.0.0 No description
+npm WARN test@0.0.0 No repository field.
+
++ async@3.1.0
+added 1 package from 1 contributor in 0.164s
+npm WARN test@0.0.0 No description
+npm WARN test@0.0.0 No repository field.
+
++ request@2.88.0
+added 48 packages from 59 contributors in 1.999s
+npm WARN test@0.0.0 No description
+npm WARN test@0.0.0 No repository field.
+
++ through@2.3.8
+added 1 package from 1 contributor in 0.257s
+Unregistered dependencies
+
+┌────────────────┬─────────────────────────────────────────────────────┐
+│ Name           │ Message                                             │
+├────────────────┼─────────────────────────────────────────────────────┤
+│ unregistered-- │ Error: 'unregistered--' is not in the npm registry. │
+│                │ You should bug the author to publish it             │
+│                │ (or use the name yourself!)                         │
+│                │                                                     │
+│                │ Note that you can also install from a               │
+│                │ tarball, folder, http url, or git url.              │
+└────────────────┴─────────────────────────────────────────────────────┘
+
+Unregistered devDependencies
+
+┌───────────────────┬────────────────────────────────────────────────────────┐
+│ Name              │ Message                                                │
+├───────────────────┼────────────────────────────────────────────────────────┤
+│ unregistereddev-- │ Error: 'unregistereddev--' is not in the npm registry. │
+│                   │ You should bug the author to publish it                │
+│                   │ (or use the name yourself!)                            │
+│                   │                                                        │
+│                   │ Note that you can also install from a                  │
+│                   │ tarball, folder, http url, or git url.                 │
+└───────────────────┴────────────────────────────────────────────────────────┘
+
+Unregistered optionalDependencies
+
+┌───────────────────┬────────────────────────────────────────────────────────┐
+│ Name              │ Message                                                │
+├───────────────────┼────────────────────────────────────────────────────────┤
+│ unregisteredopt-- │ Error: 'unregisteredopt--' is not in the npm registry. │
+│                   │ You should bug the author to publish it                │
+│                   │ (or use the name yourself!)                            │
+│                   │                                                        │
+│                   │ Note that you can also install from a                  │
+│                   │ tarball, folder, http url, or git url.                 │
+└───────────────────┴────────────────────────────────────────────────────────┘
+
+ok 39 null
+ok 40 async expected to be installed
+ok 41 request expected to be installed
+ok 42 through expected to be installed
+ok 43 should be truthy
+ok 44 async version expected to have changed
+ok 45 should be truthy
+ok 46 request version expected to have changed
+ok 47 should be truthy
+ok 48 through version expected to have changed
+ok 49 should be falsy
+ok 50 should be falsy
+ok 51 should be falsy
+# Test SCM dependency output
+SCM dependencies
+
+┌─────────┬───────────────────────────────────────────────────────────┐
+│ Name    │ Message                                                   │
+├─────────┼───────────────────────────────────────────────────────────┤
+│ scm-url │ Error: SCM dependency: git+https://github.com/foo/bar.git │
+└─────────┴───────────────────────────────────────────────────────────┘
+
+All dependencies up to date
+ok 52 null
+ok 53 should be truthy
+# Test exit code for SCM dependency
+SCM dependencies
+
+┌─────────┬───────────────────────────────────────────────────────────┐
+│ Name    │ Message                                                   │
+├─────────┼───────────────────────────────────────────────────────────┤
+│ scm-url │ Error: SCM dependency: git+https://github.com/foo/bar.git │
+└─────────┴───────────────────────────────────────────────────────────┘
+
+All dependencies up to date
+ok 54 Expected no error
+# Test getDependencies returns an empty object when passed a manifest with no dependencies
+ok 55 should be equal
+ok 56 should be truthy
+ok 57 should be equal
+# Test getDependencies ignores specified packages
+ok 58 should be equal
+ok 59 should be truthy
+ok 60 should be truthy
+ok 61 should be equal
+# Test getDependencies ignores specified package glob
+ok 62 should be equal
+ok 63 should be truthy
+ok 64 should be truthy
+ok 65 should be equal
+# Test getUpdatedDependencies returns an empty object when passed a manifest with no dependencies
+ok 66 should be equal
+ok 67 should be truthy
+ok 68 should be equal
+# Test getDependencies returns desired result when only stable versions are available
+ok 69 undefined
+ok 70 should be truthy
+ok 71 should be truthy
+ok 72 should be equal
+ok 73 should be equal
+ok 74 should be equal
+# Test getDependencies returns correct result when both stable and unstable versions are available
+ok 75 undefined
+ok 76 should be truthy
+ok 77 should be truthy
+ok 78 should be equal
+ok 79 should be equal
+ok 80 should be equal
+# Test getUpdatedDependencies returns an empty object when there are no updated stable or unstable dependencies available
+ok 81 undefined
+ok 82 should be truthy
+ok 83 should be equal
+# Test getUpdatedDependencies returns correct dependency updates when only stable updates are available
+ok 84 undefined
+ok 85 should be truthy
+ok 86 should be truthy
+ok 87 should be equal
+ok 88 should be equal
+ok 89 should be equal
+# Test getUpdatedDependencies returns correct dependency updates when both unstable and stable updates are available
+ok 90 undefined
+ok 91 should be truthy
+ok 92 should be truthy
+ok 93 should be equal
+ok 94 should be equal
+ok 95 should be equal
+# Test getUpdatedDependencies returns correct dependency updates when latest tag point to the stable version
+ok 96 undefined
+ok 97 should be truthy
+ok 98 should be truthy
+ok 99 should be equal
+ok 100 should be equal
+ok 101 should be equal
+# Test getUpdatedDependencies returns correct dependency updates when unstable version is not the most recent version
+ok 102 undefined
+ok 103 should be truthy
+ok 104 should be truthy
+ok 105 should be equal
+ok 106 should be equal
+ok 107 should be equal
+# Test getUpdatedDependencies returns correct dependency updates when versions is not sorted by time
+ok 108 undefined
+ok 109 should be truthy
+ok 110 should be truthy
+ok 111 should be equal
+ok 112 should be equal
+ok 113 should be equal
+# Test getDependencies returns correct dependencies when there is no stable version
+ok 114 undefined
+ok 115 should be truthy
+ok 116 should be truthy
+ok 117 should be equal
+ok 118 should be equal
+ok 119 should be equal
+# Positive getUpdatedDependencies onlyStable=true tests
+ok 120 undefined
+ok 121 should be truthy
+ok 122 should be truthy
+ok 123 should be equal
+ok 124 should be equal
+ok 125 should be equal
+ok 126 undefined
+ok 127 should be truthy
+ok 128 should be truthy
+ok 129 should be equal
+ok 130 should be equal
+ok 131 should be equal
+ok 132 undefined
+ok 133 should be truthy
+ok 134 should be truthy
+ok 135 should be equal
+ok 136 should be equal
+ok 137 should be equal
+ok 138 undefined
+ok 139 should be truthy
+ok 140 should be truthy
+ok 141 should be equal
+ok 142 should be equal
+ok 143 should be equal
+ok 144 undefined
+ok 145 should be truthy
+ok 146 should be truthy
+ok 147 should be equal
+ok 148 should be equal
+ok 149 should be equal
+ok 150 undefined
+ok 151 should be truthy
+ok 152 should be truthy
+ok 153 should be equal
+ok 154 should be equal
+ok 155 should be equal
+ok 156 undefined
+ok 157 should be truthy
+ok 158 should be truthy
+ok 159 should be equal
+ok 160 should be equal
+ok 161 should be equal
+# Negative getUpdatedDependencies onlyStable=true tests
+ok 162 undefined
+ok 163 should be truthy
+ok 164 should be equal
+ok 165 should be equal
+ok 166 undefined
+ok 167 should be truthy
+ok 168 should be equal
+ok 169 should be equal
+ok 170 undefined
+ok 171 should be truthy
+ok 172 should be equal
+ok 173 should be equal
+ok 174 undefined
+ok 175 should be truthy
+ok 176 should be equal
+ok 177 should be equal
+ok 178 undefined
+ok 179 should be truthy
+ok 180 should be equal
+ok 181 should be equal
+ok 182 undefined
+ok 183 should be truthy
+ok 184 should be equal
+ok 185 should be equal
+ok 186 undefined
+ok 187 should be truthy
+ok 188 should be equal
+ok 189 should be equal
+ok 190 undefined
+ok 191 should be truthy
+ok 192 should be equal
+ok 193 should be equal
+ok 194 undefined
+ok 195 should be truthy
+ok 196 should be equal
+ok 197 should be equal
+ok 198 undefined
+ok 199 should be truthy
+ok 200 should be equal
+ok 201 should be equal
+ok 202 undefined
+ok 203 should be truthy
+ok 204 should be equal
+ok 205 should be equal
+ok 206 undefined
+ok 207 should be truthy
+ok 208 should be equal
+ok 209 should be equal
+# Test getDependencies will consider devDependencies
+ok 210 undefined
+ok 211 should be truthy
+ok 212 should be truthy
+ok 213 should be equal
+ok 214 should be equal
+ok 215 should be equal
+# Test getUpdatedDependencies will consider devDependencies
+ok 216 undefined
+ok 217 should be truthy
+ok 218 should be truthy
+ok 219 should be equal
+ok 220 should be equal
+ok 221 should be equal
+# Test getDependencies will consider optionalDependencies
+ok 222 undefined
+ok 223 should be truthy
+ok 224 should be truthy
+ok 225 should be equal
+ok 226 should be equal
+ok 227 should be equal
+# Test getUpdatedDependencies will consider optionalDependencies
+ok 228 undefined
+ok 229 should be truthy
+ok 230 should be truthy
+ok 231 should be equal
+ok 232 should be equal
+ok 233 should be equal
+# Test getDependencies will consider peerDependencies
+ok 234 undefined
+ok 235 should be truthy
+ok 236 should be truthy
+ok 237 should be equal
+ok 238 should be equal
+ok 239 should be equal
+# Test getUpdatedDependencies will consider peerDependencies
+ok 240 undefined
+ok 241 should be truthy
+ok 242 should be truthy
+ok 243 should be equal
+ok 244 should be equal
+ok 245 should be equal
+# Test support dependencies specified as an array
+ok 246 undefined
+ok 247 should be truthy
+ok 248 should be truthy
+ok 249 should be equal
+ok 250 should be equal
+ok 251 should be equal
+# Test `npm view 0 versions` does not throw!
+ok 252 should not throw
+# Test error whilst getting dependency status doesn't cause remaining processing to stop
+ok 253 should be truthy
+ok 254 should be truthy
+ok 255 should be truthy
+ok 256 should be truthy
+ok 257 should be equal
+ok 258 should be equal
+ok 259 should be equal
+# Return dependency versions when versions option is true
+ok 260 undefined
+ok 261 should be truthy
+ok 262 should be truthy
+ok 263 should be truthy
+ok 264 should be equal
+ok 265 should be equal
+ok 266 should be equal
+ok 267 should be equal
+# Return dependency versions satisfying ranges when rangeVersions option is true
+ok 268 undefined
+ok 269 should be truthy
+ok 270 should be truthy
+ok 271 should be truthy
+ok 272 should be equal
+ok 273 should be equal
+ok 274 should be equal
+# Test getDependencies SCM URL warning
+ok 275 undefined
+ok 276 should be truthy
+ok 277 should be truthy
+ok 278 should be truthy
+ok 279 should be equal
+# Test non-string dependency doesn't throw
+ok 280 Expected error
+ok 281 Expected error code EDEPTYPE
+
+1..281
+# tests 281
+# pass  281
+
+# ok
+
+-------------|----------|----------|----------|----------|-------------------|
+File         |  % Stmts | % Branch |  % Funcs |  % Lines | Uncovered Line #s |
+-------------|----------|----------|----------|----------|-------------------|
+All files    |    80.99 |    76.99 |    91.53 |    82.04 |                   |
+ bin         |    68.86 |    67.86 |    85.19 |    68.99 |                   |
+  david.js   |    68.86 |    67.86 |    85.19 |    68.99 |... 09,310,315,316 |
+ lib         |    92.57 |    85.96 |    96.88 |    94.55 |                   |
+  batch.js   |    92.31 |       75 |      100 |      100 |                 2 |
+  david.js   |    91.26 |    85.71 |      100 |    91.92 |... 55,156,157,158 |
+  npm.js     |    89.29 |     87.5 |     87.5 |    95.83 |                17 |
+  version.js |      100 |       90 |      100 |      100 |                11 |
+-------------|----------|----------|----------|----------|-------------------|

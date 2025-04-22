@@ -1,0 +1,15 @@
+[
+    {
+        "moduleName": "node-expat",
+        "properties": [
+            {
+                "name": "createParser",
+                "type": [
+                    "ro"
+                ],
+                "postponeRegistration": false,
+                "returnedObject": "EventEmitter"
+            }
+        ]
+    }
+]

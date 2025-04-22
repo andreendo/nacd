@@ -1,0 +1,29 @@
+
+> proper-lockfile@4.1.1 test /benchmarks/nacd/IndigoUnited_node-proper-lockfile
+> jest --env node --coverage --runInBand
+
+PASS test/lock.test.js (64.468s)
+PASS test/misc.test.js (60.3s)
+PASS test/unlock.test.js (14.658s)
+PASS test/check.test.js
+PASS test/sync.test.js
+PASS test/release.test.js
+---------------------------------------------|----------|----------|----------|----------|-------------------|
+File                                         |  % Stmts | % Branch |  % Funcs |  % Lines | Uncovered Line #s |
+---------------------------------------------|----------|----------|----------|----------|-------------------|
+All files                                    |      100 |      100 |      100 |      100 |                   |
+ IndigoUnited_node-proper-lockfile           |      100 |      100 |      100 |      100 |                   |
+  index.js                                   |      100 |      100 |      100 |      100 |                   |
+ IndigoUnited_node-proper-lockfile/lib       |      100 |      100 |      100 |      100 |                   |
+  adapter.js                                 |      100 |      100 |      100 |      100 |                   |
+  lockfile.js                                |      100 |      100 |      100 |      100 |                   |
+  mtime-precision.js                         |      100 |      100 |      100 |      100 |                   |
+ IndigoUnited_node-proper-lockfile/test/util |      100 |      100 |      100 |      100 |                   |
+  unlockAll.js                               |      100 |      100 |      100 |      100 |                   |
+---------------------------------------------|----------|----------|----------|----------|-------------------|
+
+Test Suites: 6 passed, 6 total
+Tests:       76 passed, 76 total
+Snapshots:   0 total
+Time:        144.582s, estimated 146s
+Ran all test suites.

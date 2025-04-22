@@ -1,0 +1,460 @@
+
+> nedb@1.8.0 test /home/user/benchmarks/nacd/louischatriot_nedb
+> mocha --reporter spec --timeout 10000
+
+(node:13938) [DEP0006] DeprecationWarning: child_process: options.customFds option is deprecated. Use options.stdio instead.
+
+
+  Cursor
+    Without sorting
+      ◦ Without query, an empty query or a simple query and no skip or limit: [2K[0G      ✓ Without query, an empty query or a simple query and no skip or limit 
+      ◦ With an empty collection: [2K[0G      ✓ With an empty collection 
+      ◦ With a limit: [2K[0G      ✓ With a limit 
+      ◦ With a skip: [2K[0G      ✓ With a skip 
+      ◦ With a limit and a skip and method chaining: [2K[0G      ✓ With a limit and a skip and method chaining 
+    Sorting of the results
+      ◦ Using one sort: [2K[0G      ✓ Using one sort 
+      ◦ Sorting strings with custom string comparison function: [2K[0G      ✓ Sorting strings with custom string comparison function (88ms)
+      ◦ With an empty collection: [2K[0G      ✓ With an empty collection 
+      ◦ Ability to chain sorting and exec: [2K[0G      ✓ Ability to chain sorting and exec 
+      ◦ Using limit and sort: [2K[0G      ✓ Using limit and sort 
+      ◦ Using a limit higher than total number of docs shouldnt cause an error: [2K[0G      ✓ Using a limit higher than total number of docs shouldnt cause an error 
+      ◦ Using limit and skip with sort: [2K[0G      ✓ Using limit and skip with sort 
+      ◦ Using too big a limit and a skip with sort: [2K[0G      ✓ Using too big a limit and a skip with sort 
+      ◦ Using too big a skip with sort should return no result: [2K[0G      ✓ Using too big a skip with sort should return no result 
+      ◦ Sorting strings: [2K[0G      ✓ Sorting strings 
+      ◦ Sorting nested fields with dates: [2K[0G      ✓ Sorting nested fields with dates 
+      ◦ Sorting when some fields are undefined: [2K[0G      ✓ Sorting when some fields are undefined 
+      ◦ Sorting when all fields are undefined: [2K[0G      ✓ Sorting when all fields are undefined 
+      ◦ Multiple consecutive sorts: [2K[0G      ✓ Multiple consecutive sorts 
+      ◦ Similar data, multiple consecutive sorts: [2K[0G      ✓ Similar data, multiple consecutive sorts (62ms)
+    Projections
+      ◦ Takes all results if no projection or empty object given: [2K[0G      ✓ Takes all results if no projection or empty object given 
+      ◦ Can take only the expected fields: [2K[0G      ✓ Can take only the expected fields 
+      ◦ Can omit only the expected fields: [2K[0G      ✓ Can omit only the expected fields 
+      ◦ Cannot use both modes except for _id: [2K[0G      ✓ Cannot use both modes except for _id 
+      ◦ Projections on embedded documents - omit type: [2K[0G      ✓ Projections on embedded documents - omit type 
+      ◦ Projections on embedded documents - pick type: [2K[0G      ✓ Projections on embedded documents - pick type 
+
+  customUtils
+    uid
+      ◦ Generates a string of the expected length: [2K[0G      ✓ Generates a string of the expected length 
+      ◦ Generated uids should not be the same: [2K[0G      ✓ Generated uids should not be the same 
+
+  Database
+    ◦ Constructor compatibility with v0.6-: [2K[0G    ✓ Constructor compatibility with v0.6- (292ms)
+    Autoloading
+      ◦ Can autoload a database and query it right away: [2K[0G      ✓ Can autoload a database and query it right away (142ms)
+      ◦ Throws if autoload fails: [2K[0G      ✓ Throws if autoload fails (51ms)
+    Insert
+      ◦ Able to insert a document in the database, setting an _id if none provided, and retrieve it even after a reload: [2K[0G      ✓ Able to insert a document in the database, setting an _id if none provided, and retrieve it even after a reload (93ms)
+      ◦ Can insert multiple documents in the database: [2K[0G      ✓ Can insert multiple documents in the database 
+      ◦ Can insert and get back from DB complex objects with all primitive and secondary types: [2K[0G      ✓ Can insert and get back from DB complex objects with all primitive and secondary types 
+      ◦ If an object returned from the DB is modified and refetched, the original value should be found: [2K[0G      ✓ If an object returned from the DB is modified and refetched, the original value should be found 
+      ◦ Cannot insert a doc that has a field beginning with a $ sign: [2K[0G      ✓ Cannot insert a doc that has a field beginning with a $ sign 
+      ◦ If an _id is already given when we insert a document, use that instead of generating a random one: [2K[0G      ✓ If an _id is already given when we insert a document, use that instead of generating a random one 
+      ◦ Modifying the insertedDoc after an insert doesnt change the copy saved in the database: [2K[0G      ✓ Modifying the insertedDoc after an insert doesnt change the copy saved in the database 
+      ◦ Can insert an array of documents at once: [2K[0G      ✓ Can insert an array of documents at once 
+      ◦ If a bulk insert violates a constraint, all changes are rolled back: [2K[0G      ✓ If a bulk insert violates a constraint, all changes are rolled back 
+      ◦ If timestampData option is set, a createdAt field is added and persisted: [2K[0G      1) If timestampData option is set, a createdAt field is added and persisted
+      ◦ If timestampData option not set, don't create a createdAt and a updatedAt field: [2K[0G      ✓ If timestampData option not set, don't create a createdAt and a updatedAt field 
+      ◦ If timestampData is set but createdAt is specified by user, don't change it: [2K[0G      2) If timestampData is set but createdAt is specified by user, don't change it
+      ◦ If timestampData is set but updatedAt is specified by user, don't change it: [2K[0G      3) If timestampData is set but updatedAt is specified by user, don't change it
+      ◦ Can insert a doc with id 0: [2K[0G      ✓ Can insert a doc with id 0 
+      ◦ If the callback throws an uncaught exception, do not catch it inside findOne, this is userspace concern: [2K[0G      ✓ If the callback throws an uncaught exception, do not catch it inside findOne, this is userspace concern 
+    #getCandidates
+      ◦ Can use an index to get docs with a basic match: [2K[0G      ✓ Can use an index to get docs with a basic match 
+      ◦ Can use an index to get docs with a $in match: [2K[0G      ✓ Can use an index to get docs with a $in match 
+      ◦ If no index can be used, return the whole database: [2K[0G      ✓ If no index can be used, return the whole database 
+      ◦ Can use indexes for comparison matches: [2K[0G      ✓ Can use indexes for comparison matches 
+      ◦ Can set a TTL index that expires documents: [2K[0G      ✓ Can set a TTL index that expires documents (460ms)
+      ◦ TTL indexes can expire multiple documents and only what needs to be expired: [2K[0G      ✓ TTL indexes can expire multiple documents and only what needs to be expired (311ms)
+      ◦ Document where indexed field is absent or not a date are ignored: [2K[0G      ✓ Document where indexed field is absent or not a date are ignored (207ms)
+    Find
+      ◦ Can find all documents if an empty query is used: [2K[0G      ✓ Can find all documents if an empty query is used 
+      ◦ Can find all documents matching a basic query: [2K[0G      ✓ Can find all documents matching a basic query 
+      ◦ Can find one document matching a basic query and return null if none is found: [2K[0G      ✓ Can find one document matching a basic query and return null if none is found 
+      ◦ Can find dates and objects (non JS-native types): [2K[0G      ✓ Can find dates and objects (non JS-native types) 
+      ◦ Can use dot-notation to query subfields: [2K[0G      ✓ Can use dot-notation to query subfields 
+      ◦ Array fields match if any element matches: [2K[0G      ✓ Array fields match if any element matches 
+      ◦ Returns an error if the query is not well formed: [2K[0G      ✓ Returns an error if the query is not well formed 
+      ◦ Changing the documents returned by find or findOne do not change the database state: [2K[0G      ✓ Changing the documents returned by find or findOne do not change the database state 
+      ◦ Can use sort, skip and limit if the callback is not passed to find but to exec: [2K[0G      ✓ Can use sort, skip and limit if the callback is not passed to find but to exec 
+      ◦ Can use sort and skip if the callback is not passed to findOne but to exec: [2K[0G      ✓ Can use sort and skip if the callback is not passed to findOne but to exec 
+      ◦ Can use projections in find, normal or cursor way: [2K[0G      ✓ Can use projections in find, normal or cursor way 
+      ◦ Can use projections in findOne, normal or cursor way: [2K[0G      ✓ Can use projections in findOne, normal or cursor way 
+    Count
+      ◦ Count all documents if an empty query is used: [2K[0G      ✓ Count all documents if an empty query is used 
+      ◦ Count all documents matching a basic query: [2K[0G      ✓ Count all documents matching a basic query 
+      ◦ Array fields match if any element matches: [2K[0G      ✓ Array fields match if any element matches 
+      ◦ Returns an error if the query is not well formed: [2K[0G      ✓ Returns an error if the query is not well formed 
+    Update
+      ◦ If the query doesn't match anything, database is not modified: [2K[0G      ✓ If the query doesn't match anything, database is not modified 
+      ◦ If timestampData option is set, update the updatedAt field: [2K[0G      4) If timestampData option is set, update the updatedAt field
+      ◦ Can update multiple documents matching the query: [2K[0G      ✓ Can update multiple documents matching the query (117ms)
+      ◦ Can update only one document matching the query: [2K[0G      ✓ Can update only one document matching the query (125ms)
+      ◦ Cannot perform update if the update query is not either registered-modifiers-only or copy-only, or contain badly formatted fields: [2K[0G      ✓ Cannot perform update if the update query is not either registered-modifiers-only or copy-only, or contain badly formatted fields 
+      ◦ Can update documents using multiple modifiers: [2K[0G      ✓ Can update documents using multiple modifiers 
+      ◦ Can upsert a document even with modifiers: [2K[0G      ✓ Can upsert a document even with modifiers 
+      ◦ When using modifiers, the only way to update subdocs is with the dot-notation: [2K[0G      ✓ When using modifiers, the only way to update subdocs is with the dot-notation 
+      ◦ Returns an error if the query is not well formed: [2K[0G      ✓ Returns an error if the query is not well formed 
+      ◦ If an error is thrown by a modifier, the database state is not changed: [2K[0G      ✓ If an error is thrown by a modifier, the database state is not changed 
+      ◦ Cant change the _id of a document: [2K[0G      ✓ Cant change the _id of a document 
+      ◦ Non-multi updates are persistent: [2K[0G      ✓ Non-multi updates are persistent (118ms)
+      ◦ Multi updates are persistent: [2K[0G      ✓ Multi updates are persistent (126ms)
+      ◦ Can update without the options arg (will use defaults then): [2K[0G      ✓ Can update without the options arg (will use defaults then) 
+      ◦ If a multi update fails on one document, previous updates should be rolled back: [2K[0G      ✓ If a multi update fails on one document, previous updates should be rolled back 
+      ◦ If an index constraint is violated by an update, all changes should be rolled back: [2K[0G      ✓ If an index constraint is violated by an update, all changes should be rolled back 
+      ◦ If options.returnUpdatedDocs is true, return all matched docs: [2K[0G      ✓ If options.returnUpdatedDocs is true, return all matched docs 
+      ◦ createdAt property is unchanged and updatedAt correct after an update, even a complete document replacement: [2K[0G      ✓ createdAt property is unchanged and updatedAt correct after an update, even a complete document replacement (91ms)
+      Upserts
+        ◦ Can perform upserts if needed: [2K[0G        ✓ Can perform upserts if needed 
+        ◦ If the update query is a normal object with no modifiers, it is the doc that will be upserted: [2K[0G        ✓ If the update query is a normal object with no modifiers, it is the doc that will be upserted 
+        ◦ If the update query contains modifiers, it is applied to the object resulting from removing all operators from the find query 1: [2K[0G        ✓ If the update query contains modifiers, it is applied to the object resulting from removing all operators from the find query 1 
+        ◦ If the update query contains modifiers, it is applied to the object resulting from removing all operators from the find query 2: [2K[0G        ✓ If the update query contains modifiers, it is applied to the object resulting from removing all operators from the find query 2 
+        ◦ Performing upsert with badly formatted fields yields a standard error not an exception: [2K[0G        ✓ Performing upsert with badly formatted fields yields a standard error not an exception 
+      Callback signature
+        ◦ Regular update, multi false: [2K[0G        ✓ Regular update, multi false 
+        ◦ Regular update, multi true: [2K[0G        ✓ Regular update, multi true 
+        ◦ Upsert: [2K[0G        ✓ Upsert 
+    Remove
+      ◦ Can remove multiple documents: [2K[0G      ✓ Can remove multiple documents (109ms)
+      ◦ Remove can be called multiple times in parallel and everything that needs to be removed will be: [2K[0G      ✓ Remove can be called multiple times in parallel and everything that needs to be removed will be 
+      ◦ Returns an error if the query is not well formed: [2K[0G      ✓ Returns an error if the query is not well formed 
+      ◦ Non-multi removes are persistent: [2K[0G      ✓ Non-multi removes are persistent (117ms)
+      ◦ Multi removes are persistent: [2K[0G      ✓ Multi removes are persistent (135ms)
+      ◦ Can remove without the options arg (will use defaults then): [2K[0G      ✓ Can remove without the options arg (will use defaults then) 
+    Using indexes
+      ◦ Results of getMatching should never contain duplicates: [2K[0G      ✓ Results of getMatching should never contain duplicates 
+      ensureIndex and index initialization in database loading
+        ◦ ensureIndex can be called right after a loadDatabase and be initialized and filled correctly: [2K[0G        ✓ ensureIndex can be called right after a loadDatabase and be initialized and filled correctly (101ms)
+        ◦ ensureIndex can be called twice on the same field, the second call will ahve no effect: [2K[0G        ✓ ensureIndex can be called twice on the same field, the second call will ahve no effect 
+        ◦ ensureIndex can be called after the data set was modified and the index still be correct: [2K[0G        ✓ ensureIndex can be called after the data set was modified and the index still be correct (107ms)
+        ◦ ensureIndex can be called before a loadDatabase and still be initialized and filled correctly: [2K[0G        ✓ ensureIndex can be called before a loadDatabase and still be initialized and filled correctly (100ms)
+        ◦ Can initialize multiple indexes on a database load: [2K[0G        ✓ Can initialize multiple indexes on a database load (84ms)
+        ◦ If a unique constraint is not respected, database loading will not work and no data will be inserted: [2K[0G        ✓ If a unique constraint is not respected, database loading will not work and no data will be inserted 
+        ◦ If a unique constraint is not respected, ensureIndex will return an error and not create an index: [2K[0G        ✓ If a unique constraint is not respected, ensureIndex will return an error and not create an index 
+        ◦ Can remove an index: [2K[0G        ✓ Can remove an index 
+      Indexing newly inserted documents
+        ◦ Newly inserted documents are indexed: [2K[0G        ✓ Newly inserted documents are indexed 
+        ◦ If multiple indexes are defined, the document is inserted in all of them: [2K[0G        ✓ If multiple indexes are defined, the document is inserted in all of them 
+        ◦ Can insert two docs at the same key for a non unique index: [2K[0G        ✓ Can insert two docs at the same key for a non unique index 
+        ◦ If the index has a unique constraint, an error is thrown if it is violated and the data is not modified: [2K[0G        ✓ If the index has a unique constraint, an error is thrown if it is violated and the data is not modified (134ms)
+        ◦ If an index has a unique constraint, other indexes cannot be modified when it raises an error: [2K[0G        ✓ If an index has a unique constraint, other indexes cannot be modified when it raises an error 
+        ◦ Unique indexes prevent you from inserting two docs where the field is undefined except if theyre sparse: [2K[0G        ✓ Unique indexes prevent you from inserting two docs where the field is undefined except if theyre sparse 
+        ◦ Insertion still works as before with indexing: [2K[0G        ✓ Insertion still works as before with indexing 
+        ◦ All indexes point to the same data as the main index on _id: [2K[0G        ✓ All indexes point to the same data as the main index on _id 
+        ◦ If a unique constraint is violated, no index is changed, including the main one: [2K[0G        ✓ If a unique constraint is violated, no index is changed, including the main one 
+      Updating indexes upon document update
+        ◦ Updating docs still works as before with indexing: [2K[0G        ✓ Updating docs still works as before with indexing 
+        ◦ Indexes get updated when a document (or multiple documents) is updated: [2K[0G        ✓ Indexes get updated when a document (or multiple documents) is updated 
+        ◦ If a simple update violates a contraint, all changes are rolled back and an error is thrown: [2K[0G        ✓ If a simple update violates a contraint, all changes are rolled back and an error is thrown 
+        ◦ If a multi update violates a contraint, all changes are rolled back and an error is thrown: [2K[0G        ✓ If a multi update violates a contraint, all changes are rolled back and an error is thrown 
+      Updating indexes upon document remove
+        ◦ Removing docs still works as before with indexing: [2K[0G        ✓ Removing docs still works as before with indexing 
+        ◦ Indexes get updated when a document (or multiple documents) is removed: [2K[0G        ✓ Indexes get updated when a document (or multiple documents) is removed 
+      Persisting indexes
+        ◦ Indexes are persisted to a separate file and recreated upon reload: [2K[0G        ✓ Indexes are persisted to a separate file and recreated upon reload (377ms)
+        ◦ Indexes are persisted with their options and recreated even if some db operation happen between loads: [2K[0G        ✓ Indexes are persisted with their options and recreated even if some db operation happen between loads (477ms)
+        ◦ Indexes can also be removed and the remove persisted: [2K[0G        ✓ Indexes can also be removed and the remove persisted (527ms)
+
+  Executor
+    With persistent database
+      ◦ A throw in a callback doesnt prevent execution of next operations: [2K[0G      ✓ A throw in a callback doesnt prevent execution of next operations 
+      ◦ A falsy callback doesnt prevent execution of next operations: [2K[0G      ✓ A falsy callback doesnt prevent execution of next operations 
+      ◦ Operations are executed in the right order: [2K[0G      ✓ Operations are executed in the right order 
+      ◦ Does not starve event loop and raise warning when more than 1000 callbacks are in queue: [2K[0G      ✓ Does not starve event loop and raise warning when more than 1000 callbacks are in queue 
+      ◦ Works in the right order even with no supplied callback: [2K[0G      ✓ Works in the right order even with no supplied callback 
+    With non persistent database
+      ◦ A throw in a callback doesnt prevent execution of next operations: [2K[0G      ✓ A throw in a callback doesnt prevent execution of next operations 
+      ◦ A falsy callback doesnt prevent execution of next operations: [2K[0G      ✓ A falsy callback doesnt prevent execution of next operations 
+      ◦ Operations are executed in the right order: [2K[0G      ✓ Operations are executed in the right order 
+      ◦ Works in the right order even with no supplied callback: [2K[0G      ✓ Works in the right order even with no supplied callback 
+
+  Indexes
+    ◦ Get all elements in the index: [2K[0G    ✓ Get all elements in the index 
+    Insertion
+      ◦ Can insert pointers to documents in the index correctly when they have the field: [2K[0G      ✓ Can insert pointers to documents in the index correctly when they have the field 
+      ◦ Inserting twice for the same fieldName in a unique index will result in an error thrown: [2K[0G      ✓ Inserting twice for the same fieldName in a unique index will result in an error thrown 
+      ◦ Inserting twice for a fieldName the docs dont have with a unique index results in an error thrown: [2K[0G      ✓ Inserting twice for a fieldName the docs dont have with a unique index results in an error thrown 
+      ◦ Inserting twice for a fieldName the docs dont have with a unique and sparse index will not throw, since the docs will be non indexed: [2K[0G      ✓ Inserting twice for a fieldName the docs dont have with a unique and sparse index will not throw, since the docs will be non indexed 
+      ◦ Works with dot notation: [2K[0G      ✓ Works with dot notation 
+      ◦ Can insert an array of documents: [2K[0G      ✓ Can insert an array of documents 
+      ◦ When inserting an array of elements, if an error is thrown all inserts need to be rolled back: [2K[0G      ✓ When inserting an array of elements, if an error is thrown all inserts need to be rolled back 
+      Array fields
+        ◦ Inserts one entry per array element in the index: [2K[0G        ✓ Inserts one entry per array element in the index 
+        ◦ Inserts one entry per array element in the index, type-checked: [2K[0G        ✓ Inserts one entry per array element in the index, type-checked 
+        ◦ Inserts one entry per unique array element in the index, the unique constraint only holds across documents: [2K[0G        ✓ Inserts one entry per unique array element in the index, the unique constraint only holds across documents 
+        ◦ The unique constraint holds across documents: [2K[0G        ✓ The unique constraint holds across documents 
+        ◦ When removing a document, remove it from the index at all unique array elements: [2K[0G        ✓ When removing a document, remove it from the index at all unique array elements 
+        ◦ If a unique constraint is violated when inserting an array key, roll back all inserts before the key: [2K[0G        ✓ If a unique constraint is violated when inserting an array key, roll back all inserts before the key 
+    Removal
+      ◦ Can remove pointers from the index, even when multiple documents have the same key: [2K[0G      ✓ Can remove pointers from the index, even when multiple documents have the same key 
+      ◦ If we have a sparse index, removing a non indexed doc has no effect: [2K[0G      ✓ If we have a sparse index, removing a non indexed doc has no effect 
+      ◦ Works with dot notation: [2K[0G      ✓ Works with dot notation 
+      ◦ Can remove an array of documents: [2K[0G      ✓ Can remove an array of documents 
+    Update
+      ◦ Can update a document whose key did or didnt change: [2K[0G      ✓ Can update a document whose key did or didnt change 
+      ◦ If a simple update violates a unique constraint, changes are rolled back and an error thrown: [2K[0G      ✓ If a simple update violates a unique constraint, changes are rolled back and an error thrown 
+      ◦ Can update an array of documents: [2K[0G      ✓ Can update an array of documents 
+      ◦ If a unique constraint is violated during an array-update, all changes are rolled back and an error thrown: [2K[0G      ✓ If a unique constraint is violated during an array-update, all changes are rolled back and an error thrown 
+      ◦ If an update doesnt change a document, the unique constraint is not violated: [2K[0G      ✓ If an update doesnt change a document, the unique constraint is not violated 
+      ◦ Can revert simple and batch updates: [2K[0G      ✓ Can revert simple and batch updates 
+    Get matching documents
+      ◦ Get all documents where fieldName is equal to the given value, or an empty array if no match: [2K[0G      ✓ Get all documents where fieldName is equal to the given value, or an empty array if no match 
+      ◦ Can get all documents for a given key in a unique index: [2K[0G      ✓ Can get all documents for a given key in a unique index 
+      ◦ Can get all documents for which a field is undefined: [2K[0G      ✓ Can get all documents for which a field is undefined 
+      ◦ Can get all documents for which a field is null: [2K[0G      ✓ Can get all documents for which a field is null 
+      ◦ Can get all documents for a given key in a sparse index, but not unindexed docs (= field undefined): [2K[0G      ✓ Can get all documents for a given key in a sparse index, but not unindexed docs (= field undefined) 
+      ◦ Can get all documents whose key is in an array of keys: [2K[0G      ✓ Can get all documents whose key is in an array of keys 
+      ◦ Can get all documents whose key is between certain bounds: [2K[0G      ✓ Can get all documents whose key is between certain bounds 
+    Resetting
+      ◦ Can reset an index without any new data, the index will be empty afterwards: [2K[0G      ✓ Can reset an index without any new data, the index will be empty afterwards 
+      ◦ Can reset an index and initialize it with one document: [2K[0G      ✓ Can reset an index and initialize it with one document 
+      ◦ Can reset an index and initialize it with an array of documents: [2K[0G      ✓ Can reset an index and initialize it with an array of documents 
+
+  Model
+    Serialization, deserialization
+      ◦ Can serialize and deserialize strings: [2K[0G      ✓ Can serialize and deserialize strings 
+      ◦ Can serialize and deserialize booleans: [2K[0G      ✓ Can serialize and deserialize booleans 
+      ◦ Can serialize and deserialize numbers: [2K[0G      ✓ Can serialize and deserialize numbers 
+      ◦ Can serialize and deserialize null: [2K[0G      ✓ Can serialize and deserialize null 
+      ◦ undefined fields are removed when serialized: [2K[0G      ✓ undefined fields are removed when serialized 
+      ◦ Can serialize and deserialize a date: [2K[0G      ✓ Can serialize and deserialize a date 
+      ◦ Can serialize and deserialize sub objects: [2K[0G      ✓ Can serialize and deserialize sub objects 
+      ◦ Can serialize and deserialize sub arrays: [2K[0G      ✓ Can serialize and deserialize sub arrays 
+      ◦ Reject field names beginning with a $ sign or containing a dot, except the four edge cases: [2K[0G      ✓ Reject field names beginning with a $ sign or containing a dot, except the four edge cases 
+      ◦ Can serialize string fields with a new line without breaking the DB: [2K[0G      ✓ Can serialize string fields with a new line without breaking the DB (314ms)
+      ◦ Can accept objects whose keys are numbers: [2K[0G      ✓ Can accept objects whose keys are numbers 
+    Object checking
+      ◦ Field names beginning with a $ sign are forbidden: [2K[0G      ✓ Field names beginning with a $ sign are forbidden 
+      ◦ Field names cannot contain a .: [2K[0G      ✓ Field names cannot contain a . 
+      ◦ Properties with a null value dont trigger an error: [2K[0G      ✓ Properties with a null value dont trigger an error 
+      ◦ Can check if an object is a primitive or not: [2K[0G      ✓ Can check if an object is a primitive or not 
+    Deep copying
+      ◦ Should be able to deep copy any serializable model: [2K[0G      ✓ Should be able to deep copy any serializable model 
+      ◦ Should deep copy the contents of an array: [2K[0G      ✓ Should deep copy the contents of an array 
+      ◦ Without the strictKeys option, everything gets deep copied: [2K[0G      ✓ Without the strictKeys option, everything gets deep copied 
+      ◦ With the strictKeys option, only valid keys gets deep copied: [2K[0G      ✓ With the strictKeys option, only valid keys gets deep copied 
+    Modifying documents
+      ◦ Queries not containing any modifier just replace the document by the contents of the query but keep its _id: [2K[0G      ✓ Queries not containing any modifier just replace the document by the contents of the query but keep its _id 
+      ◦ Throw an error if trying to change the _id field in a copy-type modification: [2K[0G      ✓ Throw an error if trying to change the _id field in a copy-type modification 
+      ◦ Throw an error if trying to use modify in a mixed copy+modify way: [2K[0G      ✓ Throw an error if trying to use modify in a mixed copy+modify way 
+      ◦ Throw an error if trying to use an inexistent modifier: [2K[0G      ✓ Throw an error if trying to use an inexistent modifier 
+      ◦ Throw an error if a modifier is used with a non-object argument: [2K[0G      ✓ Throw an error if a modifier is used with a non-object argument 
+      $set modifier
+        ◦ Can change already set fields without modfifying the underlying object: [2K[0G        ✓ Can change already set fields without modfifying the underlying object 
+        ◦ Creates fields to set if they dont exist yet: [2K[0G        ✓ Creates fields to set if they dont exist yet 
+        ◦ Can set sub-fields and create them if necessary: [2K[0G        ✓ Can set sub-fields and create them if necessary 
+        ◦ Doesn't replace a falsy field by an object when recursively following dot notation: [2K[0G        ✓ Doesn't replace a falsy field by an object when recursively following dot notation 
+      $unset modifier
+        ◦ Can delete a field, not throwing an error if the field doesnt exist: [2K[0G        ✓ Can delete a field, not throwing an error if the field doesnt exist 
+        ◦ Can unset sub-fields and entire nested documents: [2K[0G        ✓ Can unset sub-fields and entire nested documents 
+        ◦ When unsetting nested fields, should not create an empty parent to nested field: [2K[0G        ✓ When unsetting nested fields, should not create an empty parent to nested field 
+      $inc modifier
+        ◦ Throw an error if you try to use it with a non-number or on a non number field: [2K[0G        ✓ Throw an error if you try to use it with a non-number or on a non number field 
+        ◦ Can increment number fields or create and initialize them if needed: [2K[0G        ✓ Can increment number fields or create and initialize them if needed 
+        ◦ Works recursively: [2K[0G        ✓ Works recursively 
+      $push modifier
+        ◦ Can push an element to the end of an array: [2K[0G        ✓ Can push an element to the end of an array 
+        ◦ Can push an element to a non-existent field and will create the array: [2K[0G        ✓ Can push an element to a non-existent field and will create the array 
+        ◦ Can push on nested fields: [2K[0G        ✓ Can push on nested fields 
+        ◦ Throw if we try to push to a non-array: [2K[0G        ✓ Throw if we try to push to a non-array 
+        ◦ Can use the $each modifier to add multiple values to an array at once: [2K[0G        ✓ Can use the $each modifier to add multiple values to an array at once 
+        ◦ Can use the $slice modifier to limit the number of array elements: [2K[0G        ✓ Can use the $slice modifier to limit the number of array elements 
+      $addToSet modifier
+        ◦ Can add an element to a set: [2K[0G        ✓ Can add an element to a set 
+        ◦ Can add an element to a non-existent set and will create the array: [2K[0G        ✓ Can add an element to a non-existent set and will create the array 
+        ◦ Throw if we try to addToSet to a non-array: [2K[0G        ✓ Throw if we try to addToSet to a non-array 
+        ◦ Use deep-equality to check whether we can add a value to a set: [2K[0G        ✓ Use deep-equality to check whether we can add a value to a set 
+        ◦ Can use the $each modifier to add multiple values to a set at once: [2K[0G        ✓ Can use the $each modifier to add multiple values to a set at once 
+      $pop modifier
+        ◦ Throw if called on a non array, a non defined field or a non integer: [2K[0G        ✓ Throw if called on a non array, a non defined field or a non integer 
+        ◦ Can remove the first and last element of an array: [2K[0G        ✓ Can remove the first and last element of an array 
+      $pull modifier
+        ◦ Can remove an element from a set: [2K[0G        ✓ Can remove an element from a set 
+        ◦ Can remove multiple matching elements: [2K[0G        ✓ Can remove multiple matching elements 
+        ◦ Throw if we try to pull from a non-array: [2K[0G        ✓ Throw if we try to pull from a non-array 
+        ◦ Use deep-equality to check whether we can remove a value from a set: [2K[0G        ✓ Use deep-equality to check whether we can remove a value from a set 
+        ◦ Can use any kind of nedb query with $pull: [2K[0G        ✓ Can use any kind of nedb query with $pull 
+      $max modifier
+        ◦ Will set the field to the updated value if value is greater than current one, without modifying the original object: [2K[0G        ✓ Will set the field to the updated value if value is greater than current one, without modifying the original object 
+        ◦ Will not update the field if new value is smaller than current one: [2K[0G        ✓ Will not update the field if new value is smaller than current one 
+        ◦ Will create the field if it does not exist: [2K[0G        ✓ Will create the field if it does not exist 
+        ◦ Works on embedded documents: [2K[0G        ✓ Works on embedded documents 
+      $min modifier
+        ◦ Will set the field to the updated value if value is smaller than current one, without modifying the original object: [2K[0G        ✓ Will set the field to the updated value if value is smaller than current one, without modifying the original object 
+        ◦ Will not update the field if new value is greater than current one: [2K[0G        ✓ Will not update the field if new value is greater than current one 
+        ◦ Will create the field if it does not exist: [2K[0G        ✓ Will create the field if it does not exist 
+        ◦ Works on embedded documents: [2K[0G        ✓ Works on embedded documents 
+    Comparing things
+      ◦ undefined is the smallest: [2K[0G      ✓ undefined is the smallest 
+      ◦ Then null: [2K[0G      ✓ Then null 
+      ◦ Then numbers: [2K[0G      ✓ Then numbers 
+      ◦ Then strings: [2K[0G      ✓ Then strings 
+      ◦ Then booleans: [2K[0G      ✓ Then booleans 
+      ◦ Then dates: [2K[0G      ✓ Then dates 
+      ◦ Then arrays: [2K[0G      ✓ Then arrays 
+      ◦ And finally objects: [2K[0G      ✓ And finally objects 
+      ◦ Can specify custom string comparison function: [2K[0G      ✓ Can specify custom string comparison function 
+    Querying
+      Comparing things
+        ◦ Two things of different types cannot be equal, two identical native things are equal: [2K[0G        ✓ Two things of different types cannot be equal, two identical native things are equal 
+        ◦ Can test native types null undefined string number boolean date equality: [2K[0G        ✓ Can test native types null undefined string number boolean date equality 
+        ◦ If one side is an array or undefined, comparison fails: [2K[0G        ✓ If one side is an array or undefined, comparison fails 
+        ◦ Can test objects equality: [2K[0G        ✓ Can test objects equality 
+      Getting a fields value in dot notation
+        ◦ Return first-level and nested values: [2K[0G        ✓ Return first-level and nested values 
+        ◦ Return undefined if the field cannot be found in the object: [2K[0G        ✓ Return undefined if the field cannot be found in the object 
+        ◦ Can navigate inside arrays with dot notation, and return the array of values in that case: [2K[0G        ✓ Can navigate inside arrays with dot notation, and return the array of values in that case 
+        ◦ Can get a single value out of an array using its index: [2K[0G        ✓ Can get a single value out of an array using its index 
+      Field equality
+        ◦ Can find documents with simple fields: [2K[0G        ✓ Can find documents with simple fields 
+        ◦ Can find documents with the dot-notation: [2K[0G        ✓ Can find documents with the dot-notation 
+        ◦ Cannot find undefined: [2K[0G        ✓ Cannot find undefined 
+        ◦ Nested objects are deep-equality matched and not treated as sub-queries: [2K[0G        ✓ Nested objects are deep-equality matched and not treated as sub-queries 
+        ◦ Can match for field equality inside an array with the dot notation: [2K[0G        ✓ Can match for field equality inside an array with the dot notation 
+      Regular expression matching
+        ◦ Matching a non-string to a regular expression always yields false: [2K[0G        ✓ Matching a non-string to a regular expression always yields false 
+        ◦ Can match strings using basic querying: [2K[0G        ✓ Can match strings using basic querying 
+        ◦ Can match strings using the $regex operator: [2K[0G        ✓ Can match strings using the $regex operator 
+        ◦ Will throw if $regex operator is used with a non regex value: [2K[0G        ✓ Will throw if $regex operator is used with a non regex value 
+        ◦ Can use the $regex operator in cunjunction with other operators: [2K[0G        ✓ Can use the $regex operator in cunjunction with other operators 
+        ◦ Can use dot-notation: [2K[0G        ✓ Can use dot-notation 
+      $lt
+        ◦ Cannot compare a field to an object, an array, null or a boolean, it will return false: [2K[0G        ✓ Cannot compare a field to an object, an array, null or a boolean, it will return false 
+        ◦ Can compare numbers, with or without dot notation: [2K[0G        ✓ Can compare numbers, with or without dot notation 
+        ◦ Can compare strings, with or without dot notation: [2K[0G        ✓ Can compare strings, with or without dot notation 
+        ◦ If field is an array field, a match means a match on at least one element: [2K[0G        ✓ If field is an array field, a match means a match on at least one element 
+        ◦ Works with dates too: [2K[0G        ✓ Works with dates too 
+      Other comparison operators: $lte, $gt, $gte, $ne, $in, $exists
+        ◦ $lte: [2K[0G        ✓ $lte 
+        ◦ $gt: [2K[0G        ✓ $gt 
+        ◦ $gte: [2K[0G        ✓ $gte 
+        ◦ $ne: [2K[0G        ✓ $ne 
+        ◦ $in: [2K[0G        ✓ $in 
+        ◦ $nin: [2K[0G        ✓ $nin 
+        ◦ $exists: [2K[0G        ✓ $exists 
+      Comparing on arrays
+        ◦ Can perform a direct array match: [2K[0G        ✓ Can perform a direct array match 
+        ◦ Can query on the size of an array field: [2K[0G        ✓ Can query on the size of an array field 
+        ◦ $size operator works with empty arrays: [2K[0G        ✓ $size operator works with empty arrays 
+        ◦ Should throw an error if a query operator is used without comparing to an integer: [2K[0G        ✓ Should throw an error if a query operator is used without comparing to an integer 
+        ◦ Using $size operator on a non-array field should prevent match but not throw: [2K[0G        ✓ Using $size operator on a non-array field should prevent match but not throw 
+        ◦ Can use $size several times in the same matcher: [2K[0G        ✓ Can use $size several times in the same matcher 
+        ◦ Can query array documents with multiple simultaneous conditions: [2K[0G        ✓ Can query array documents with multiple simultaneous conditions 
+        ◦ $elemMatch operator works with empty arrays: [2K[0G        ✓ $elemMatch operator works with empty arrays 
+        ◦ Can use more complex comparisons inside nested query documents: [2K[0G        ✓ Can use more complex comparisons inside nested query documents 
+      Logical operators $or, $and, $not
+        ◦ Any of the subqueries should match for an $or to match: [2K[0G        ✓ Any of the subqueries should match for an $or to match 
+        ◦ All of the subqueries should match for an $and to match: [2K[0G        ✓ All of the subqueries should match for an $and to match 
+        ◦ Subquery should not match for a $not to match: [2K[0G        ✓ Subquery should not match for a $not to match 
+        ◦ Logical operators are all top-level, only other logical operators can be above: [2K[0G        ✓ Logical operators are all top-level, only other logical operators can be above 
+        ◦ Logical operators can be combined as long as they are on top of the decision tree: [2K[0G        ✓ Logical operators can be combined as long as they are on top of the decision tree 
+        ◦ Should throw an error if a logical operator is used without an array or if an unknown logical operator is used: [2K[0G        ✓ Should throw an error if a logical operator is used without an array or if an unknown logical operator is used 
+      Comparison operator $where
+        ◦ Function should match and not match correctly: [2K[0G        ✓ Function should match and not match correctly 
+        ◦ Should throw an error if the $where function is not, in fact, a function: [2K[0G        ✓ Should throw an error if the $where function is not, in fact, a function 
+        ◦ Should throw an error if the $where function returns a non-boolean: [2K[0G        ✓ Should throw an error if the $where function returns a non-boolean 
+        ◦ Should be able to do the complex matching it must be used for: [2K[0G        ✓ Should be able to do the complex matching it must be used for 
+      Array fields
+        ◦ Field equality: [2K[0G        ✓ Field equality 
+        ◦ With one comparison operator: [2K[0G        ✓ With one comparison operator 
+        ◦ Works with arrays that are in subdocuments: [2K[0G        ✓ Works with arrays that are in subdocuments 
+        ◦ Can query inside arrays thanks to dot notation: [2K[0G        ✓ Can query inside arrays thanks to dot notation 
+        ◦ Can query for a specific element inside arrays thanks to dot notation: [2K[0G        ✓ Can query for a specific element inside arrays thanks to dot notation 
+        ◦ A single array-specific operator and the query is treated as array specific: [2K[0G        ✓ A single array-specific operator and the query is treated as array specific 
+        ◦ Can mix queries on array fields and non array filds with array specific operators: [2K[0G        ✓ Can mix queries on array fields and non array filds with array specific operators 
+
+  Persistence
+    ◦ Every line represents a document: [2K[0G    ✓ Every line represents a document 
+    ◦ Badly formatted lines have no impact on the treated data: [2K[0G    ✓ Badly formatted lines have no impact on the treated data 
+    ◦ Well formatted lines that have no _id are not included in the data: [2K[0G    ✓ Well formatted lines that have no _id are not included in the data 
+    ◦ If two lines concern the same doc (= same _id), the last one is the good version: [2K[0G    ✓ If two lines concern the same doc (= same _id), the last one is the good version 
+    ◦ If a doc contains $$deleted: true, that means we need to remove it from the data: [2K[0G    ✓ If a doc contains $$deleted: true, that means we need to remove it from the data 
+    ◦ If a doc contains $$deleted: true, no error is thrown if the doc wasnt in the list before: [2K[0G    ✓ If a doc contains $$deleted: true, no error is thrown if the doc wasnt in the list before 
+    ◦ If a doc contains $$indexCreated, no error is thrown during treatRawData and we can get the index options: [2K[0G    ✓ If a doc contains $$indexCreated, no error is thrown during treatRawData and we can get the index options 
+    ◦ Compact database on load: [2K[0G    ✓ Compact database on load (109ms)
+    ◦ Calling loadDatabase after the data was modified doesnt change its contents: [2K[0G    ✓ Calling loadDatabase after the data was modified doesnt change its contents (210ms)
+    ◦ Calling loadDatabase after the datafile was removed will reset the database: [2K[0G    ✓ Calling loadDatabase after the datafile was removed will reset the database (118ms)
+    ◦ Calling loadDatabase after the datafile was modified loads the new data: [2K[0G    ✓ Calling loadDatabase after the datafile was modified loads the new data (167ms)
+    ◦ When treating raw data, refuse to proceed if too much data is corrupt, to avoid data loss: [2K[0G    ✓ When treating raw data, refuse to proceed if too much data is corrupt, to avoid data loss (326ms)
+    ◦ Can listen to compaction events: [2K[0G    ✓ Can listen to compaction events 
+    Serialization hooks
+      ◦ Declaring only one hook will throw an exception to prevent data loss: [2K[0G      ✓ Declaring only one hook will throw an exception to prevent data loss 
+      ◦ Declaring two hooks that are not reverse of one another will cause an exception to prevent data loss: [2K[0G      ✓ Declaring two hooks that are not reverse of one another will cause an exception to prevent data loss 
+      ◦ A serialization hook can be used to transform data before writing new state to disk: [2K[0G      ✓ A serialization hook can be used to transform data before writing new state to disk (96ms)
+      ◦ Use serialization hook when persisting cached database or compacting: [2K[0G      ✓ Use serialization hook when persisting cached database or compacting (202ms)
+      ◦ Deserialization hook is correctly used when loading data: [2K[0G      ✓ Deserialization hook is correctly used when loading data (254ms)
+    Prevent dataloss when persisting data
+      ◦ Creating a datastore with in memory as true and a bad filename wont cause an error: [2K[0G      ✓ Creating a datastore with in memory as true and a bad filename wont cause an error (52ms)
+      ◦ Creating a persistent datastore with a bad filename will cause an error: [2K[0G      ✓ Creating a persistent datastore with a bad filename will cause an error 
+      ◦ If no file exists, ensureDatafileIntegrity creates an empty datafile: [2K[0G      ✓ If no file exists, ensureDatafileIntegrity creates an empty datafile (49ms)
+      ◦ If only datafile exists, ensureDatafileIntegrity will use it: [2K[0G      ✓ If only datafile exists, ensureDatafileIntegrity will use it (48ms)
+      ◦ If temp datafile exists and datafile doesnt, ensureDatafileIntegrity will use it (cannot happen except upon first use): [2K[0G      ✓ If temp datafile exists and datafile doesnt, ensureDatafileIntegrity will use it (cannot happen except upon first use) (54ms)
+      ◦ If both temp and current datafiles exist, ensureDatafileIntegrity will use the datafile, as it means that the write of the temp file failed: [2K[0G      ✓ If both temp and current datafiles exist, ensureDatafileIntegrity will use the datafile, as it means that the write of the temp file failed (167ms)
+      ◦ persistCachedDatabase should update the contents of the datafile and leave a clean state: [2K[0G      ✓ persistCachedDatabase should update the contents of the datafile and leave a clean state (92ms)
+      ◦ After a persistCachedDatabase, there should be no temp or old filename: [2K[0G      ✓ After a persistCachedDatabase, there should be no temp or old filename (76ms)
+      ◦ persistCachedDatabase should update the contents of the datafile and leave a clean state even if there is a temp datafile: [2K[0G      ✓ persistCachedDatabase should update the contents of the datafile and leave a clean state even if there is a temp datafile (75ms)
+      ◦ persistCachedDatabase should update the contents of the datafile and leave a clean state even if there is a temp datafile: [2K[0G      ✓ persistCachedDatabase should update the contents of the datafile and leave a clean state even if there is a temp datafile (101ms)
+      ◦ Persistence works as expected when everything goes fine: [2K[0G      ✓ Persistence works as expected when everything goes fine (368ms)
+      ◦ If system crashes during a loadDatabase, the former version is not lost: (node:13960) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+[2K[0G      ✓ If system crashes during a loadDatabase, the former version is not lost (515ms)
+      ◦ Cannot cause EMFILE errors by opening too many file descriptors: [2K[0G      ✓ Cannot cause EMFILE errors by opening too many file descriptors (8229ms)
+    ensureFileDoesntExist
+      ◦ Doesnt do anything if file already doesnt exist: [2K[0G      ✓ Doesnt do anything if file already doesnt exist 
+      ◦ Deletes file if it exists: [2K[0G      ✓ Deletes file if it exists 
+
+
+  ✖ 4 of 330 tests failed:
+
+  1) Database Insert If timestampData option is set, a createdAt field is added and persisted:
+     AssertionError: expected 126 to be below 60
+      at Function.assert.isBelow (/home/user/benchmarks/nacd/louischatriot_nedb/node_modules/chai/lib/chai/interface/assert.js:293:35)
+      at /home/user/benchmarks/nacd/louischatriot_nedb/test/db.test.js:289:18
+      at newArguments.(anonymous function) (/home/user/benchmarks/nacd/louischatriot_nedb/lib/executor.js:29:17)
+      at /home/user/benchmarks/nacd/louischatriot_nedb/lib/datastore.js:356:12
+      at /home/user/benchmarks/nacd/louischatriot_nedb/lib/persistence.js:201:12
+      at DelayInjector.dealWithSimpleCallback (/home/user/git/nacd/lib/mode/plain2/delayinjector.js:156:28)
+      at Object.apply (/home/user/git/nacd/lib/mode/plain2/delayinjector.js:41:33)
+      at /home/user/git/nacd/node_modules/graceful-fs/graceful-fs.js:57:14
+      at FSReqWrap.args [as oncomplete] (fs.js:140:20)
+
+  2) Database Insert If timestampData is set but createdAt is specified by user, don't change it:
+     AssertionError: expected 100 to be below 60
+      at Function.assert.isBelow (/home/user/benchmarks/nacd/louischatriot_nedb/node_modules/chai/lib/chai/interface/assert.js:293:35)
+      at /home/user/benchmarks/nacd/louischatriot_nedb/test/db.test.js:336:16
+      at newArguments.(anonymous function) (/home/user/benchmarks/nacd/louischatriot_nedb/lib/executor.js:29:17)
+      at /home/user/benchmarks/nacd/louischatriot_nedb/lib/datastore.js:356:12
+      at /home/user/benchmarks/nacd/louischatriot_nedb/lib/persistence.js:201:12
+      at DelayInjector.dealWithSimpleCallback (/home/user/git/nacd/lib/mode/plain2/delayinjector.js:156:28)
+      at Object.apply (/home/user/git/nacd/lib/mode/plain2/delayinjector.js:41:33)
+      at /home/user/git/nacd/node_modules/graceful-fs/graceful-fs.js:57:14
+      at FSReqWrap.args [as oncomplete] (fs.js:140:20)
+
+  3) Database Insert If timestampData is set but updatedAt is specified by user, don't change it:
+     AssertionError: expected 101 to be below 60
+      at Function.assert.isBelow (/home/user/benchmarks/nacd/louischatriot_nedb/node_modules/chai/lib/chai/interface/assert.js:293:35)
+      at /home/user/benchmarks/nacd/louischatriot_nedb/test/db.test.js:358:16
+      at newArguments.(anonymous function) (/home/user/benchmarks/nacd/louischatriot_nedb/lib/executor.js:29:17)
+      at /home/user/benchmarks/nacd/louischatriot_nedb/lib/datastore.js:356:12
+      at /home/user/benchmarks/nacd/louischatriot_nedb/lib/persistence.js:201:12
+      at DelayInjector.dealWithSimpleCallback (/home/user/git/nacd/lib/mode/plain2/delayinjector.js:156:28)
+      at Object.apply (/home/user/git/nacd/lib/mode/plain2/delayinjector.js:41:33)
+      at /home/user/git/nacd/node_modules/graceful-fs/graceful-fs.js:57:14
+      at FSReqWrap.args [as oncomplete] (fs.js:140:20)
+
+  4) Database Update If timestampData option is set, update the updatedAt field:
+     AssertionError: expected 101 to be below 60
+      at Function.assert.isBelow (/home/user/benchmarks/nacd/louischatriot_nedb/node_modules/chai/lib/chai/interface/assert.js:293:35)
+      at /home/user/benchmarks/nacd/louischatriot_nedb/test/db.test.js:1073:16
+      at newArguments.(anonymous function) (/home/user/benchmarks/nacd/louischatriot_nedb/lib/executor.js:29:17)
+      at /home/user/benchmarks/nacd/louischatriot_nedb/lib/datastore.js:356:12
+      at /home/user/benchmarks/nacd/louischatriot_nedb/lib/persistence.js:201:12
+      at DelayInjector.dealWithSimpleCallback (/home/user/git/nacd/lib/mode/plain2/delayinjector.js:156:28)
+      at Object.apply (/home/user/git/nacd/lib/mode/plain2/delayinjector.js:41:33)
+      at /home/user/git/nacd/node_modules/graceful-fs/graceful-fs.js:57:14
+      at FSReqWrap.args [as oncomplete] (fs.js:140:20)
+
+
+npm ERR! Test failed.  See above for more details.

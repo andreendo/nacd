@@ -1,0 +1,10 @@
+
+> archiver@3.1.1 test /benchmarks/nacd/archiverjs_node-archiver
+> mocha --reporter dot
+
+
+
+  ․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․
+
+  37 passing (90ms)
+

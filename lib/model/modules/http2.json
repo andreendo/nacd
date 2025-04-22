@@ -1,0 +1,114 @@
+[
+    {
+        "moduleName": "http2",
+        "properties": [
+            {
+                "name": "connect",
+                "type": [
+                    "cb",
+                    "ro"
+                ],
+                "postponeRegistration": false,
+                "returnedObject": "http2.ClientHttp2Session",
+                "connectedCallbacks": true
+            },
+            {
+                "name": "createServer",
+                "type": [
+                    "cb",
+                    "ro",
+                    "co"
+                ],
+                "postponeRegistration": false,
+                "returnedObject": "http2.Http2Server",
+                "connectedCallbacks": true,
+                "callbackObjects": [
+                    "http.IncomingMessage",
+                    "http.ServerResponse"
+                ]
+            },
+            {
+                "name": "createSecureServer",
+                "type": [
+                    "cb",
+                    "ro",
+                    "co"
+                ],
+                "postponeRegistration": false,
+                "returnedObject": "http2.Http2SecureServer",
+                "connectedCallbacks": true,
+                "callbackObjects": [
+                    "http.IncomingMessage",
+                    "http.ServerResponse"
+                ]
+            }
+        ]
+    },
+    {
+        "moduleName": "http2.ClientHttp2Session",
+        "is": [
+            "EventEmitter"
+        ],
+        "properties": []
+    },
+    {
+        "moduleName": "http2.Http2Server",
+        "is": [
+            "net.Server"
+        ],
+        "eventSpecificObjects": [
+            {
+                "event": "checkContinue",
+                "callbackObjects": [
+                    "http2.Http2ServerRequest",
+                    "http2.Http2ServerResponse"
+                ]
+            },
+            {
+                "event": "request",
+                "callbackObjects": [
+                    "http2.Http2ServerRequest",
+                    "http2.Http2ServerResponse"
+                ]
+            }
+        ],
+        "properties": []
+    },
+    {
+        "moduleName": "http2.Http2SecureServer",
+        "is": [
+            "tls.Server"
+        ],
+        "eventSpecificObjects": [
+            {
+                "event": "checkContinue",
+                "callbackObjects": [
+                    "http2.Http2ServerRequest",
+                    "http2.Http2ServerResponse"
+                ]
+            },
+            {
+                "event": "request",
+                "callbackObjects": [
+                    "http2.Http2ServerRequest",
+                    "http2.Http2ServerResponse"
+                ]
+            }
+        ],
+        "properties": []
+    },
+    {
+        "moduleName": "http2.Http2ServerRequest",
+        "is": [
+            "stream.Readable"
+        ],
+        "properties": []
+    },
+    {
+        "moduleName": "http2.Http2ServerResponse",
+        "is": [
+            "EventEmitter"
+        ],
+        "properties": []
+    }
+]

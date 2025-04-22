@@ -1,0 +1,1175 @@
+
+> nano@8.1.0 test /home/user/benchmarks/nacd/apache_couchdb-nano
+> standard && npm run mocha
+
+
+> nano@8.1.0 mocha /home/user/benchmarks/nacd/apache_couchdb-nano
+> NOCK_OFF=true istanbul cover tape tests/*/*/*.js
+
+TAP version 13
+# nano/tests/unit/attachment/destroy:1
+ok 1 object
+ok 2 function
+ok 3 should be equal
+ok 4 should be equivalent
+# nano/tests/unit/attachment/get:1
+ok 5 object
+ok 6 function
+ok 7 should be equal
+ok 8 should be equivalent
+# nano/tests/unit/attachment/get:2
+ok 9 object
+ok 10 function
+ok 11 should be equal
+ok 12 should be equivalent
+# nano/tests/unit/attachment/insert:1
+ok 13 object
+ok 14 function
+ok 15 should be equal
+ok 16 should be equivalent
+# nano/tests/unit/attachment/insert:2
+ok 17 object
+ok 18 function
+ok 19 should be equal
+ok 20 should be equivalent
+# nano/tests/unit/attachment/insert:3
+ok 21 object
+ok 22 function
+ok 23 should be equal
+ok 24 should be equivalent
+# nano/tests/unit/database/changes:1
+ok 25 object
+ok 26 function
+ok 27 should be equal
+ok 28 should be equivalent
+# nano/tests/unit/database/changes:2
+ok 29 object
+ok 30 function
+ok 31 should be equal
+ok 32 should be equivalent
+# nano/tests/unit/database/compact:1
+ok 33 object
+ok 34 function
+ok 35 should be equal
+ok 36 should be equivalent
+# nano/tests/unit/database/create:1
+ok 37 object
+ok 38 function
+ok 39 should be equal
+ok 40 should be equivalent
+# nano/tests/unit/database/create:2
+ok 41 object
+ok 42 function
+ok 43 should be equal
+ok 44 should be equivalent
+# nano/tests/unit/database/destroy:1
+ok 45 object
+ok 46 function
+ok 47 should be equal
+ok 48 should be equivalent
+# nano/tests/unit/database/follow:1
+ok 49 object
+ok 50 function
+ok 51 should be equal
+ok 52 object
+ok 53 should be equivalent
+# nano/tests/unit/database/get:1
+ok 54 object
+ok 55 function
+ok 56 should be equal
+ok 57 should be equivalent
+# nano/tests/unit/database/list:1
+ok 58 object
+ok 59 function
+ok 60 should be equal
+ok 61 should be equivalent
+# nano/tests/unit/database/replicate:1
+ok 62 object
+ok 63 function
+ok 64 should be equal
+ok 65 should be equivalent
+# nano/tests/unit/database/replicate:2
+ok 66 object
+ok 67 function
+ok 68 should be equal
+ok 69 should be equivalent
+# nano/tests/unit/database/replicator:1
+ok 70 object
+ok 71 function
+ok 72 should be equal
+ok 73 should be equivalent
+# nano/tests/unit/database/replicator:2
+ok 74 object
+ok 75 function
+ok 76 should be equal
+ok 77 should be equivalent
+# nano/tests/unit/database/updates:1
+ok 78 object
+ok 79 function
+ok 80 should be equal
+ok 81 should be equivalent
+# nano/tests/unit/database/updates:2
+ok 82 object
+ok 83 function
+ok 84 should be equal
+ok 85 should be equivalent
+# nano/tests/unit/view/atomic:1
+ok 86 object
+ok 87 function
+ok 88 should be equal
+ok 89 should be equivalent
+# nano/tests/unit/view/compact:1
+ok 90 object
+ok 91 function
+ok 92 should be equal
+ok 93 should be equivalent
+# nano/tests/unit/find/find:1
+ok 94 object
+ok 95 function
+ok 96 should be equal
+ok 97 should be equivalent
+# nano/tests/unit/view/viewWithList:1
+ok 98 object
+ok 99 function
+ok 100 should be equal
+ok 101 should be equivalent
+# nano/tests/unit/view/search:1
+ok 102 object
+ok 103 function
+ok 104 should be equal
+ok 105 should be equivalent
+# nano/tests/unit/view/show:1
+ok 106 object
+ok 107 function
+ok 108 should be equal
+ok 109 should be equivalent
+# nano/tests/unit/view/view:1
+ok 110 object
+ok 111 function
+ok 112 should be equal
+ok 113 should be equivalent
+# nano/tests/unit/view/view:2
+ok 114 object
+ok 115 function
+ok 116 should be equal
+ok 117 should be equivalent
+# nano/tests/unit/document/bulk:1
+ok 118 object
+ok 119 function
+ok 120 should be equal
+ok 121 should be equivalent
+# nano/tests/unit/document/bulk:2
+ok 122 object
+ok 123 function
+ok 124 should be equal
+ok 125 should be equivalent
+# nano/tests/unit/document/copy:1
+ok 126 object
+ok 127 function
+ok 128 should be equal
+ok 129 should be equivalent
+# nano/tests/unit/document/copy:1
+ok 130 object
+ok 131 function
+ok 132 should be truthy
+# it should not return db info if docName undefined
+ok 133 should be equal
+# it should not return db info if docName null
+ok 134 should be equal
+# it should not return db info if docName empty string
+ok 135 should be equal
+# it should return a promise when no callback is specified
+ok 136 should be equal
+# it should not return a promise when a callback is specified
+ok 137 null
+ok 138 should be equal
+ok 139 should be equal
+# nano/tests/unit/multipart/get:1
+ok 140 object
+ok 141 function
+ok 142 should be equal
+ok 143 should be equivalent
+# nano/tests/unit/multipart/insert:1
+ok 144 object
+ok 145 function
+ok 146 should be equal
+ok 147 should be equivalent
+# it should be able to set a jar box
+ok 148 should be equal
+# should be able to deal with html errors bad couches
+ok 149 should be equal
+# should be capable of using `error`
+ok 150 should be equal
+# should remove cloudant stacktraces
+ok 151 should not be equal
+ok 152 should be equal
+# nano/tests/unit/server/followUpdates:1
+ok 153 object
+ok 154 function
+ok 155 should be equal
+ok 156 object
+ok 157 should be equivalent
+# nano/tests/unit/server/followUpdates:2
+ok 158 object
+ok 159 function
+ok 160 should be equal
+ok 161 object
+ok 162 should be equivalent
+# it should be able to set a jar box
+ok 163 should be equal
+ok 164 should be equal
+ok 165 should be equal
+# attachment/destroy
+## setup
+ok 166 create database
+# attachment/destroy
+## should be able to insert a new plain text attachment
+ok 167 returns Promise
+ok 168 response ok
+ok 169 have a revision number
+ok 170 response ok
+ok 171 `id` should be `new`
+# attachment/destroy
+## should fail destroying with a bad filename
+ok 172 returns Promise
+ok 173 Promise is rejected
+# attachment/destroy
+## teardown
+ok 174 destroy database
+ok 175 mocks didn't run
+# attachment/get
+## setup
+ok 176 create database
+# attachment/get
+## should be able to fetch an attachment
+ok 177 returns Promise
+ok 178 response ok
+ok 179 should have a revision number
+ok 180 string is reflexive
+# attachment/get
+## should insert and fetch a binary file
+ok 181 returns Promise
+ok 182 response ok
+ok 183 should have a revision number
+ok 184 binary data is reflexive
+# attachment/get
+## teardown
+ok 185 destroy database
+ok 186 mocks didn't run
+# attachment/insert
+## setup
+ok 187 create database
+# attachment/insert
+## should be able to insert a simple attachment
+ok 188 returns Promise
+ok 189 response ok
+ok 190 should have a revision
+# attachment/insert
+## teardown
+ok 191 destroy database
+ok 192 mocks didn't run
+# attachment/pipe
+## setup
+ok 193 create database
+# attachment/pipe
+## should be able to pipe to a writeStream
+ok 194 should be equal
+# attachment/pipe
+## should be able to pipe to a writeStream
+# attachment/pipe
+## should be able to pipe from a readStream
+ok 195 should get the logo
+ok 196 logo should remain unchanged
+# attachment/pipe
+## teardown
+ok 197 destroy database
+ok 198 mocks didn't run
+# attachment/update
+## setup
+ok 199 create database
+# attachment/update
+## should be able to insert and update attachments
+ok 200 returns Promise
+ok 201 response ok
+ok 202 should have a revision
+ok 203 should store a revision
+# attachment/update
+## should be able to fetch the updated pixel
+ok 204 response ok
+# attachment/update
+## teardown
+ok 205 destroy database
+ok 206 mocks didn't run
+# database/changes
+## setup
+ok 207 create database
+# database/changes
+## should be able to insert three documents
+ok 208 should store docs
+# database/changes
+## should be able to receive changes since seq:0
+ok 209 returns Promise
+ok 210 gets three results
+# database/changes
+## should be able to receive changes since seq:0 as stream
+ok 211 returns Promise
+ok 212 returns a Request
+ok 213 gets three results
+# database/changes
+## should be able to receive changes - no params - stream
+ok 214 returns Promise
+ok 215 returns a Request
+# database/changes
+## teardown
+ok 216 destroy database
+ok 217 mocks didn't run
+# database/compact
+## setup
+ok 218 create database
+# database/compact
+## should store and delete `goofy`
+ok 219 returns Promise
+ok 220 response should be ok
+ok 221 response ok
+# database/compact
+## should have run the compaction
+ok 222 returns Promise
+ok 223 document count is not 3
+ok 224 document should be deleted
+# database/compact
+## should finish compaction before ending
+ok 225 compaction is complete
+# database/compact
+## teardown
+ok 226 destroy database
+ok 227 mocks didn't run
+# database/create-and-destroy
+## setup
+ok 228 create database
+# database/create-and-destroy
+## should be able to create `az09_$()+-/` database
+# database/create-and-destroy
+## should be able to create a database without query parameters
+not ok 229 Promise is rejected
+  ---
+    operator: ok
+    expected: true
+    actual:   false
+    at: <anonymous> (/home/user/benchmarks/nacd/apache_couchdb-nano/tests/integration/database/create-and-destroy.js:34:12)
+    stack: |-
+      Error: Promise is rejected
+          at Test.assert [as _assert] (/home/user/benchmarks/nacd/apache_couchdb-nano/node_modules/tape/lib/test.js:226:54)
+          at Test.bound [as _assert] (/home/user/benchmarks/nacd/apache_couchdb-nano/node_modules/tape/lib/test.js:77:32)
+          at Test.assert (/home/user/benchmarks/nacd/apache_couchdb-nano/node_modules/tape/lib/test.js:344:10)
+          at Test.bound [as ok] (/home/user/benchmarks/nacd/apache_couchdb-nano/node_modules/tape/lib/test.js:77:32)
+          at /home/user/benchmarks/nacd/apache_couchdb-nano/tests/integration/database/create-and-destroy.js:34:12
+          at process._tickCallback (internal/process/next_tick.js:68:7)
+  ...
+not ok 230 timed out
+  ---
+    operator: fail
+    at: Timeout._onTimeout (/home/user/benchmarks/nacd/apache_couchdb-nano/tests/helpers/harness.js:36:16)
+    stack: |-
+      Error: timed out
+          at Test.assert [as _assert] (/home/user/benchmarks/nacd/apache_couchdb-nano/node_modules/tape/lib/test.js:226:54)
+          at Test.bound [as _assert] (/home/user/benchmarks/nacd/apache_couchdb-nano/node_modules/tape/lib/test.js:77:32)
+          at Test.fail (/home/user/benchmarks/nacd/apache_couchdb-nano/node_modules/tape/lib/test.js:319:10)
+          at Test.bound [as fail] (/home/user/benchmarks/nacd/apache_couchdb-nano/node_modules/tape/lib/test.js:77:32)
+          at Timeout._onTimeout (/home/user/benchmarks/nacd/apache_couchdb-nano/tests/helpers/harness.js:36:16)
+          at ontimeout (timers.js:436:11)
+          at tryOnTimeout (timers.js:300:5)
+          at listOnTimeout (timers.js:263:5)
+          at Timer.processTimers (timers.js:223:10)
+  ...
+# database/create-and-destroy
+## should be able to create a database with query parameters
+not ok 231 Promise is rejected
+  ---
+    operator: ok
+    expected: true
+    actual:   false
+    at: <anonymous> (/home/user/benchmarks/nacd/apache_couchdb-nano/tests/integration/database/create-and-destroy.js:43:12)
+    stack: |-
+      Error: Promise is rejected
+          at Test.assert [as _assert] (/home/user/benchmarks/nacd/apache_couchdb-nano/node_modules/tape/lib/test.js:226:54)
+          at Test.bound [as _assert] (/home/user/benchmarks/nacd/apache_couchdb-nano/node_modules/tape/lib/test.js:77:32)
+          at Test.assert (/home/user/benchmarks/nacd/apache_couchdb-nano/node_modules/tape/lib/test.js:344:10)
+          at Test.bound [as ok] (/home/user/benchmarks/nacd/apache_couchdb-nano/node_modules/tape/lib/test.js:77:32)
+          at /home/user/benchmarks/nacd/apache_couchdb-nano/tests/integration/database/create-and-destroy.js:43:12
+          at process._tickCallback (internal/process/next_tick.js:68:7)
+  ...
+not ok 232 timed out
+  ---
+    operator: fail
+    at: Timeout._onTimeout (/home/user/benchmarks/nacd/apache_couchdb-nano/tests/helpers/harness.js:36:16)
+    stack: |-
+      Error: timed out
+          at Test.assert [as _assert] (/home/user/benchmarks/nacd/apache_couchdb-nano/node_modules/tape/lib/test.js:226:54)
+          at Test.bound [as _assert] (/home/user/benchmarks/nacd/apache_couchdb-nano/node_modules/tape/lib/test.js:77:32)
+          at Test.fail (/home/user/benchmarks/nacd/apache_couchdb-nano/node_modules/tape/lib/test.js:319:10)
+          at Test.bound [as fail] (/home/user/benchmarks/nacd/apache_couchdb-nano/node_modules/tape/lib/test.js:77:32)
+          at Timeout._onTimeout (/home/user/benchmarks/nacd/apache_couchdb-nano/tests/helpers/harness.js:36:16)
+          at ontimeout (timers.js:436:11)
+          at tryOnTimeout (timers.js:300:5)
+          at listOnTimeout (timers.js:263:5)
+          at Timer.processTimers (timers.js:223:10)
+  ...
+# database/create-and-destroy
+## should be able to use config from a nano object to create a db
+ok 233 should create database
+# database/create-and-destroy
+## must destroy the databases we created
+ok 234 should destroy all dbs
+# database/create-and-destroy
+## teardown
+ok 235 destroy database
+ok 236 mocks didn't run
+# database/follow
+## setup
+ok 237 create database
+# database/follow
+## should insert a bunch of items
+ok 238 should store docs
+# database/follow
+## should be able to get the changes feed
+ok 239 change existed
+ok 240 change existed
+ok 241 change existed
+# database/follow
+## should clear changes feed
+# database/follow
+## teardown
+ok 242 destroy database
+ok 243 mocks didn't run
+# database/get
+## setup
+ok 244 create database
+# database/get
+## should be able to fetch the database
+ok 245 returns Promise
+ok 246 should be empty
+ok 247 name
+# database/get
+## resolves db URL correctly for http://app.com/_couchdb
+ok 248 should get doc at prefixed path
+# database/get
+## teardown
+ok 249 destroy database
+ok 250 mocks didn't run
+# database/list
+## setup
+ok 251 create database
+# database/list
+## should create _replicator
+# database/list
+## should destroy _users
+# database/list
+## should crestr _users
+# database/list
+## should list the correct databases
+ok 252 returns Promise
+ok 253 should have exactly 3 dbs
+# database/list
+## teardown
+ok 254 destroy database
+ok 255 mocks didn't run
+# database/replicate
+## setup
+ok 256 create database
+# database/replicate
+## should insert a bunch of items
+ok 257 should store docs
+# database/replicate
+## creates a bunch of database replicas
+ok 258 created database(s)
+# database/replicate
+## should be able to replicate three docs
+ok 259 returns Promise
+ok 260 and have three documents
+# database/replicate
+## should be able to replicate to a `nano` object
+ok 261 returns Promise
+ok 262 and have three documents
+# database/replicate
+## should be able to replicate with params
+ok 263 returns Promise
+ok 264 Promise is resolved
+# database/replicate
+## should destroy the extra databases
+ok 265 deleted databases
+# database/replicate
+## teardown
+ok 266 destroy database
+ok 267 mocks didn't run
+# database/replicator
+## setup
+ok 268 create database
+# database/replicator
+## should insert a bunch of items
+ok 269 should store docs
+# database/replicator
+## creates a bunch of database replicas
+ok 270 created database(s)
+# database/replicator
+## should destroy the extra databases
+ok 271 deleted databases
+# database/replicator
+## teardown
+ok 272 destroy database
+ok 273 mocks didn't run
+# design/atomic
+## setup
+ok 274 create database
+# design/atomic
+## should be able to insert an atomic design doc
+ok 275 returns Promise
+ok 276 does not have an attitude
+ok 277 got the revisions
+# design/atomic
+## should be able to insert atomically
+ok 278 returns Promise
+ok 279 and the right value was set
+# design/atomic
+## should be able to update atomically without a body
+ok 280 returns Promise
+ok 281 and the new field is present
+# design/atomic
+## should be able to update with slashes on the id
+ok 282 returns Promise
+ok 283 response ok
+ok 284 with the right copy
+# design/atomic
+## teardown
+ok 285 destroy database
+ok 286 mocks didn't run
+# design/compact
+## setup
+ok 287 create database
+# design/compact
+## should insert `alice` the design doc
+ok 288 it should destroy the foo
+# design/compact
+## teardown
+ok 289 destroy database
+ok 290 mocks didn't run
+# design/list
+## setup
+ok 291 create database
+# design/list
+## should create a ddoc and insert some docs
+ok 292 should create view
+ok 293 response is good
+ok 294 store the peeps
+# design/list
+## should get the people by running the ddoc
+ok 295 returns Promise
+ok 296 Promise is resolved
+ok 297 and list should be `hello`
+# design/list
+## teardown
+ok 298 destroy database
+ok 299 mocks didn't run
+# design/multiple
+## setup
+ok 300 create database
+# design/multiple
+## should be able to insert docs and design doc
+ok 301 returns Promise
+ok 302 Promise is resolved
+ok 303 response ok
+# design/multiple
+## should insert a bunch of items
+ok 304 should store docs
+# design/multiple
+## get multiple docs with a composed key
+ok 305 returns Promise
+ok 306 Promise is resolved
+ok 307 has more or less than two rows
+ok 308 foo is not the first id
+ok 309 bar is not the second id
+# design/multiple
+## get multiple docs with a composed key as a stream
+ok 310 does not returns Promise
+ok 311 returns a Request
+ok 312 has more or less than two rows
+ok 313 foo is not the first id
+ok 314 bar is not the second id
+# design/multiple
+## teardown
+ok 315 destroy database
+ok 316 mocks didn't run
+# design/query
+## setup
+ok 317 create database
+# design/query
+## should create a ddoc and insert some docs
+ok 318 should create view
+ok 319 response is good
+ok 320 store the peeps
+# design/query
+## should respond with derek when asked for derek
+ok 321 no errors
+ok 322 should be equal
+ok 323 should be equal
+ok 324 should be equal
+ok 325 should be equal
+ok 326 should be equal
+# design/query
+## should have no cloning issues when doing queries
+ok 327 no errors
+ok 328 should be equal
+ok 329 should be equal
+ok 330 should be equal
+ok 331 should be equal
+ok 332 should be equal
+ok 333 no errors
+ok 334 should be equal
+ok 335 should be equal
+ok 336 should be equal
+ok 337 should be equal
+ok 338 should be equal
+ok 339 no errors
+ok 340 should be truthy
+ok 341 should be equal
+ok 342 should be equal
+# design/query
+## should support multiple view queries
+ok 343 no errors
+ok 344 should return query results
+ok 345 query results should be array
+ok 346 should return results to both queries
+ok 347 should be expected query results
+# design/query
+## teardown
+ok 348 destroy database
+ok 349 mocks didn't run
+# design/show
+## setup
+ok 350 create database
+# design/show
+## should insert a show ddoc
+ok 351 should start the show
+ok 352 response ok
+ok 353 stores docs
+# design/show
+## should show the amazing clemens in json
+ok 354 returns Promise
+ok 355 Promise is resolved
+ok 356 should be equal
+ok 357 should be equal
+ok 358 should be equal
+# design/show
+## should show the amazing clemens in html
+ok 359 should work
+ok 360 should be equal
+ok 361 should be equal
+# design/show
+## teardown
+ok 362 destroy database
+ok 363 mocks didn't run
+# document/bulk
+## setup
+ok 364 create database
+# document/bulk
+## should be able to bulk insert two docs
+ok 365 returns Promise
+ok 366 Promise is resolved
+ok 367 has two docs
+ok 368 first got id
+ok 369 other also got id
+# document/bulk
+## teardown
+ok 370 destroy database
+ok 371 mocks didn't run
+# document/copy
+## setup
+ok 372 create database
+# document/copy
+## must insert two docs before the tests start
+ok 373 stores src
+ok 374 response ok
+ok 375 haz rev
+ok 376 stores dest
+ok 377 oki doki
+ok 378 response has rev
+# document/copy
+## should be able to copy and overwrite a document
+ok 379 returns Promise
+ok 380 Promise is resolved
+# document/copy
+## copy without overwrite should return conflict for exists docs
+ok 381 returns Promise
+ok 382 Promise is rejected
+# document/copy
+## copy to a new destination should work
+ok 383 returns Promise
+ok 384 Promise is resolved
+# document/copy
+## teardown
+ok 385 destroy database
+ok 386 mocks didn't run
+# document/create_index
+## setup
+ok 387 create database
+# document/create_index
+## should insert a one item
+ok 388 should store docs
+# document/create_index
+## Should create one simple index
+ok 389 returns Promise
+ok 390 index should be created
+ok 391 index should have correct name
+# document/create_index
+## teardown
+ok 392 destroy database
+ok 393 mocks didn't run
+# document/destroy
+## setup
+ok 394 create database
+# document/destroy
+## should insert a document
+ok 395 stores foo
+ok 396 ok response
+ok 397 response with rev
+# document/destroy
+## should not delete a db
+ok 398 returns Promise
+ok 399 Promise is rejected
+# document/destroy
+## should delete a document
+ok 400 returns Promise
+ok 401 Promise is resolved
+ok 402 ok!
+# document/destroy
+## teardown
+ok 403 destroy database
+ok 404 mocks didn't run
+# document/fetch
+## setup
+ok 405 create database
+# document/fetch
+## should insert a bunch of items
+ok 406 should store docs
+# document/fetch
+## should be able to fetch with one key
+ok 407 returns Promise
+ok 408 Promise is resolved
+ok 409 and get one row
+ok 410 out of 3
+# document/fetch
+## should be able to fetch with multiple keys
+ok 411 returns Promise
+ok 412 Promise is resolved
+ok 413 two rows
+ok 414 out of 3
+# document/fetch
+## should be able to fetch with params
+ok 415 returns Promise
+ok 416 Promise is resolved
+ok 417 and get one row
+ok 418 out of 3
+# document/fetch
+## teardown
+ok 419 destroy database
+ok 420 mocks didn't run
+# document/fetch_revs
+## setup
+ok 421 create database
+# document/fetch_revs
+## should insert a bunch of items
+ok 422 should store docs
+# document/fetch_revs
+## should be able to fetch with one key
+ok 423 returns Promise
+ok 424 Promise is resolved
+ok 425 and get one row
+ok 426 out of 3
+ok 427 rev should not return key
+# document/fetch_revs
+## should be able to fetch with multiple keys
+ok 428 returns Promise
+ok 429 Promise is resolved
+ok 430 two rows
+ok 431 out of 3
+ok 432 no doc in 1
+ok 433 no doc in 2
+# document/fetch_revs
+## should be able to fetch with params
+ok 434 returns Promise
+ok 435 Promise is resolved
+ok 436 and get one row
+ok 437 out of 3
+ok 438 rev should not return key
+# document/fetch_revs
+## teardown
+ok 439 destroy database
+ok 440 mocks didn't run
+# document/find
+## setup
+ok 441 create database
+# document/find
+## should insert a bunch of items
+ok 442 should store docs
+# document/find
+## should be to do a mango query
+ok 443 returns Promise
+ok 444 Promise is resolved
+ok 445 and get one row
+# document/find
+## should be to do a mango query with streams
+ok 446 does not return Promise
+ok 447 returns a Request
+ok 448 and get one row
+# document/find
+## teardown
+ok 449 destroy database
+ok 450 mocks didn't run
+# document/get
+## setup
+ok 451 create database
+# document/get
+## should insert a one item
+ok 452 should store docs
+# document/get
+## should get the document
+ok 453 returns Promise
+ok 454 Promise is resolved
+ok 455 got revs info
+ok 456 id is food
+ok 457 baz is in foo
+# document/get
+## teardown
+ok 458 destroy database
+ok 459 mocks didn't run
+# document/head
+## setup
+ok 460 create database
+# document/head
+## should insert a one item
+ok 461 should store docs
+# document/head
+## should get a status code when you do head - promises
+ok 462 returns Promise
+ok 463 Promise is resolved
+ok 464 and is ok
+# document/head
+## should get a status code when you do head - callbacks
+ok 465 should get the head of foobaz
+ok 466 and is ok
+# document/head
+## teardown
+ok 467 destroy database
+ok 468 mocks didn't run
+# document/insert
+## setup
+ok 469 create database
+# document/insert
+## should insert one simple document
+ok 470 returns Promise
+ok 471 Promise is resolved
+ok 472 response should be ok
+ok 473 response should have rev
+# document/insert
+## should fail to insert again since it already exists
+ok 474 returns Promise
+ok 475 Promise is rejected
+ok 476 scope is couch
+ok 477 type is conflict
+# document/insert
+## should be able to use custom params in insert
+ok 478 returns Promise
+ok 479 Promise is resolved
+ok 480 response should be ok
+ok 481 response should have rev
+# document/insert
+## should be able to insert functions in docs
+ok 482 response should be ok
+ok 483 response should have rev
+ok 484 fn matches fn2
+# document/insert
+## teardown
+ok 485 destroy database
+ok 486 mocks didn't run
+# document/list
+## setup
+ok 487 create database
+# document/list
+## should insert a bunch of items
+ok 488 should store docs
+# document/list
+## should list the three documents
+ok 489 returns Promise
+ok 490 Promise is resolved
+ok 491 with total three rows
+ok 492 and the rows themselves
+# document/list
+## should be able to list using the `relax` function
+ok 493 not relaxed
+ok 494 got meh rows
+ok 495 but its only one #sadpanda
+ok 496 out of three
+# document/list
+## should be able to list with a start_key
+ok 497 returns Promise
+ok 498 Promise is resolved
+ok 499 get the rows
+ok 500 starts in row two
+ok 501 out of three rows
+ok 502 offset is 1
+# document/list
+## should be able to list with a startkey
+ok 503 returns Promise
+ok 504 Promise is resolved
+ok 505 get the rows
+ok 506 starts in row two
+ok 507 out of three rows
+# document/list
+## should be able to list with a endkey
+ok 508 returns Promise
+ok 509 Promise is resolved
+ok 510 get the rows
+ok 511 starts in row two
+ok 512 out of three rows
+# document/list
+## should be able to list with a end_key
+ok 513 returns Promise
+ok 514 Promise is resolved
+ok 515 get the rows
+ok 516 starts in row two
+ok 517 out of three rows
+# document/list
+## should be able to list as a stream
+ok 518 does not return Promise
+ok 519 returns a Request
+# document/list
+## should be able to list with params as a stream
+ok 520 does not return Promise
+ok 521 returns a Request
+# document/list
+## teardown
+ok 522 destroy database
+ok 523 mocks didn't run
+# document/update
+## setup
+ok 524 create database
+# document/update
+## should insert one doc
+ok 525 returns Promise
+ok 526 Promise is resolved
+ok 527 response ok
+ok 528 withs rev
+# document/update
+## should update the document
+ok 529 returns Promise
+ok 530 Promise is resolved
+ok 531 response should be ok
+# document/update
+## teardown
+ok 532 destroy database
+ok 533 mocks didn't run
+# multipart/get
+## setup
+ok 534 create database
+# multipart/get
+## should be able to insert a doc with att
+ok 535 returns Promise
+ok 536 Promise is resolved
+ok 537 response should be ok
+ok 538 id is foobaz
+ok 539 has rev
+# multipart/get
+## should be able to get the document with the attachment
+ok 540 should get foobaz
+ok 541 should have content type
+ok 542 should be equal
+ok 543 foobaz should be a buffer
+# multipart/get
+## teardown
+ok 544 destroy database
+ok 545 mocks didn't run
+# multipart/insert
+## setup
+ok 546 create database
+# multipart/insert
+## should handle crazy encodings
+ok 547 returns Promise
+ok 548 Promise is resolved
+ok 549 response should be ok
+ok 550 response should have rev
+# multipart/insert
+## should test with presence of attachment
+ok 551 should have stored the thingy
+ok 552 should get the doc
+ok 553 both attachments should be present
+# multipart/insert
+## should work with attachment as a buffer
+ok 554 returns Promise
+ok 555 Promise is resolved
+ok 556 response should be ok
+ok 557 response should have rev
+# multipart/insert
+## teardown
+ok 558 destroy database
+ok 559 mocks didn't run
+# shared/config
+## setup
+ok 560 create database
+# shared/config
+## should serve the root when no path is specified
+ok 561 version is defined
+ok 562 had version
+# shared/config
+## should be able to parse urls
+ok 563 simple url
+ok 564 simple with trailing
+ok 565 with authentication
+ok 566 with escaped auth
+ok 567 with dbname containing encoded slash
+ok 568 with repeating dbname
+ok 569 with subdir
+ok 570 with port
+ok 571 `a` database
+# shared/config
+## should not parse urls when parseURL flag set to false
+ok 572 the untouched url
+# shared/config
+## should accept and handle customer http headers
+ok 573 header `x-second-header` honored
+ok 574 headers `x-second-header` honored
+# shared/config
+## should prevent shallow object copies
+ok 575 simple url
+ok 576 `requestDefaults` should be set
+ok 577 should not be re-using the same object
+# shared/config
+## teardown
+ok 578 destroy database
+ok 579 mocks didn't run
+# shared/cookie
+## setup
+ok 580 create database
+# shared/cookie
+## should be able to create a user
+ok 581 should be truthy
+# shared/cookie
+## should be able to insert with a cookie
+ok 582 returns Promise
+ok 583 response should be ok
+ok 584 response should have rev
+# shared/cookie
+## should be able to get the session
+ok 585 should be equal
+# shared/cookie
+## teardown
+ok 586 destroy database
+ok 587 mocks didn't run
+# shared/error
+## setup
+ok 588 create database
+# shared/error
+## should throw when initialize fails
+ok 589 should have throw
+ok 590 with a description
+ok 591 should have throw
+ok 592 with a message
+# shared/error
+## should be able to stream the simplest request
+ok 593 request worked
+# shared/error
+## should error when destroying a db that does not exist
+ok 594 returns Promise
+ok 595 Promise is rejected
+ok 596 is missing
+# shared/error
+## teardown
+ok 597 destroy database
+ok 598 mocks didn't run
+# shared/headers
+## setup
+ok 599 create database
+# shared/headers
+## should get headers
+!!! null { ok: true,
+  id: 'new',
+  rev: '1-4321bdaf58ca1dc91e526fa7fec2bb5c' }
+ok 600 should store hello
+ok 601 response should be ok
+ok 602 should have a revision number
+ok 603 should get the hello
+ok 604 status is not modified
+ok 605 should get the hello
+ok 606 status is `ok`
+# shared/headers
+## teardown
+ok 607 destroy database
+ok 608 mocks didn't run
+# shared/log
+## setup
+ok 609 create database
+# shared/log
+## should be able to instantiate a log
+ok 610 id is set `6nas0g`
+ok 611 should be equal
+# shared/log
+## teardown
+ok 612 destroy database
+ok 613 mocks didn't run
+# util/uuid
+## setup
+ok 614 create database
+# util/uuid
+## should generate three uuids
+ok 615 returns Promise
+ok 616 Promise is resolved
+ok 617 got response
+ok 618 got uuids
+ok 619 got 3
+# util/uuid
+## should generate one uuid
+ok 620 returns Promise
+ok 621 Promise is resolved
+ok 622 got response
+ok 623 got uuid
+ok 624 got 1
+# util/uuid
+## teardown
+ok 625 destroy database
+ok 626 mocks didn't run
+# design/search
+## setup
+ok 627 create database
+# design/search
+## should allow custom request object to be supplied
+ok 628 returns Promise
+ok 629 Promise is resolved
+ok 630 should be equal
+ok 631 should be equal
+# design/search
+## should submit all search queries via a POST request
+ok 632 returns Promise
+ok 633 Promise is resolved
+ok 634 should be equal
+ok 635 should be equal
+ok 636 should be equal
+# design/search
+## should allow search results to be streamed
+ok 637 should be equal
+ok 638 should be equal
+ok 639 should be equal
+# design/search
+## teardown
+ok 640 destroy database
+ok 641 mocks didn't run
+
+=============================== Coverage summary ===============================
+Statements   : 94.21% ( 358/380 )
+Branches     : 91.01% ( 172/189 )
+Functions    : 93.67% ( 74/79 )
+Lines        : 94.15% ( 354/376 )
+================================================================================
+
+1..641
+# tests 641
+# pass  637
+# fail  4
+

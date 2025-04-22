@@ -1,0 +1,184 @@
+-------------------------------------------------------------------------
+*** JavaScript standard built-in objects 
+
+- See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
+- Objects in the global scope
+
+- Value properties
+
+Infinity
+NaN
+undefined
+
+- Function properties
+
+eval            //Security issue
+isFinite
+isNaN
+parseFloat            
+parseInt
+decodeURI             
+decodeURIComponent
+encodeURI
+encodeURIComponent
+escape
+unescape
+
+- Fundamental objects
+
+Object
+Function        //Security issue with its constructor
+Boolean
+Symbol
+Error                 
+EvalError
+RangeError
+ReferenceError
+SyntaxError
+TypeError
+URIError
+
+- Numbers and dates
+
+Number
+BigInt
+Math
+Date
+
+- Text processing
+
+String
+RegExp
+
+- Indexed collections
+
+Array
+Float32Array          
+Float64Array          
+Uint16Array           
+Uint32Array           
+Uint8Array
+Int16Array            
+Int32Array            
+Int8Array
+BigInt64Array
+BigUint64Array
+Uint8ClampedArray
+
+- Keyed collections
+
+Map
+Set
+WeakMap               
+WeakSet
+
+- Structured Data
+
+ArrayBuffer
+SharedArrayBuffer
+Atomics
+DataView
+JSON
+
+- Control abstraction objects
+
+Promise
+
+- Reflection
+
+Proxy                 
+Reflect
+
+- Internationalization
+
+Intl
+
+- WebAssembly
+
+WebAssembly
+
+- Web API 
+    - https://developer.mozilla.org/en-US/docs/Web/API
+
+URL
+URLSearchParams
+
+-------------------------------------------------------------------------
+*** Node.js
+
+- See https://nodejs.org/api/
+
+- built-in modules
+    - Identify which ones touch the 'outside' world?
+
+assert                                                     
+async_hooks           
+buffer
+    - Buffer is global and the same as require('buffer').Buffer
+child_process
+    - //Security issue (e.g., exec)
+cluster
+console
+    - Global object, do not need to use require('console').
+crypto
+dgram
+dns
+domain                                    
+events                
+fs                              
+http                  
+http2
+https                 
+inspector                              
+module
+    - It has a object module that is a reference to the current module 
+        - https://nodejs.org/api/modules.html#modules_the_module_object
+        - some properties and free variables like __dirname and __filename
+    - require 
+net                   
+os                                  
+path
+perf_hooks
+process
+    - global object
+punycode              
+querystring           
+readline
+repl
+    - //Security issue - code injection
+stream                
+string_decoder        
+timers
+    - it exposes a global API (functions)
+    - global functions: setImmediate, setInterval, setTimeout, clearImmediate, clearInterval, clearTimeout
+tls                 
+trace_events
+tty                                              
+url                   
+util
+v8                    
+vm                      
+    - //Security issue - code injection
+zlib
+
+- Remaining Node.js globals
+
+queueMicrotask 
+    - added in v11.0.0
+    - Can block event loop as process.nextTick()
+    - process.nextTick queue preceeds microtasks queue
+    - https://developer.mozilla.org/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide
+        - It can be used in browsers
+        - Before, you need to create a Promise that immediately resolves (microtask)
+    - https://developer.mozilla.org/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide/In_depth
+
+
+global
+    - The global namespace object
+    - It can also be accessed as root (deprecated), _ (only REPL), GLOBAL (deprecated)
+    - Properties also accessed as free variables:
+        - __defineGetter__, __defineSetter__, __lookupGetter__, __lookupSetter__,
+          __proto__, hasOwnProperty, isPrototypeOf, propertyIsEnumerable, toLocaleString,
+          toString, valueOf, constructor
+
+_error (only in REPL)

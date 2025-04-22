@@ -1,0 +1,271 @@
+[
+    {
+        "moduleName": "http",
+        "properties": [
+            {
+                "name": "Agent",
+                "type": [
+                    "oc",
+                    "ro"
+                ],
+                "postponeRegistration": false,
+                "returnedObject": "http.Agent"
+            },
+            {
+                "name": "get",
+                "type": [
+                    "cb",
+                    "ro",
+                    "co"
+                ],
+                "postponeRegistration": false,
+                "returnedObject": "http.ClientRequest",
+                "connectedCallbacks": true,
+                "callbackObjects": [
+                    "http.IncomingMessage"
+                ]
+            },
+            {
+                "name": "request",
+                "type": [
+                    "cb",
+                    "ro",
+                    "co"
+                ],
+                "postponeRegistration": false,
+                "returnedObject": "http.ClientRequest",
+                "connectedCallbacks": true,
+                "callbackObjects": [
+                    "http.IncomingMessage"
+                ]
+            },
+            {
+                "name": "createServer",
+                "type": [
+                    "cb",
+                    "ro",
+                    "co"
+                ],
+                "postponeRegistration": false,
+                "returnedObject": "http.Server",
+                "connectedCallbacks": true,
+                "callbackObjects": [
+                    "http.IncomingMessage",
+                    "http.ServerResponse"
+                ]
+            },
+            {
+                "name": "Server",
+                "type": [
+                    "oc",
+                    "ro",
+                    "co",
+                    "cb"
+                ],
+                "postponeRegistration": false,
+                "returnedObject": "http.Server",
+                "callbackObjects": [
+                    "http.IncomingMessage",
+                    "http.ServerResponse"
+                ]
+            }
+        ]
+    },
+    {
+        "moduleName": "http.Agent",
+        "properties": [
+            {
+                "name": "createConnection",
+                "type": [
+                    "cb",
+                    "ro"
+                ],
+                "postponeRegistration": false,
+                "returnedObject": "net.Socket",
+                "connectedCallbacks": true
+            }
+        ]
+    },
+    {
+        "moduleName": "http.ClientRequest",
+        "is": [
+            "EventEmitter"
+        ],
+        "eventSpecificObjects": [
+            {
+                "event": "connect",
+                "callbackObjects": [
+                    "http.IncomingMessage",
+                    "net.Socket"
+                ]
+            },
+            {
+                "event": "upgrade",
+                "callbackObjects": [
+                    "http.IncomingMessage",
+                    "net.Socket"
+                ]
+            },            
+            {
+                "event": "response",
+                "callbackObjects": [
+                    "http.IncomingMessage"
+                ]
+            },
+            {
+                "event": "socket",
+                "callbackObjects": [
+                    "net.Socket"
+                ]
+            }
+        ],
+        "properties": [
+            {
+                "name": "setTimeout",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": false,
+                "connectedCallbacks": true
+            },
+            {
+                "name": "write",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": false,
+                "connectedCallbacks": true
+            },
+            {
+                "name": "end",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": false,
+                "connectedCallbacks": true
+            }
+        ]
+    },
+    {
+        "moduleName": "http.IncomingMessage",
+        "is": [
+            "EventEmitter"
+        ],
+        "properties": [
+            {
+                "name": "setTimeout",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": false,
+                "connectedCallbacks": true
+            },
+            {
+                "name": "socket",
+                "type": [
+                    "op"
+                ],
+                "AsyncObjectProperty": "net.Socket"
+            }
+        ]
+    },
+    {
+        "moduleName": "http.Server",
+        "is": [
+            "net.Server"
+        ],
+        "eventSpecificObjects": [
+            {
+                "event": "checkContinue",
+                "callbackObjects": [
+                    "http.IncomingMessage",
+                    "http.ServerResponse"
+                ]
+            },
+            {
+                "event": "checkExpectation",
+                "callbackObjects": [
+                    "http.IncomingMessage",
+                    "http.ServerResponse"
+                ]
+            },
+            {
+                "event": "connect",
+                "callbackObjects": [
+                    "http.IncomingMessage",
+                    "net.Socket"
+                ]
+            },
+            {
+                "event": "request",
+                "callbackObjects": [
+                    "http.IncomingMessage",
+                    "http.ServerResponse"
+                ]
+            },
+            {
+                "event": "upgrade",
+                "callbackObjects": [
+                    "http.IncomingMessage",
+                    "net.Socket"
+                ]
+            }
+        ],
+        "properties": [
+            {
+                "name": "setTimeout",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": false,
+                "connectedCallbacks": true
+            }
+        ]
+    },
+    {
+        "moduleName": "http.ServerResponse",
+        "is": [
+            "EventEmitter"
+        ],
+        "properties": [
+            {
+                "name": "write",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": false,
+                "connectedCallbacks": true
+            },
+            {
+                "name": "end",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": false,
+                "connectedCallbacks": true
+            },
+            {
+                "name": "setTimeout",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": false,
+                "connectedCallbacks": true
+            },
+            {
+                "name": "connection",
+                "type": [
+                    "op"
+                ],
+                "AsyncObjectProperty": "net.Socket"
+            },
+            {
+                "name": "socket",
+                "type": [
+                    "op"
+                ],
+                "AsyncObjectProperty": "net.Socket"
+            }
+        ]
+    }
+]

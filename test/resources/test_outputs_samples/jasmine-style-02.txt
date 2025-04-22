@@ -1,0 +1,12 @@
+
+> fast-xml-parser@3.16.0 test /home/user/benchmarks/nacd/NaturalIntelligence_fast-xml-parser
+> jasmine spec/*spec.js
+
+Randomized with seed 39605
+Started
+...................................................................................................................................................
+
+
+147 specs, 5 failures
+Finished in 3.645 seconds
+Randomized with seed 39605 (jasmine --random=true --seed=39605)

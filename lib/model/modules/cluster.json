@@ -1,0 +1,59 @@
+[
+    {
+        "moduleName": "cluster",
+        "is": [
+            "EventEmitter"
+        ],
+        "properties": [
+            {
+                "name": "fork",
+                "type": [
+                    "ro"
+                ],
+                "postponeRegistration": false,
+                "optionalProperty": true,
+                "returnedObject": "cluster.Worker"
+            },
+            {
+                "name": "disconnect",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": false,
+                "optionalProperty": true
+            },
+            {
+                "name": "worker",
+                "type": [
+                    "op"
+                ],
+                "postponeRegistration": false,
+                "optionalProperty": true,
+                "AsyncObjectProperty": "cluster.Worker"
+            }
+        ]
+    },
+    {
+        "moduleName": "cluster.Worker",
+        "is": [
+            "EventEmitter"
+        ],
+        "properties": [
+            {
+                "name": "send",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": false
+            },
+            {
+                "name": "process",
+                "type": [
+                    "ob"
+                ],
+                "postponeRegistration": false,
+                "AsyncObjectProperty": "ChildProcess"
+            }
+        ]
+    }
+]

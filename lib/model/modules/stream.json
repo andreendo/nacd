@@ -1,0 +1,102 @@
+[
+    {
+        "moduleName": "stream.Readable",
+        "is": [
+            "EventEmitter"
+        ],
+        "properties": [
+            {
+                "name": "_read",
+                "type": [
+                    "dd"
+                ],
+                "postponeRegistration": false,
+                "allowCallFromInternals": true
+            }
+        ]
+    },
+    {
+        "moduleName": "stream.Writable",
+        "is": [
+            "EventEmitter"
+        ],
+        "properties": [
+            {
+                "name": "write",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": false,
+                "connectedCallbacks": true
+            },
+            {
+                "name": "end",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": false,
+                "connectedCallbacks": true
+            },
+            {
+                "name": "_write",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": false,
+                "connectedCallbacks": true,
+                "allowCallFromInternals": true
+            },
+            {
+                "name": "_writev",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": false,
+                "connectedCallbacks": true,
+                "allowCallFromInternals": true
+            },
+            {
+                "name": "_final",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": false,
+                "connectedCallbacks": true,
+                "allowCallFromInternals": true
+            }
+        ]
+    },
+    {
+        "moduleName": "stream.Duplex",
+        "is": [
+            "stream.Readable",
+            "stream.Writable"
+        ]
+    },
+    {
+        "moduleName": "stream.Transform",
+        "is": [
+            "EventEmitter"
+        ],
+        "properties": [
+            {
+                "name": "_transform",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": false,
+                "connectedCallbacks": true,
+                "allowCallFromInternals": true
+            },
+            {
+                "name": "_flush",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": false,
+                "connectedCallbacks": true,
+                "allowCallFromInternals": true
+            }                        
+        ]
+    }
+]

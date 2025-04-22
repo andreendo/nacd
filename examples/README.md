@@ -1,0 +1,1 @@
+This folder contains micro-benchmarks with examples using different async functions of Node.js built-in modules.

@@ -1,0 +1,52 @@
+[
+    {
+        "moduleName": "EventEmitter",
+        "properties": [
+            {
+                "name": "on",
+                "logArg": 0,
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": false,
+                "connectedCallbacks": true
+            },
+            {
+                "name": "addListener",
+                "logArg": 0,
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": false,
+                "connectedCallbacks": true
+            },
+            {
+                "name": "prependListener",
+                "logArg": 0,
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": false,
+                "connectedCallbacks": true
+            },
+            {
+                "name": "prependOnceListener",
+                "logArg": 0,
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": false,
+                "connectedCallbacks": true
+            },            
+            {
+                "name": "once",
+                "logArg": 0,
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": false,
+                "connectedCallbacks": true
+            }
+        ]
+    }
+]

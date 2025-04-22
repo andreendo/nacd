@@ -1,0 +1,96 @@
+AKA
+real    3m19,343s
+user    0m29,140s
+sys     0m5,824s
+FPS
+real    141m42,055s
+user    0m59,996s
+sys     0m9,734s
+GHO
+real    4m6,658s
+user    0m57,707s
+sys     0m5,567s
+MKD
+real    3m35,142s
+user    0m24,429s
+sys     0m5,141s
+NES
+real    4m50,285s
+user    0m44,342s
+sys     0m6,958s
+NLF
+real    26m7,406s
+user    0m27,099s
+sys     0m5,804s
+SIO
+real    28m14,526s
+user    0m41,058s
+sys     0m7,025s
+DEL
+real    4m4,566s
+user    0m26,813s
+sys     0m5,462s
+LST
+real    4m38,815s
+user    0m42,979s
+sys     0m8,469s
+NSC
+real    6m44,074s
+user    0m38,469s
+sys     0m6,576s
+XLS
+real    26m0,615s
+user    21m24,781s
+sys     5m4,937s
+GPT
+real    2m40,205s
+user    0m33,638s
+sys     0m6,263s
+LVS
+real    29m19,309s
+user    4m18,008s
+sys     0m38,993s
+bluebird
+real    2m58,720s
+user    0m25,153s
+sys     0m5,127s
+express-user
+real    7m38,924s
+user    0m56,987s
+sys     0m8,493s
+SIOC
+real    3m32,092s
+user    0m27,835s
+sys     0m5,595s
+ME1
+real    6m6,660s
+user    0m59,133s
+sys     0m8,796s
+ME2
+real    6m8,200s
+user    0m59,086s
+sys     0m8,823s
+ME3
+real    6m14,956s
+user    0m58,997s
+sys     0m8,830s
+ME4
+real    6m24,327s
+user    1m0,342s
+sys     0m9,018s
+NEDB1
+real    19m14,061s
+user    0m49,714s
+sys     0m8,746s
+NEDB2
+real    14m33,243s
+user    0m47,656s
+sys     0m8,362s
+ARC
+real    4m12,138s
+user    0m40,647s
+sys     0m6,804s
+OBJ
+real    1m47,197s
+user    0m39,380s
+sys     0m7,461s

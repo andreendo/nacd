@@ -1,0 +1,472 @@
+[
+    {
+        "moduleName": "fs",
+        "properties": [
+            {
+                "name": "appendFile",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": true
+            },
+            {
+                "name": "access",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": true
+            },
+            {
+                "name": "chown",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": true
+            },
+            {
+                "name": "chmod",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": true
+            },
+            {
+                "name": "close",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": true
+            },
+            {
+                "name": "copyFile",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": true
+            },
+            {
+                "name": "exists",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": true
+            },
+            {
+                "name": "fchown",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": true
+            },
+            {
+                "name": "fchmod",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": true
+            },
+            {
+                "name": "fdatasync",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": true
+            },
+            {
+                "name": "fstat",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": true
+            },
+            {
+                "name": "fsync",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": true
+            },
+            {
+                "name": "ftruncate",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": true
+            },
+            {
+                "name": "futimes",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": true
+            },
+            {
+                "name": "lchown",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": true
+            },
+            {
+                "name": "link",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": true
+            },
+            {
+                "name": "lchmod",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": true,
+                "optionalProperty": true
+            },
+            {
+                "name": "lstat",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": true
+            },
+            {
+                "name": "mkdir",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": true
+            },
+            {
+                "name": "mkdtemp",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": true
+            },
+            {
+                "name": "open",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": true
+            },
+            {
+                "name": "readdir",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": true
+            },
+            {
+                "name": "read",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": true
+            },
+            {
+                "name": "readFile",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": true
+            },
+            {
+                "name": "readlink",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": true
+            },
+            {
+                "name": "realpath",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": true
+            },
+            {
+                "name": "rename",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": true
+            },
+            {
+                "name": "rmdir",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": true
+            },
+            {
+                "name": "stat",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": true
+            },
+            {
+                "name": "symlink",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": true
+            },
+            {
+                "name": "truncate",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": true
+            },
+            {
+                "name": "unlink",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": true
+            },
+            {
+                "name": "utimes",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": true
+            },
+            {
+                "name": "watchFile",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": true
+            },
+            {
+                "name": "writeFile",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": true
+            },
+            {
+                "name": "write",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": true
+            },
+            {
+                "name": "createReadStream",
+                "type": [
+                    "ro"
+                ],
+                "postponeRegistration": false,
+                "returnedObject": "stream.Readable"
+            },
+            {
+                "name": "createWriteStream",
+                "type": [
+                    "ro"
+                ],
+                "postponeRegistration": false,
+                "returnedObject": "stream.Writable"
+            },
+            {
+                "name": "watch",
+                "type": [
+                    "cb",
+                    "ro"
+                ],
+                "postponeRegistration": false,
+                "returnedObject": "fs.FSWatcher",
+                "connectedCallbacks": true
+            },
+            {
+                "name": "promises",
+                "type": [
+                    "op"
+                ],
+                "AsyncObjectProperty": "fs.Promises"
+            }
+        ]
+    },
+    {
+        "moduleName": "fs.Promises",
+        "properties": [
+            {
+                "name": "access",
+                "type": [
+                    "rp"
+                ],
+                "postponeRegistration": true
+            },
+            {
+                "name": "copyFile",
+                "type": [
+                    "rp"
+                ],
+                "postponeRegistration": true
+            },
+            {
+                "name": "open",
+                "type": [
+                    "rp"
+                ],
+                "postponeRegistration": true
+            },
+            {
+                "name": "rename",
+                "type": [
+                    "rp"
+                ],
+                "postponeRegistration": true
+            },
+            {
+                "name": "truncate",
+                "type": [
+                    "rp"
+                ],
+                "postponeRegistration": true
+            },
+            {
+                "name": "rmdir",
+                "type": [
+                    "rp"
+                ],
+                "postponeRegistration": true
+            },
+            {
+                "name": "mkdir",
+                "type": [
+                    "rp"
+                ],
+                "postponeRegistration": true
+            },
+            {
+                "name": "readdir",
+                "type": [
+                    "rp"
+                ],
+                "postponeRegistration": true
+            },
+            {
+                "name": "readlink",
+                "type": [
+                    "rp"
+                ],
+                "postponeRegistration": true
+            },
+            {
+                "name": "symlink",
+                "type": [
+                    "rp"
+                ],
+                "postponeRegistration": true
+            },
+            {
+                "name": "lstat",
+                "type": [
+                    "rp"
+                ],
+                "postponeRegistration": true
+            },
+            {
+                "name": "stat",
+                "type": [
+                    "rp"
+                ],
+                "postponeRegistration": true
+            },
+            {
+                "name": "link",
+                "type": [
+                    "rp"
+                ],
+                "postponeRegistration": true
+            },
+            {
+                "name": "unlink",
+                "type": [
+                    "rp"
+                ],
+                "postponeRegistration": true
+            },
+            {
+                "name": "chmod",
+                "type": [
+                    "rp"
+                ],
+                "postponeRegistration": true
+            },
+            {
+                "name": "lchmod",
+                "type": [
+                    "rp"
+                ],
+                "postponeRegistration": true
+            },
+            {
+                "name": "lchown",
+                "type": [
+                    "rp"
+                ],
+                "postponeRegistration": true
+            },
+            {
+                "name": "chown",
+                "type": [
+                    "rp"
+                ],
+                "postponeRegistration": true
+            },
+            {
+                "name": "utimes",
+                "type": [
+                    "rp"
+                ],
+                "postponeRegistration": true
+            },
+            {
+                "name": "realpath",
+                "type": [
+                    "rp"
+                ],
+                "postponeRegistration": true
+            },
+            {
+                "name": "mkdtemp",
+                "type": [
+                    "rp"
+                ],
+                "postponeRegistration": true
+            },
+            {
+                "name": "writeFile",
+                "type": [
+                    "rp"
+                ],
+                "postponeRegistration": true
+            },
+            {
+                "name": "appendFile",
+                "type": [
+                    "rp"
+                ],
+                "postponeRegistration": true
+            },
+            {
+                "name": "readFile",
+                "type": [
+                    "rp"
+                ],
+                "postponeRegistration": true
+            }
+        ]
+    },
+    {
+        "moduleName": "fs.FSWatcher",
+        "is": [
+            "EventEmitter"
+        ]
+    }    
+]

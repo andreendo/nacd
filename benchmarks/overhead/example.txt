@@ -1,0 +1,16 @@
+XLS
+real    1h2m10,706s
+user    0m5,703s
+sys     0m0,897s
+XXX
+real    0m7,316s
+user    0m1,121s
+sys     0m0,302s
+AAA
+real    0m22,312s
+user    0m2,503s
+sys     0m0,533s
+BBBBBB
+real    1m8,832s
+user    0m2,522s
+sys     0m0,544s

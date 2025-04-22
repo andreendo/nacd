@@ -1,0 +1,174 @@
+[
+    {
+        "moduleName": "zlib",
+        "properties": [
+            {
+                "name": "deflate",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": false
+            },
+            {
+                "name": "gzip",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": false
+            },
+            {
+                "name": "deflateRaw",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": false
+            },
+            {
+                "name": "unzip",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": false
+            },
+            {
+                "name": "inflate",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": false
+            },
+            {
+                "name": "gunzip",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": false
+            },
+            {
+                "name": "inflateRaw",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": false
+            },
+            {
+                "name": "brotliCompress",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": false
+            },
+            {
+                "name": "brotliDecompress",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": false
+            },
+            {
+                "name": "createDeflate",
+                "type": [
+                    "ro"
+                ],
+                "postponeRegistration": false,
+                "returnedObject": "ZlibTransformInterface"
+            },
+            {
+                "name": "createInflate",
+                "type": [
+                    "ro"
+                ],
+                "postponeRegistration": false,
+                "returnedObject": "ZlibTransformInterface"
+            },
+            {
+                "name": "createDeflateRaw",
+                "type": [
+                    "ro"
+                ],
+                "postponeRegistration": false,
+                "returnedObject": "ZlibTransformInterface"
+            },
+            {
+                "name": "createInflateRaw",
+                "type": [
+                    "ro"
+                ],
+                "postponeRegistration": false,
+                "returnedObject": "ZlibTransformInterface"
+            },
+            {
+                "name": "createGzip",
+                "type": [
+                    "ro"
+                ],
+                "postponeRegistration": false,
+                "returnedObject": "ZlibTransformInterface"
+            },
+            {
+                "name": "createGunzip",
+                "type": [
+                    "ro"
+                ],
+                "postponeRegistration": false,
+                "returnedObject": "ZlibTransformInterface"
+            },
+            {
+                "name": "createUnzip",
+                "type": [
+                    "ro"
+                ],
+                "postponeRegistration": false,
+                "returnedObject": "ZlibTransformInterface"
+            },
+            {
+                "name": "createBrotliCompress",
+                "type": [
+                    "ro"
+                ],
+                "postponeRegistration": false,
+                "returnedObject": "ZlibTransformInterface"
+            },
+            {
+                "name": "createBrotliDecompress",
+                "type": [
+                    "ro"
+                ],
+                "postponeRegistration": false,
+                "returnedObject": "ZlibTransformInterface"
+            }
+        ]
+    },
+    {
+        "moduleName": "ZlibTransformInterface",
+        "is": [
+            "stream.Transform"
+        ],
+        "properties": [
+            {
+                "name": "close",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": false
+            },
+            {
+                "name": "flush",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": false,
+                "connectedCallbacks": true
+            },
+            {
+                "name": "params",
+                "type": [
+                    "cb"
+                ],
+                "connectedCallbacks": true,
+                "postponeRegistration": false,
+                "optionalProperty": true
+            }
+        ]
+    }
+]

@@ -1,0 +1,149 @@
+[
+    {
+        "moduleName": "net",
+        "properties": [
+            {
+                "name": "connect",
+                "type": [
+                    "cb",
+                    "ro"
+                ],
+                "postponeRegistration": false,
+                "returnedObject": "net.Socket",
+                "connectedCallbacks": true
+            },
+            {
+                "name": "createConnection",
+                "type": [
+                    "cb",
+                    "ro"
+                ],
+                "postponeRegistration": false,
+                "returnedObject": "net.Socket",
+                "connectedCallbacks": true
+            },
+            {
+                "name": "Socket",
+                "type": [
+                    "oc",
+                    "ro"
+                ],
+                "postponeRegistration": false,
+                "returnedObject": "net.Socket"
+            },
+            {
+                "name": "createServer",
+                "type": [
+                    "cb",
+                    "ro",
+                    "co"
+                ],
+                "postponeRegistration": false,
+                "returnedObject": "net.Server",
+                "callbackObjects": [
+                    "net.Socket"
+                ],
+                "connectedCallbacks": true
+            },
+            {
+                "name": "Server",
+                "type": [
+                    "oc",
+                    "ro",
+                    "co",
+                    "cb"
+                ],
+                "postponeRegistration": false,
+                "returnedObject": "net.Server",
+                "callbackObjects": [
+                    "net.Socket"
+                ],
+                "connectedCallbacks": true
+            }
+        ]
+    },
+    {
+        "moduleName": "net.Socket",
+        "is": [
+            "stream.Duplex"
+        ],
+        "properties": [
+            {
+                "name": "connect",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": false,
+                "connectedCallbacks": true,
+                "optionalProperty": true
+            },
+            {
+                "name": "end",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": false,
+                "optionalProperty": true,
+                "connectedCallbacks": true
+            },
+            {
+                "name": "setTimeout",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": false,
+                "optionalProperty": true,
+                "connectedCallbacks": true
+            },
+            {
+                "name": "write",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": false,
+                "optionalProperty": true,
+                "connectedCallbacks": true
+            }
+        ]
+    },
+    {
+        "moduleName": "net.Server",
+        "is": [
+            "EventEmitter"
+        ],
+        "eventSpecificObjects": [
+            {
+                "event": "connection",
+                "callbackObjects": [
+                    "net.Socket"
+                ]
+            }
+        ],
+        "properties": [
+            {
+                "name": "close",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": false,
+                "connectedCallbacks": true
+            },
+            {
+                "name": "getConnections",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": false,
+                "connectedCallbacks": true
+            },
+            {
+                "name": "listen",
+                "type": [
+                    "cb"
+                ],
+                "postponeRegistration": false,
+                "connectedCallbacks": true
+            }
+        ]
+    }
+]
