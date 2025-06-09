@@ -4,7 +4,20 @@
 
 An event race detector based on delay injections at the Node.js API level. 
 
-This is an anonymous repository that contains the source code of NACD, as well as the experimental package needed to replicate the experiments presented in the paper "_Event Race Detection for Node.js Using Delay Injections_", submitted to the European Conference on Object-Oriented Programming (ECOOP 2025). The repository contains some external links to Google Drive, but they can be accessed anonymously. 
+This is a repository that contains the source code of NACD, as well as the experimental package needed to replicate the experiments presented in the paper "_Event Race Detection for Node.js Using Delay Injections_", accepted in the European Conference on Object-Oriented Programming (ECOOP 2025). Please see our paper for futher details: [\<preprint\>](https://cs.au.dk/~amoeller/papers/nacd/paper.pdf). 
+
+Citation: 
+```bib
+@InProceedings{nacd2025,
+  author =       {Andr\'e{} Takeshi Endo and Anders M\o{}ller},
+  title =        {Event Race Detection for Node.js Using Delay Injections},
+  booktitle =    {Proc. 39th European Conference on Object-Oriented Programming (ECOOP)},
+  year =         {2025},
+  month =        {June},
+}
+```
+
+The repository contains some external links to Google Drive, but they can be accessed anonymously. 
 
 
 ## Environment Requirements
