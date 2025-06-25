@@ -4,16 +4,27 @@
 
 An event race detector based on delay injections at the Node.js API level. 
 
-This is a repository that contains the source code of NACD, as well as the experimental package needed to replicate the experiments presented in the paper "_Event Race Detection for Node.js Using Delay Injections_", accepted in the European Conference on Object-Oriented Programming (ECOOP 2025). Please see our paper for futher details: [\<preprint\>](https://cs.au.dk/~amoeller/papers/nacd/paper.pdf). 
+This is a repository that contains the source code of NACD, as well as the experimental package needed to replicate the experiments presented in the paper "_Event Race Detection for Node.js Using Delay Injections_", accepted in the European Conference on Object-Oriented Programming (ECOOP 2025). Please see our paper for futher details: [\<paper (open access)\>](https://doi.org/10.4230/LIPIcs.ECOOP.2025.9). 
 
 Citation: 
 ```bib
 @InProceedings{nacd2025,
-  author =       {Andr\'e{} Takeshi Endo and Anders M\o{}ller},
-  title =        {Event Race Detection for Node.js Using Delay Injections},
-  booktitle =    {Proc. 39th European Conference on Object-Oriented Programming (ECOOP)},
-  year =         {2025},
-  month =        {June},
+  author =	{Endo, Andre Takeshi and M{\o}ller, Anders},
+  title =	{{Event Race Detection for Node.js  Using Delay Injections}},
+  booktitle =	{39th European Conference on Object-Oriented Programming (ECOOP 2025)},
+  pages =	{9:1--9:28},
+  series =	{Leibniz International Proceedings in Informatics (LIPIcs)},
+  ISBN =	{978-3-95977-373-7},
+  ISSN =	{1868-8969},
+  year =	{2025},
+  volume =	{333},
+  editor =	{Aldrich, Jonathan and Silva, Alexandra},
+  publisher =	{Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik},
+  address =	{Dagstuhl, Germany},
+  URL =		{https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ECOOP.2025.9},
+  URN =		{urn:nbn:de:0030-drops-233026},
+  doi =		{10.4230/LIPIcs.ECOOP.2025.9},
+  annote =	{Keywords: JavaScript, race conditions, flaky tests, event races, callback interleaving}
 }
 ```
 
